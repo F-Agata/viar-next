@@ -34,8 +34,6 @@ const BoxSingleQuestion = ({ question, smallDescription, opened = false }) => {
                                         width={36}
                                         height={36}
                                         bg={'colorSecondary'}
-                                        width={36}
-                                        height={36}
                                         display={'flex'}
                                         justifyContent={'center'}
                                         alignItems={'center'}

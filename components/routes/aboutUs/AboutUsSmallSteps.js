@@ -61,7 +61,7 @@ const AboutUsSmallSteps = () => (
                         Morbi
                     </TitleAndText>
 
-                    <TitleAndText variant={'textSmall'} textAlign={'left'} color={'colorWhite'} textAlign={'Center'}>
+                    <TitleAndText variant={'textSmall'} color={'colorWhite'} textAlign={'Center'}>
                          Praesent nec diam posuere
                         <TitleAndText as="span" color={'colorSecondary'}>  molestie pulvinar leo.  </TitleAndText>
                         Justo eu scelerisque  iaculis congue
@@ -108,7 +108,7 @@ const AboutUsSmallSteps = () => (
                     Cras non
                 </TitleAndText>
 
-                <TitleAndText variant={'textSmall'} textAlign={'left'} color={'colorWhite'} textAlign={'Center'}>
+                <TitleAndText variant={'textSmall'} color={'colorWhite'} textAlign={'Center'}>
                     Suspendisse sit
                     <TitleAndText as="span" color={'colorSecondary'}>  amet consectetur  aliquet odio a cursus </TitleAndText>
                     vitae erat ut elit congue congue
@@ -155,7 +155,7 @@ const AboutUsSmallSteps = () => (
                     Curabitur
                 </TitleAndText>
 
-                <TitleAndText variant={'textSmall'} textAlign={'left'} color={'colorWhite'} textAlign={'Center'}>
+                <TitleAndText variant={'textSmall'} color={'colorWhite'} textAlign={'Center'}>
                     Nullam maximus facilisis nulla
                     <TitleAndText as="span" color={'colorSecondary'}>  elementum vel magna nec,   </TitleAndText>
                     bibendum iaculis tellus
@@ -202,7 +202,7 @@ const AboutUsSmallSteps = () => (
                     Integer lobortis
                 </TitleAndText>
 
-                <TitleAndText variant={'textSmall'} textAlign={'left'} color={'colorWhite'} textAlign={'Center'}>
+                <TitleAndText variant={'textSmall'} color={'colorWhite'} textAlign={'Center'}>
                     Quisque mollis lectus ut sapien accumsan,
                     <TitleAndText as="span" color={'colorSecondary'}>  Quisque mollis lectus ut sapien accumsan,   </TitleAndText>
                     vitae neque turpis
@@ -249,7 +249,7 @@ const AboutUsSmallSteps = () => (
                     Orci varius
                 </TitleAndText>
 
-                <TitleAndText variant={'textSmall'} textAlign={'left'} color={'colorWhite'} textAlign={'Center'}>
+                <TitleAndText variant={'textSmall'} color={'colorWhite'} textAlign={'Center'}>
                     Sed vel magna sit amet risus porta congue nec ac augue
                     <TitleAndText as="span" color={'colorSecondary'}>  ultricies pulvinar  </TitleAndText>
                     eget tempor est sapien a massa

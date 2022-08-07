@@ -52,8 +52,6 @@ const PortfolioSlider = () => {
                 justifyContent={'center'}
                 alignItems={'center'}
                 flexWrap={'nowrap'}
-                width={'100%'}
-
                 width={typeof window !== 'undefined' ? `${window.innerWidth}px` : '100%'}
             >
                 <TitleAndText variant={{ _: 'title4Uppercase', tablet: 'title3Uppercase' }} textAlign={'center'} color={'colorWhite'} m={'20px 20px'}>Nunc vestibulum sodales rhoncus</TitleAndText>
