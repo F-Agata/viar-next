@@ -36,6 +36,10 @@ const Btn = styled.button`
             color: 'colorLight',
             boxShadow:
               '0px 4px 4px rgba(0, 0, 0, 0.5), 0px 3px rgb(232, 113, 69) ',
+            textShadow: '16px 0px 36px rgba(255, 255, 255, 1)',
+          },
+          '&:hover p': {
+            textShadow: '16px 0px 36px rgba(255, 255, 255, 1)',
           },
           '&:active': {
             background: `${theme.colors.colorSecondary}`,

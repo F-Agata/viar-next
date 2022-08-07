@@ -35,7 +35,7 @@ const SlidersArrowsAndDots = ({
   }
 
   const dots = portfolioItems.map((item, index) => (
-    <StyledBoxIconDot key={`dot${index}`} onClick={() => scrollToId(index)}>
+    <StyledBoxIconDot onClick={() => scrollToId(index)}>
       <StyledBsDot />
     </StyledBoxIconDot>
   ))

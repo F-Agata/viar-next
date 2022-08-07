@@ -1,11 +1,12 @@
 import React, { useEffect } from 'react'
 import styled, { css } from 'styled-components'
 
+import useForm from './useForm'
+import validationRules from './validationRules'
+
 import { BiEnvelope } from 'react-icons/bi'
 import { BsTelephone } from 'react-icons/bs'
 import { MdOutlineUnsubscribe } from 'react-icons/md'
-import validationRules from './validationRules'
-import useForm from './useForm'
 
 import Box from '../../../../styles/Box'
 import Btn from '../../../../styles/Btn'

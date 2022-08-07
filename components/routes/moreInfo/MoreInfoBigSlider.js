@@ -1,9 +1,9 @@
 import { useRef, useState } from 'react'
 import styled, { css } from 'styled-components'
 
-import MoreInfoBig01 from './MoreInfoBig01'
-import MoreInfoBig02 from './MoreInfoBig02'
-import MoreInfoBig03 from './MoreInfoBig03'
+import MoreInfoBig01 from '../moreInfo/MoreInfoBig01'
+import MoreInfoBig02 from '../moreInfo/MoreInfoBig02'
+import MoreInfoBig03 from '../moreInfo/MoreInfoBig03'
 import SlidersArrowsAndDots from './SlidersArrowsAndDots'
 
 import Box from '../../../styles/Box'

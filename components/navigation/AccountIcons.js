@@ -9,42 +9,48 @@ import Box from '../../styles/Box'
 import BoxIcon from '../../styles/BoxIcon'
 import Link from '../../styles/Link'
 
-const AccountIcons = ({ needCloseIcon, needOpenIcon, changeNav }) => (
-  <Box display={'flex'}>
-    <Link href={'/home'}>
-      <BoxIcon width={40} height={40} bg={'colorWhite'} ml={10}>
-        <StyledMdOutlineManageAccounts />
-      </BoxIcon>
-    </Link>
-    <Link href={'/home'}>
-      <BoxIcon width={40} height={40} bg={'colorSecondary'} ml={10}>
-        <StyledBiCart />
-      </BoxIcon>
-    </Link>
-    {needCloseIcon && (
-      <BoxIcon
-        onClick={changeNav}
-        width={40}
-        height={40}
-        bg={'colorWhite'}
-        ml={10}
-      >
-        <StyledGrClose />
-      </BoxIcon>
-    )}
-    {needOpenIcon && (
-      <BoxIcon
-        onClick={changeNav}
-        width={40}
-        height={40}
-        bg={'colorWhite'}
-        ml={10}
-      >
-        <StyledFaBars />
-      </BoxIcon>
-    )}
-  </Box>
-)
+const AccountIcons = ({ needCloseIcon, needOpenIcon, changeNav }) => {
+  return (
+    <Box
+      // border={'green 2px solid'}
+      display={'flex'}
+    >
+      <Link href={`/home`}>
+        {' '}
+        <BoxIcon width={40} height={40} bg={'colorWhite'} ml={10}>
+          <StyledMdOutlineManageAccounts />
+        </BoxIcon>
+      </Link>
+      <Link href={`/home`}>
+        <BoxIcon width={40} height={40} bg={'colorSecondary'} ml={10}>
+          <StyledBiCart />
+        </BoxIcon>
+      </Link>
+      {needCloseIcon && (
+        <BoxIcon
+          onClick={changeNav}
+          width={40}
+          height={40}
+          bg={'colorWhite'}
+          ml={10}
+        >
+          <StyledGrClose />
+        </BoxIcon>
+      )}
+      {needOpenIcon && (
+        <BoxIcon
+          onClick={changeNav}
+          width={40}
+          height={40}
+          bg={'colorWhite'}
+          ml={10}
+        >
+          <StyledFaBars />
+        </BoxIcon>
+      )}
+    </Box>
+  )
+}
 
 export default AccountIcons
 

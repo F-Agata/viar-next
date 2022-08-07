@@ -22,15 +22,39 @@ const TitleAndText = styled.p`
         lineHeight: 'lh2',
         fontWeight: 'fontRegular',
       },
+      title2Uppercase: {
+        fontSize: 'fs2',
+        lineHeight: 'lh2',
+        fontWeight: 'fontRegular',
+        textTransform: 'uppercase',
+      },
       title3: {
         fontSize: 'fs3',
         lineHeight: 'lh3',
         fontWeight: 'fontRegular',
       },
+      title3Uppercase: {
+        fontSize: 'fs3',
+        lineHeight: 'lh3',
+        fontWeight: 'fontRegular',
+        textTransform: 'uppercase',
+      },
       title4: {
         fontSize: 'fs4',
         lineHeight: 'lh4',
         fontWeight: 'fontBold',
+      },
+      title4Uppercase: {
+        fontSize: 'fs4',
+        lineHeight: 'lh4',
+        fontWeight: 'fontRegular',
+        textTransform: 'uppercase',
+      },
+      title4UppercaseBold: {
+        fontSize: 'fs4',
+        lineHeight: 'lh4',
+        fontWeight: 'fontBold',
+        textTransform: 'uppercase',
       },
       textLarge: {
         fontSize: 'fs5',
@@ -41,6 +65,11 @@ const TitleAndText = styled.p`
         fontSize: 'fs6',
         lineHeight: 'lh6',
         fontWeight: 'fontRegular',
+      },
+      textMiddleBold: {
+        fontSize: 'fs6',
+        lineHeight: 'lh6',
+        fontWeight: 'fontBold',
       },
       textSmall: {
         fontSize: 'fs7',

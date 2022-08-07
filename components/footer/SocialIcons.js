@@ -7,33 +7,39 @@ import BoxIcon from '../../styles/BoxIcon'
 import Link from '../../styles/Link'
 import TitleAndText from '../../styles/TitleAndText'
 
-const SocialIcons = () => (
-  <Box>
-    <TitleAndText variant={'textSmall'}> Socialmedia</TitleAndText>
-    <BoxWrapperSocialIcons>
-      <Link href={'/#'}>
-        <BoxIcon width={40} height={40} bg={'colorSecondary'} ml={0}>
-          <StyledFaFacebook />
-        </BoxIcon>
-      </Link>
-      <Link href={'/#'}>
-        <BoxIcon width={40} height={40} bg={'colorSecondary'} ml={10}>
-          <StyledFaTwitter />
-        </BoxIcon>
-      </Link>
-      <Link href={'/#'}>
-        <BoxIcon width={40} height={40} bg={'colorSecondary'} ml={10}>
-          <StyledFaInstagram />
-        </BoxIcon>
-      </Link>
-    </BoxWrapperSocialIcons>
-  </Box>
-)
+const SocialIcons = () => {
+  return (
+    <Box>
+      <TitleAndText variant={'textSmall'}> Socialmedia</TitleAndText>
+      <BoxWrappSocialIcons>
+        <Link href={`/#`}>
+          <BoxIcon width={40} height={40} bg={'colorSecondary'} ml={0}>
+            <StyledFaFacebook />
+          </BoxIcon>
+        </Link>
+        <Link href={`/#`}>
+          {' '}
+          <BoxIcon width={40} height={40} bg={'colorSecondary'} ml={10}>
+            {' '}
+            <StyledFaTwitter />
+          </BoxIcon>
+        </Link>
+        <Link href={`/#`}>
+          {' '}
+          <BoxIcon width={40} height={40} bg={'colorSecondary'} ml={10}>
+            <StyledFaInstagram />
+          </BoxIcon>
+        </Link>
+      </BoxWrappSocialIcons>
+    </Box>
+  )
+}
 
 export default SocialIcons
 
-const BoxWrapperSocialIcons = styled(Box)`
-  padding: 10px 0;
+const BoxWrappSocialIcons = styled(Box)`
+  //border: blueviolet 2px solid;
+  padding: 10px 0px;
   width: 100%;
   display: flex;
   justify-content: flex-start;

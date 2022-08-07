@@ -1,7 +1,8 @@
 import styled, { css } from 'styled-components'
 
-import { BsFillCheckCircleFill } from 'react-icons/bs'
 import itemsTextPartWithImg from './itemsTextPartWithImg'
+
+import { BsFillCheckCircleFill } from 'react-icons/bs'
 
 import Box from '../../../styles/Box'
 import TitleAndText from '../../../styles/TitleAndText'

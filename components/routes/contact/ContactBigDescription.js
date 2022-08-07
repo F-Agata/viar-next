@@ -6,37 +6,39 @@ import Form from './form/Form'
 import Box from '../../../styles/Box'
 import TitleAndText from '../../../styles/TitleAndText'
 
-const ContactBigDescription = () => (
-  <Box
-    display={'flex'}
-    flexDirection={'column'}
-    justifyContent={'center'}
-    alignItems={'center'}
-  >
-    <BoxBg>
-      <ContactTextPartWithImg />
-      <BgxBgBorder>
-        <Box
-          display={'flex'}
-          flexDirection={'column'}
-          justifyContent={'center'}
-          alignItems={'center'}
-          p={'0px 20px'}
-        >
-          <TitleAndText
-            variant={'title4Uppercase'}
-            textAlign={'center'}
-            mb={20}
+const ContactBigDescription = () => {
+  return (
+    <Box
+      display={'flex'}
+      flexDirection={'column'}
+      justifyContent={'center'}
+      alignItems={'center'}
+    >
+      <BoxBg>
+        <ContactTextPartWithImg />
+        <BgxBgBorder>
+          <Box
+            display={'flex'}
+            flexDirection={'column'}
+            justifyContent={'center'}
+            alignItems={'center'}
+            p={'0px 20px'}
           >
-            Duis a urna purus
-          </TitleAndText>
+            <TitleAndText
+              variant={'title4Uppercase'}
+              textAlign={'center'}
+              mb={20}
+            >
+              Duis a urna purus
+            </TitleAndText>
 
-          <Form />
-        </Box>
-      </BgxBgBorder>
-    </BoxBg>
-  </Box>
-)
+            <Form />
+          </Box>
+        </BgxBgBorder>
+      </BoxBg>
+    </Box>
+  )
+}
 
 export default ContactBigDescription
 

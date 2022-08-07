@@ -7,74 +7,77 @@ import Btn from '../../../../styles/Btn'
 import Link from '../../../../styles/Link'
 import TitleAndText from '../../../../styles/TitleAndText'
 
-const DoYouWantToChat = () => (
-  <Box
-    width={'340px'}
-    // border={'green 2px solid'}
-    display={'flex'}
-    flexDirection={'column'}
-    justifyContent={{ _: 'center', tablet: 'flex-start' }}
-    alignItems={{ _: 'center', tablet: 'center' }}
-    mb={40}
-    p={'0px  20px'}
-    position={'relative'}
-  >
-    <Box width={'300px'}>
-      <TitleAndText
-        width={'300px'}
-        variant={'title2Uppercase'}
-        textAlign={{ _: 'center', tablet: 'left' }}
-        mb={20}
-      >
-        How can you contact us?
-      </TitleAndText>
-    </Box>
-    <BoxWrapImg>
-      <QuestionMarksImg
-        src={'contact/questionMarks.png'}
-        alt={'questionMarks'}
-      />
-    </BoxWrapImg>
+const DoYouWantToChat = () => {
+  return (
+    <Box
+      width={'340px'}
+      // border={'green 2px solid'}
+      display={'flex'}
+      flexDirection={'column'}
+      justifyContent={{ _: 'center', tablet: 'flex-start' }}
+      alignItems={{ _: 'center', tablet: 'center' }}
+      mb={40}
+      p={'0px  20px'}
+      position={'relative'}
+    >
+      <Box width={'300px'}>
+        <TitleAndText
+          width={'300px'}
+          variant={'title2Uppercase'}
+          textAlign={{ _: 'center', tablet: 'left' }}
+          mb={20}
+        >
+          How can you contact us?
+        </TitleAndText>
+      </Box>
+      <BoxWrapImg>
+        <QuestionMarksImg
+          src={'contact/questionMarks.png'}
+          alt={'questionMarks'}
+        />
+      </BoxWrapImg>
 
-    <BoxBgBorder>
-      <Box
-        display={'flex'}
-        flexDirection={'column'}
-        justifyContent={'center'}
-        alignItems={'center'}
-        p={'0px 20px'}
-      >
-        <TitleAndText
-          variant={'textLarge'}
-          textAlign={{ _: 'center', tablet: 'left' }}
-          mb={20}
-        >
-          Do you want to chat?
-        </TitleAndText>
-        <TitleAndText
-          variant={'textSmall'}
-          textAlign={{ _: 'center', tablet: 'left' }}
-          mb={20}
-        >
-          Nulla lobortis metus sed massa imperdiet, a blandit ligula tincidunt.
-        </TitleAndText>
+      <BoxBgBorder>
         <Box
-          // border={'orange 2px solid'}
-          width={'100%'}
           display={'flex'}
+          flexDirection={'column'}
           justifyContent={'center'}
           alignItems={'center'}
+          p={'0px 20px'}
         >
-          <Link href={'/#'}>
-            <Btn variant="orangeDark" m={'20px 0'} width={'100%'}>
-              <StyledAiOutlineWhatsApp /> WhatsApp
-            </Btn>
-          </Link>
+          <TitleAndText
+            variant={'textLarge'}
+            textAlign={{ _: 'center', tablet: 'left' }}
+            mb={20}
+          >
+            Do you want to chat?
+          </TitleAndText>
+          <TitleAndText
+            variant={'textSmall'}
+            textAlign={{ _: 'center', tablet: 'left' }}
+            mb={20}
+          >
+            Nulla lobortis metus sed massa imperdiet, a blandit ligula
+            tincidunt.
+          </TitleAndText>
+          <Box
+            // border={'orange 2px solid'}
+            width={'100%'}
+            display={'flex'}
+            justifyContent={'center'}
+            alignItems={'center'}
+          >
+            <Link href={`/#`}>
+              <Btn variant="orangeDark" m={'20px 0'} width={'100%'}>
+                <StyledAiOutlineWhatsApp /> WhatsApp
+              </Btn>
+            </Link>
+          </Box>
         </Box>
-      </Box>
-    </BoxBgBorder>
-  </Box>
-)
+      </BoxBgBorder>
+    </Box>
+  )
+}
 
 export default DoYouWantToChat
 

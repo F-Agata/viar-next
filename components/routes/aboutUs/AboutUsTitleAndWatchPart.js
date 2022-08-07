@@ -3,121 +3,123 @@ import styled from 'styled-components'
 import Box from '../../../styles/Box'
 import TitleAndText from '../../../styles/TitleAndText'
 
-const AboutUsTitleAndWatchPart = () => (
-  <Box
-    // border={'pink 2px solid'}
-    display={'flex'}
-    flexDirection={'column'}
-    justifyContent={'center'}
-    alignItems={'center'}
-    p={'0px 0px 40px 0'}
-  >
-    <TitleAndText
-      variant={{ _: 'title3Uppercase', tablet: 'title2Uppercase' }}
-      textAlign={'center'}
-      color={'colorWhite'}
-      mb={20}
-    >
-      {' '}
-      Duis at arcu malesuada{' '}
-    </TitleAndText>
-
+const AboutUsTitleAndWatchPart = () => {
+  return (
     <Box
-      // border={'orange 2px solid'}
+      // border={'pink 2px solid'}
       display={'flex'}
+      flexDirection={'column'}
       justifyContent={'center'}
       alignItems={'center'}
-      mb={20}
+      p={'0px 0px 40px 0'}
     >
       <TitleAndText
-        variant={{ _: 'textMiddleBold', tablet: 'textLarge' }}
+        variant={{ _: 'title3Uppercase', tablet: 'title2Uppercase' }}
         textAlign={'center'}
         color={'colorWhite'}
-        m={'10px 0'}
+        mb={20}
       >
-        Maecenases as aliquamem -
-        <TitleAndText as="span" color={'colorSecondary'}>
-          {' '}
-          sit amet iaculis sem
-        </TitleAndText>
+        {' '}
+        Duis at arcu malesuada{' '}
       </TitleAndText>
-    </Box>
 
-    <Box
-      // border={'blue 2px solid'}
-      display={'flex'}
-      justifyContent={'space-between'}
-      alignItems={'center'}
-      width={'100%'}
-      maxWidth={{ _: '380px', tablet: '600px' }}
-      pl={{ _: '24px', tablet: '40px' }}
-    >
       <Box
-        width={'40%'}
-        border={' 1px solid'}
-        borderColor={'colorSecondary'}
-        borderRadius={8}
-        position={'relative'}
-        height={{ _: '60px', tablet: '100px' }}
+        // border={'orange 2px solid'}
         display={'flex'}
-        justifyContent={'right'}
+        justifyContent={'center'}
         alignItems={'center'}
-        pr={20}
+        mb={20}
       >
         <TitleAndText
-          variant={{ _: 'textSmallVery', tablet: 'textMiddle' }}
+          variant={{ _: 'textMiddleBold', tablet: 'textLarge' }}
+          textAlign={'center'}
           color={'colorWhite'}
-          textAlign={'left'}
+          m={'10px 0'}
         >
-          time: 1 hour
+          Maecenases as aliquamem -
+          <TitleAndText as="span" color={'colorSecondary'}>
+            {' '}
+            sit amet iaculis sem
+          </TitleAndText>
         </TitleAndText>
-
-        <Box
-          height={{ _: '100%' }}
-          position={'absolute'}
-          left={{ _: '-25px', tablet: '-41px' }}
-          display={'flex'}
-          justifyContent={'center'}
-          alignItems={'center'}
-          zIndex={'2'}
-        >
-          <StyledImg src={'aboutUs/watchFire.png'} alt={'icon'} />
-        </Box>
       </Box>
 
       <Box
-        width={'40%'}
-        border={' 1px solid'}
-        borderColor={'colorSecondary'}
-        borderRadius={8}
-        position={'relative'}
-        height={{ _: '60px', tablet: '100px' }}
+        // border={'blue 2px solid'}
         display={'flex'}
-        justifyContent={'right'}
+        justifyContent={'space-between'}
         alignItems={'center'}
-        pr={20}
+        width={'100%'}
+        maxWidth={{ _: '380px', tablet: '600px' }}
+        pl={{ _: '24px', tablet: '40px' }}
       >
         <Box
-          height={{ _: '100%' }}
-          position={'absolute'}
-          left={{ _: '-30px', tablet: '-50px' }}
+          width={'40%'}
+          border={' 1px solid'}
+          borderColor={'colorSecondary'}
+          borderRadius={8}
+          position={'relative'}
+          height={{ _: '60px', tablet: '100px' }}
           display={'flex'}
-          justifyContent={'center'}
+          justifyContent={'right'}
           alignItems={'center'}
+          pr={20}
         >
-          <StyledImg src={'aboutUs/watchStandard.svg'} alt={'icon'} />
+          <TitleAndText
+            variant={{ _: 'textSmallVery', tablet: 'textMiddle' }}
+            color={'colorWhite'}
+            textAlign={'left'}
+          >
+            time: 1 hour
+          </TitleAndText>
+
+          <Box
+            height={{ _: '100%' }}
+            position={'absolute'}
+            left={{ _: '-25px', tablet: '-41px' }}
+            display={'flex'}
+            justifyContent={'center'}
+            alignItems={'center'}
+            zIndex={'2'}
+          >
+            <StyledImg src={`aboutUs/watchFire.png`} alt={'icon'} />
+          </Box>
         </Box>
-        <TitleAndText
-          variant={{ _: 'textSmallVery', tablet: 'textMiddle' }}
-          color={'colorWhite'}
-          textAlign={'left'}
+
+        <Box
+          width={'40%'}
+          border={' 1px solid'}
+          borderColor={'colorSecondary'}
+          borderRadius={8}
+          position={'relative'}
+          height={{ _: '60px', tablet: '100px' }}
+          display={'flex'}
+          justifyContent={'right'}
+          alignItems={'center'}
+          pr={20}
         >
-          time: 3-8 hours
-        </TitleAndText>
+          <Box
+            height={{ _: '100%' }}
+            position={'absolute'}
+            left={{ _: '-30px', tablet: '-50px' }}
+            display={'flex'}
+            justifyContent={'center'}
+            alignItems={'center'}
+          >
+            <StyledImg src={`aboutUs/watchStandard.svg`} alt={'icon'} />
+          </Box>
+          <TitleAndText
+            variant={{ _: 'textSmallVery', tablet: 'textMiddle' }}
+            color={'colorWhite'}
+            textAlign={'left'}
+          >
+            time: 3-8 hours
+          </TitleAndText>
+        </Box>
       </Box>
     </Box>
-  </Box>
-)
+  )
+}
 
 export default AboutUsTitleAndWatchPart
 

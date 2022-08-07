@@ -7,93 +7,95 @@ import TitleAndText from '../../../styles/TitleAndText'
 
 import MoreInfoTextPart03 from './MoreInfoTextPart03'
 
-const MoreInfoSmall03 = () => (
-  <Box
-    // border={'green 2px solid'}
+const MoreInfoSmall03 = () => {
+  return (
+    <Box
+      // border={'green 2px solid'}
 
-    // height={'100vh'}
-    display={'flex'}
-    flexDirection={'column'}
-    justifyContent={'space-between'}
-    alignItems={'strench'}
-    width={typeof window !== 'undefined' ? `${window.innerWidth}px` : '100%'}
-  >
-    <BgxBg>
-      <Box
-        // border={'yellow 2px solid'}
-        display={'flex'}
-        justifyContent={'center'}
-        alignItems={'center'}
-        width={'100%'}
-      >
-        <HeaderImg src={'moreInfo/womenWithSelfPortrait.png'} alt={'photo'} />
-      </Box>
+      // height={'100vh'}
+      display={'flex'}
+      flexDirection={'column'}
+      justifyContent={'space-between'}
+      alignItems={'strench'}
+      width={typeof window !== 'undefined' ? `${window.innerWidth}px` : '100%'}
+    >
+      <BgxBg>
+        <Box
+          // border={'yellow 2px solid'}
+          display={'flex'}
+          justifyContent={'center'}
+          alignItems={'center'}
+          width={'100%'}
+        >
+          <HeaderImg src={'moreInfo/womenWithSelfPortrait.png'} alt={'photo'} />
+        </Box>
 
-      <BoxWrappOrnament>
-        <OrnamentImg src={' ornament.png'} alt={'photo'} />
-        <BoxWrappTextInsideOrnament>
-          <TitleAndText
-            variant={'textSmall'}
-            // variant={{_: 'textSmallVery', mobileL: 'textSmall', }}
-            textAlign={'center'}
-            // pb={{_: '0', mobileL: '10px', }}
-          >
-            Nam efficitur{' '}
-          </TitleAndText>
+        <BoxWrappOrnament>
+          <OrnamentImg src={' ornament.png'} alt={'photo'} />
+          <BoxWrappTextInsideOrnament>
+            <TitleAndText
+              variant={'textSmall'}
+              // variant={{_: 'textSmallVery', mobileL: 'textSmall', }}
+              textAlign={'center'}
+              // pb={{_: '0', mobileL: '10px', }}
+            >
+              Nam efficitur{' '}
+            </TitleAndText>
+            <TitleAndText
+              variant={'textSmall'}
+              // variant={{_: 'textSmallVery', mobileL: 'textSmall', }}
+              textAlign={'center'}
+              color={'colorSecondary'}
+            >
+              {' '}
+              tortor sed
+            </TitleAndText>
+          </BoxWrappTextInsideOrnament>
+        </BoxWrappOrnament>
+
+        <BoxWrappArrow>
+          <ArrowImg src={'arrowTwisting01.png'} alt={'arrow'} />
+        </BoxWrappArrow>
+
+        <BoxWrappGift>
+          <GiftImg src={'gift.png'} alt={'gift'} />
+        </BoxWrappGift>
+
+        <BoxWrappTxt>
           <TitleAndText
             variant={'textSmall'}
             // variant={{_: 'textSmallVery', mobileL: 'textSmall', }}
             textAlign={'center'}
             color={'colorSecondary'}
           >
-            {' '}
-            tortor sed
+            Etiam ac{' '}
           </TitleAndText>
-        </BoxWrappTextInsideOrnament>
-      </BoxWrappOrnament>
+          <TitleAndText
+            variant={'textSmall'}
+            // variant={{_: 'textSmallVery', mobileL: 'textSmall', }}
+            textAlign={'center'}
+          >
+            {' '}
+            convallis massa
+          </TitleAndText>
+        </BoxWrappTxt>
+      </BgxBg>
 
-      <BoxWrappArrow>
-        <ArrowImg src={'arrowTwisting01.png'} alt={'arrow'} />
-      </BoxWrappArrow>
+      <Box
+        // height={{_: '50% ', mobileL: '35%', }}
 
-      <BoxWrappGift>
-        <GiftImg src={'gift.png'} alt={'gift'} />
-      </BoxWrappGift>
-
-      <BoxWrappTxt>
-        <TitleAndText
-          variant={'textSmall'}
-          // variant={{_: 'textSmallVery', mobileL: 'textSmall', }}
-          textAlign={'center'}
-          color={'colorSecondary'}
-        >
-          Etiam ac{' '}
-        </TitleAndText>
-        <TitleAndText
-          variant={'textSmall'}
-          // variant={{_: 'textSmallVery', mobileL: 'textSmall', }}
-          textAlign={'center'}
-        >
-          {' '}
-          convallis massa
-        </TitleAndText>
-      </BoxWrappTxt>
-    </BgxBg>
-
-    <Box
-      // height={{_: '50% ', mobileL: '35%', }}
-
-      // border={'pink 2px solid'}
-      display={'flex'}
-      flexDirection={'column'}
-      justifyContent={'center'}
-      alignItems={'center'}
-      p={{ _: '0px 20px', mobileL: '0px 40px' }}
-    >
-      <MoreInfoTextPart03 />
+        // border={'pink 2px solid'}
+        display={'flex'}
+        flexDirection={'column'}
+        justifyContent={'center'}
+        alignItems={'center'}
+        p={{ _: '0px 20px', mobileL: '0px 40px' }}
+      >
+        <MoreInfoTextPart03 />
+      </Box>
     </Box>
-  </Box>
-)
+  )
+}
 
 export default MoreInfoSmall03
 

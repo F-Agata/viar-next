@@ -7,78 +7,80 @@ import TitleAndText from '../../../styles/TitleAndText'
 
 import ContactTextPartHeader from './ContactTextPartHeader'
 
-const ContactSmallHeader = () => (
-  <Box
-    // border={'green 2px solid'}
-    display={'flex'}
-    flexDirection={'column'}
-    justifyContent={'space-between'}
-    alignItems={'strench'}
-  >
-    <BgxBg>
-      <Box
-        // border={'lightblue 2px solid'}
-        display={'flex'}
-        justifyContent={'center'}
-        alignItems={'center'}
-        width={'100%'}
-      >
-        <HeaderImg src={'contact/womentWithPainting4.png'} alt={'photo'} />
-      </Box>
+const ContactSmallHeader = () => {
+  return (
+    <Box
+      // border={'green 2px solid'}
+      display={'flex'}
+      flexDirection={'column'}
+      justifyContent={'space-between'}
+      alignItems={'strench'}
+    >
+      <BgxBg>
+        <Box
+          // border={'lightblue 2px solid'}
+          display={'flex'}
+          justifyContent={'center'}
+          alignItems={'center'}
+          width={'100%'}
+        >
+          <HeaderImg src={'contact/womentWithPainting4.png'} alt={'photo'} />
+        </Box>
 
-      <BoxWrappOrnament>
-        <OrnamentImg src={' ornament.png'} alt={'photo'} />
-        <BoxWrappTextInsideOrnament>
-          <TitleAndText variant={'textSmall'} textAlign={'center'}>
-            Nam efficit{' '}
-          </TitleAndText>
+        <BoxWrappOrnament>
+          <OrnamentImg src={' ornament.png'} alt={'photo'} />
+          <BoxWrappTextInsideOrnament>
+            <TitleAndText variant={'textSmall'} textAlign={'center'}>
+              Nam efficit{' '}
+            </TitleAndText>
+            <TitleAndText
+              variant={'textSmall'}
+              textAlign={'center'}
+              color={'colorSecondary'}
+            >
+              {' '}
+              faucibus{' '}
+            </TitleAndText>
+          </BoxWrappTextInsideOrnament>
+        </BoxWrappOrnament>
+        <BoxWrappArrow>
+          <ArrowImg src={'arrowTwisting02.png'} alt={'arrow'} />
+        </BoxWrappArrow>
+        <BoxWrappGift>
+          <GiftImg src={'gift.png'} alt={'gift'} />
+        </BoxWrappGift>
+        <BoxWrappTxt>
           <TitleAndText
             variant={'textSmall'}
+            // variant={{_: 'textSmallVery', mobileL: 'textSmall', }}
             textAlign={'center'}
             color={'colorSecondary'}
           >
-            {' '}
-            faucibus{' '}
+            Etiam ac{' '}
           </TitleAndText>
-        </BoxWrappTextInsideOrnament>
-      </BoxWrappOrnament>
-      <BoxWrappArrow>
-        <ArrowImg src={'arrowTwisting02.png'} alt={'arrow'} />
-      </BoxWrappArrow>
-      <BoxWrappGift>
-        <GiftImg src={'gift.png'} alt={'gift'} />
-      </BoxWrappGift>
-      <BoxWrappTxt>
-        <TitleAndText
-          variant={'textSmall'}
-          // variant={{_: 'textSmallVery', mobileL: 'textSmall', }}
-          textAlign={'center'}
-          color={'colorSecondary'}
-        >
-          Etiam ac{' '}
-        </TitleAndText>
-        <TitleAndText
-          variant={'textSmall'}
-          // variant={{_: 'textSmallVery', mobileL: 'textSmall', }}
-          textAlign={'center'}
-        >
-          {' '}
-          convallis massa
-        </TitleAndText>
-      </BoxWrappTxt>
-    </BgxBg>
-    <Box
-      // border={'pink 2px solid'}
-      display={'flex'}
-      flexDirection={'column'}
-      justifyContent={'center'}
-      alignItems={'center'}
-      p={{ _: '0px 20px', mobileL: '0px 40px' }}
-    >
-      <ContactTextPartHeader />
+          <TitleAndText
+            variant={'textSmall'}
+            // variant={{_: 'textSmallVery', mobileL: 'textSmall', }}
+            textAlign={'center'}
+          >
+            {' '}
+            convallis massa
+          </TitleAndText>
+        </BoxWrappTxt>
+      </BgxBg>
+      <Box
+        // border={'pink 2px solid'}
+        display={'flex'}
+        flexDirection={'column'}
+        justifyContent={'center'}
+        alignItems={'center'}
+        p={{ _: '0px 20px', mobileL: '0px 40px' }}
+      >
+        <ContactTextPartHeader />
+      </Box>
     </Box>
-  </Box>
-)
+  )
+}
 
 export default ContactSmallHeader
 

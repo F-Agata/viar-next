@@ -46,12 +46,7 @@ const useForm = (validationRules, submittedForm) => {
     }
   })
 
-  return {
-    values,
-    errors,
-    handleChange,
-    handleSubmit,
-  }
+  return { values, errors, handleChange, handleSubmit }
 }
 
 export default useForm

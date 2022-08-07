@@ -7,15 +7,17 @@ import OfferDescription from './OfferDescription'
 import OfferSizes from './OfferSizes'
 import OfferLaughingManSmall from './OfferLaughingManSmall'
 
-const OfferBig = () => (
-  <Box
-  // border={'green 2px solid'}
-  >
-    <OfferBigHeader />
-    <OfferDescription />
-    <OfferSizes />
-    <OfferLaughingManSmall />
-  </Box>
-)
+const OfferBig = () => {
+  return (
+    <Box
+    // border={'green 2px solid'}
+    >
+      <OfferBigHeader />
+      <OfferDescription />
+      <OfferSizes />
+      <OfferLaughingManSmall />
+    </Box>
+  )
+}
 
 export default OfferBig

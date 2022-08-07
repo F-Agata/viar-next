@@ -8,6 +8,8 @@ export default {
     colorBtn2: '#AD8780',
     colorWhite: '#FFFFFF',
     colorLight: '#F3E4E1',
+    colorLightBg: '#F9EFEB',
+    colorLightBg95: 'rgba(249, 239, 235, 0.95)',
   },
   gradients: {
     gradientBtn:

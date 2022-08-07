@@ -9,17 +9,20 @@ import Link from '../../styles/Link'
 const SocialIcons = ({ changeNav, bigMenu }) => {
   return (
     <BoxWrappSocialIcons bigMenu={bigMenu}>
-      <Link href={'/#'} onClick={changeNav}>
+      <Link href={`/#`} onClick={changeNav}>
         <BoxIcon width={40} height={40} bg={'colorBtn2'}>
           <StyledFaFacebook />
         </BoxIcon>
       </Link>
-      <Link href={'/#'} onClick={changeNav}>
+      <Link href={`/#`} onClick={changeNav}>
+        {' '}
         <BoxIcon width={40} height={40} bg={'colorBtn2'} ml={10}>
+          {' '}
           <StyledFaTwitter />
         </BoxIcon>
       </Link>
-      <Link href={'/#'} onClick={changeNav}>
+      <Link href={`/#`} onClick={changeNav}>
+        {' '}
         <BoxIcon width={40} height={40} bg={'colorBtn2'} ml={10}>
           <StyledFaInstagram />
         </BoxIcon>
@@ -31,12 +34,15 @@ const SocialIcons = ({ changeNav, bigMenu }) => {
 export default SocialIcons
 
 const BoxWrappSocialIcons = styled(Box)`
+  //border: blueviolet 2px solid;
   max-width: ${(props) => (props.bigMenu ? '160px' : '300px')};
   padding: 0 10px 0 20px;
   width: 100%;
   align-self: flex-end;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  height: 100%;
 `
 
 const StyledFaFacebook = styled(FaFacebook)`

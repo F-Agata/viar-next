@@ -1,5 +1,5 @@
 const validationRules = (values) => {
-  const errors = {}
+  let errors = {}
 
   if (!values.phone.trim()) {
     errors.phone = 'podaj numer telefonu'

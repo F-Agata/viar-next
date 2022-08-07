@@ -5,118 +5,120 @@ import Btn from '../../../styles/Btn'
 import Link from '../../../styles/Link'
 import TitleAndText from '../../../styles/TitleAndText'
 
-const HomeSmall = () => (
-  <Box
-    // border={'green 2px solid'}
-    display={'flex'}
-    flexDirection={'column'}
-    justifyContent={'space-between'}
-    alignItems={'strench'}
-  >
-    <BgxBg>
-      <Box
-        // border={'yellow 2px solid'}
-        display={'flex'}
-        justifyContent={'center'}
-        alignItems={'center'}
-      >
-        <HeaderImg src={'home/womenWithPaintingBig01.png'} alt={'photo'} />
-      </Box>
+const HomeSmall = () => {
+  return (
+    <Box
+      // border={'green 2px solid'}
+      display={'flex'}
+      flexDirection={'column'}
+      justifyContent={'space-between'}
+      alignItems={'strench'}
+    >
+      <BgxBg>
+        <Box
+          // border={'yellow 2px solid'}
+          display={'flex'}
+          justifyContent={'center'}
+          alignItems={'center'}
+        >
+          <HeaderImg src={'home/womenWithPaintingBig01.png'} alt={'photo'} />
+        </Box>
 
-      <BoxWrappOrnament>
-        <OrnamentImg src={' ornament.png'} alt={'photo'} />
-        <BoxWrappTextInsideOrnament>
+        <BoxWrappOrnament>
+          <OrnamentImg src={' ornament.png'} alt={'photo'} />
+          <BoxWrappTextInsideOrnament>
+            <TitleAndText
+              variant={{ _: 'textSmallVery', mobileL: 'textSmall' }}
+              textAlign={'center'}
+            >
+              Lorem ipsum
+            </TitleAndText>
+            <TitleAndText
+              variant={{ _: 'textSmallVery', mobileL: 'textSmall' }}
+              textAlign={'center'}
+              color={'colorSecondary'}
+            >
+              {' '}
+              consectetur ac mattist
+            </TitleAndText>
+          </BoxWrappTextInsideOrnament>
+        </BoxWrappOrnament>
+
+        <BoxWrappArrow>
+          <ArrowImg src={'arrowTwisting01.png'} alt={'arrow'} />
+        </BoxWrappArrow>
+
+        <BoxWrappGift>
+          <GiftImg src={'gift.png'} alt={'gift'} />
+        </BoxWrappGift>
+
+        <BoxWrappTxt>
           <TitleAndText
-            variant={{ _: 'textSmallVery', mobileL: 'textSmall' }}
-            textAlign={'center'}
-          >
-            Lorem ipsum
-          </TitleAndText>
-          <TitleAndText
-            variant={{ _: 'textSmallVery', mobileL: 'textSmall' }}
+            variant={'textSmall'}
             textAlign={'center'}
             color={'colorSecondary'}
           >
-            {' '}
-            consectetur ac mattist
+            Lorem ipsum
           </TitleAndText>
-        </BoxWrappTextInsideOrnament>
-      </BoxWrappOrnament>
-
-      <BoxWrappArrow>
-        <ArrowImg src={'arrowTwisting01.png'} alt={'arrow'} />
-      </BoxWrappArrow>
-
-      <BoxWrappGift>
-        <GiftImg src={'gift.png'} alt={'gift'} />
-      </BoxWrappGift>
-
-      <BoxWrappTxt>
-        <TitleAndText
-          variant={'textSmall'}
-          textAlign={'center'}
-          color={'colorSecondary'}
-        >
-          Lorem ipsum
-        </TitleAndText>
-        <TitleAndText variant={'textSmall'} textAlign={'center'}>
-          {' '}
-          consectetur adipiscing elit
-        </TitleAndText>
-      </BoxWrappTxt>
-    </BgxBg>
-
-    <Box
-      display={'flex'}
-      flexDirection={'column'}
-      justifyContent={'center'}
-      alignItems={'center'}
-      p={{ _: '0px 20px', mobileL: '0px 40px' }}
-    >
-      <TitleAndText
-        variant={'title3Uppercase'}
-        textAlign={'center'}
-        m={'100px 0 20px 0'}
-      >
-        {' '}
-        <TitleAndText as="span" color={'colorSecondary'}>
-          Lorem ipsum
-        </TitleAndText>{' '}
-        dolor sit amet
-      </TitleAndText>
-      <TitleAndText variant={'textSmallBold'} textAlign={'center'} mb={20}>
-        <TitleAndText as="span" color={'colorSecondary'}>
-          Donec luctus tortor
-        </TitleAndText>{' '}
-        consectetur adipiscing elit. Suspendisse massa.
-      </TitleAndText>
-      <TitleAndText variant={'textSmallBold'} textAlign={'center'} mb={20}>
-        <TitleAndText as="span" color={'colorSecondary'}>
-          Mauris vel{' '}
-        </TitleAndText>{' '}
-        nulla vitae odio
-      </TitleAndText>
-      <TitleAndText variant={'textSmallBold'} textAlign={'center'} mb={20}>
-        <TitleAndText as="span" color={'colorSecondary'}>
-          Nunc ac mattis
-        </TitleAndText>{' '}
-        libero, non rhoncus erat. Sed
-      </TitleAndText>
-      <Box
-        // border={'yellow 2px solid'}
-        width={'100%'}
-        p={'0 20px'}
-      >
-        <Link href={'/moreInfo'}>
-          <Btn variant="orangeDark" m={'40px 0'} width={'100%'}>
+          <TitleAndText variant={'textSmall'} textAlign={'center'}>
             {' '}
-            More...
-          </Btn>
-        </Link>
+            consectetur adipiscing elit
+          </TitleAndText>
+        </BoxWrappTxt>
+      </BgxBg>
+
+      <Box
+        display={'flex'}
+        flexDirection={'column'}
+        justifyContent={'center'}
+        alignItems={'center'}
+        p={{ _: '0px 20px', mobileL: '0px 40px' }}
+      >
+        <TitleAndText
+          variant={'title3Uppercase'}
+          textAlign={'center'}
+          m={'100px 0 20px 0'}
+        >
+          {' '}
+          <TitleAndText as="span" color={'colorSecondary'}>
+            Lorem ipsum
+          </TitleAndText>{' '}
+          dolor sit amet
+        </TitleAndText>
+        <TitleAndText variant={'textSmallBold'} textAlign={'center'} mb={20}>
+          <TitleAndText as="span" color={'colorSecondary'}>
+            Donec luctus tortor
+          </TitleAndText>{' '}
+          consectetur adipiscing elit. Suspendisse massa.
+        </TitleAndText>
+        <TitleAndText variant={'textSmallBold'} textAlign={'center'} mb={20}>
+          <TitleAndText as="span" color={'colorSecondary'}>
+            Mauris vel{' '}
+          </TitleAndText>{' '}
+          nulla vitae odio
+        </TitleAndText>
+        <TitleAndText variant={'textSmallBold'} textAlign={'center'} mb={20}>
+          <TitleAndText as="span" color={'colorSecondary'}>
+            Nunc ac mattis
+          </TitleAndText>{' '}
+          libero, non rhoncus erat. Sed
+        </TitleAndText>
+        <Box
+          // border={'yellow 2px solid'}
+          width={'100%'}
+          p={'0 20px'}
+        >
+          <Link href={`/moreInfo`}>
+            <Btn variant="orangeDark" m={'40px 0'} width={'100%'}>
+              {' '}
+              More...
+            </Btn>
+          </Link>
+        </Box>
       </Box>
     </Box>
-  </Box>
-)
+  )
+}
 
 export default HomeSmall
 

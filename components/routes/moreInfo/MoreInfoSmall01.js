@@ -7,77 +7,79 @@ import Btn from '../../../styles/Btn'
 import Link from '../../../styles/Link'
 import TitleAndText from '../../../styles/TitleAndText'
 
-const MoreInfoSmall01 = () => (
-  <Box
-    // border={'green 2px solid'}
-    display={'flex'}
-    flexDirection={'column'}
-    justifyContent={'space-between'}
-    alignItems={'strench'}
-    width={typeof window !== 'undefined' ? `${window.innerWidth}px` : '100%'}
-    // width={'100%'}
-  >
-    <BgxBg>
-      <Box
-        // border={'yellow 2px solid'}
-        display={'flex'}
-        justifyContent={'center'}
-        alignItems={'center'}
-        width={'90%'}
-        ml={'-8%'}
-      >
-        <HeaderImg src={'moreInfo/womanWithHero.png'} alt={'photo'} />
-      </Box>
+const MoreInfoSmall01 = () => {
+  return (
+    <Box
+      // border={'green 2px solid'}
+      display={'flex'}
+      flexDirection={'column'}
+      justifyContent={'space-between'}
+      alignItems={'strench'}
+      width={typeof window !== 'undefined' ? `${window.innerWidth}px` : '100%'}
+      // width={'100%'}
+    >
+      <BgxBg>
+        <Box
+          // border={'yellow 2px solid'}
+          display={'flex'}
+          justifyContent={'center'}
+          alignItems={'center'}
+          width={'90%'}
+          ml={'-8%'}
+        >
+          <HeaderImg src={'moreInfo/womanWithHero.png'} alt={'photo'} />
+        </Box>
 
-      <BoxWrappOrnament>
-        <OrnamentImg src={' ornament.png'} alt={'photo'} />
-        <BoxWrappTextInsideOrnament>
-          <TitleAndText
-            variant={{ _: 'textSmallVery', mobileL: 'textSmall' }}
-            textAlign={'center'}
-          >
-            Lorem ipsum
-          </TitleAndText>
+        <BoxWrappOrnament>
+          <OrnamentImg src={' ornament.png'} alt={'photo'} />
+          <BoxWrappTextInsideOrnament>
+            <TitleAndText
+              variant={{ _: 'textSmallVery', mobileL: 'textSmall' }}
+              textAlign={'center'}
+            >
+              Lorem ipsum
+            </TitleAndText>
+            <TitleAndText
+              variant={{ _: 'textSmallVery', mobileL: 'textSmall' }}
+              textAlign={'center'}
+              color={'colorSecondary'}
+            >
+              {' '}
+              cons ac mattist
+            </TitleAndText>
+          </BoxWrappTextInsideOrnament>
+        </BoxWrappOrnament>
+
+        <BoxWrappArrow>
+          <ArrowImg src={'arrowTwisting06.png'} alt={'arrow'} />
+        </BoxWrappArrow>
+
+        <BoxWrappGift>
+          <GiftImg src={'gift.png'} alt={'gift'} />
+        </BoxWrappGift>
+
+        <BoxWrappTxt>
           <TitleAndText
             variant={{ _: 'textSmallVery', mobileL: 'textSmall' }}
             textAlign={'center'}
             color={'colorSecondary'}
           >
-            {' '}
-            cons ac mattist
+            Consectetur
           </TitleAndText>
-        </BoxWrappTextInsideOrnament>
-      </BoxWrappOrnament>
+          <TitleAndText
+            variant={{ _: 'textSmallVery', mobileL: 'textSmall' }}
+            textAlign={'center'}
+          >
+            {' '}
+            consectetur adipiscing{' '}
+          </TitleAndText>
+        </BoxWrappTxt>
+      </BgxBg>
 
-      <BoxWrappArrow>
-        <ArrowImg src={'arrowTwisting06.png'} alt={'arrow'} />
-      </BoxWrappArrow>
-
-      <BoxWrappGift>
-        <GiftImg src={'gift.png'} alt={'gift'} />
-      </BoxWrappGift>
-
-      <BoxWrappTxt>
-        <TitleAndText
-          variant={{ _: 'textSmallVery', mobileL: 'textSmall' }}
-          textAlign={'center'}
-          color={'colorSecondary'}
-        >
-          Consectetur
-        </TitleAndText>
-        <TitleAndText
-          variant={{ _: 'textSmallVery', mobileL: 'textSmall' }}
-          textAlign={'center'}
-        >
-          {' '}
-          consectetur adipiscing{' '}
-        </TitleAndText>
-      </BoxWrappTxt>
-    </BgxBg>
-
-    <MoreInfoTextPart01 />
-  </Box>
-)
+      <MoreInfoTextPart01 />
+    </Box>
+  )
+}
 
 export default MoreInfoSmall01
 

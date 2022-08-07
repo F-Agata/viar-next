@@ -7,88 +7,90 @@ import TitleAndText from '../../../styles/TitleAndText'
 
 import OfferTextPartHeader from './OfferTextPartHeader'
 
-const OfferSmallHeader = () => (
-  <Box
-    // border={'green 2px solid'}
-    display={'flex'}
-    flexDirection={'column'}
-    justifyContent={'space-between'}
-    alignItems={'strench'}
-  >
-    <BgxBg>
-      <Box
-        // border={'lightblue 2px solid'}
-        display={'flex'}
-        justifyContent={'center'}
-        alignItems={'center'}
-        width={'100%'}
-      >
-        <HeaderImg src={'offer/coupleWithPainting.png'} alt={'photo'} />
-      </Box>
+const OfferSmallHeader = () => {
+  return (
+    <Box
+      // border={'green 2px solid'}
+      display={'flex'}
+      flexDirection={'column'}
+      justifyContent={'space-between'}
+      alignItems={'strench'}
+    >
+      <BgxBg>
+        <Box
+          // border={'lightblue 2px solid'}
+          display={'flex'}
+          justifyContent={'center'}
+          alignItems={'center'}
+          width={'100%'}
+        >
+          <HeaderImg src={'offer/coupleWithPainting.png'} alt={'photo'} />
+        </Box>
 
-      <BoxWrappOrnament>
-        <OrnamentImg src={' ornament.png'} alt={'photo'} />
-        <BoxWrappTextInsideOrnament>
-          <TitleAndText
-            variant={'textSmall'}
-            // variant={{_: 'textSmallVery', mobileL: 'textSmall', }}
-            textAlign={'center'}
-            // pb={{_: '0', mobileL: '10px', }}
-          >
-            Aenean{' '}
-          </TitleAndText>
+        <BoxWrappOrnament>
+          <OrnamentImg src={' ornament.png'} alt={'photo'} />
+          <BoxWrappTextInsideOrnament>
+            <TitleAndText
+              variant={'textSmall'}
+              // variant={{_: 'textSmallVery', mobileL: 'textSmall', }}
+              textAlign={'center'}
+              // pb={{_: '0', mobileL: '10px', }}
+            >
+              Aenean{' '}
+            </TitleAndText>
+            <TitleAndText
+              variant={'textSmall'}
+              // variant={{_: 'textSmallVery', mobileL: 'textSmall', }}
+              textAlign={'center'}
+              color={'colorSecondary'}
+            >
+              {' '}
+              urna convallis
+            </TitleAndText>
+          </BoxWrappTextInsideOrnament>
+        </BoxWrappOrnament>
+
+        <BoxWrappArrow>
+          <ArrowImg src={'arrowTwisting05.png'} alt={'arrow'} />
+        </BoxWrappArrow>
+
+        <BoxWrappGift>
+          <GiftImg src={'gift.png'} alt={'gift'} />
+        </BoxWrappGift>
+
+        <BoxWrappTxt>
           <TitleAndText
             variant={'textSmall'}
             // variant={{_: 'textSmallVery', mobileL: 'textSmall', }}
             textAlign={'center'}
             color={'colorSecondary'}
           >
-            {' '}
-            urna convallis
+            Morbi{' '}
           </TitleAndText>
-        </BoxWrappTextInsideOrnament>
-      </BoxWrappOrnament>
+          <TitleAndText
+            variant={'textSmall'}
+            // variant={{_: 'textSmallVery', mobileL: 'textSmall', }}
+            textAlign={'center'}
+          >
+            {' '}
+            vitae risus
+          </TitleAndText>
+        </BoxWrappTxt>
+      </BgxBg>
 
-      <BoxWrappArrow>
-        <ArrowImg src={'arrowTwisting05.png'} alt={'arrow'} />
-      </BoxWrappArrow>
-
-      <BoxWrappGift>
-        <GiftImg src={'gift.png'} alt={'gift'} />
-      </BoxWrappGift>
-
-      <BoxWrappTxt>
-        <TitleAndText
-          variant={'textSmall'}
-          // variant={{_: 'textSmallVery', mobileL: 'textSmall', }}
-          textAlign={'center'}
-          color={'colorSecondary'}
-        >
-          Morbi{' '}
-        </TitleAndText>
-        <TitleAndText
-          variant={'textSmall'}
-          // variant={{_: 'textSmallVery', mobileL: 'textSmall', }}
-          textAlign={'center'}
-        >
-          {' '}
-          vitae risus
-        </TitleAndText>
-      </BoxWrappTxt>
-    </BgxBg>
-
-    <Box
-      // border={'pink 2px solid'}
-      display={'flex'}
-      flexDirection={'column'}
-      justifyContent={'center'}
-      alignItems={'center'}
-      p={{ _: '0px 20px', mobileL: '0px 40px' }}
-    >
-      <OfferTextPartHeader />
+      <Box
+        // border={'pink 2px solid'}
+        display={'flex'}
+        flexDirection={'column'}
+        justifyContent={'center'}
+        alignItems={'center'}
+        p={{ _: '0px 20px', mobileL: '0px 40px' }}
+      >
+        <OfferTextPartHeader />
+      </Box>
     </Box>
-  </Box>
-)
+  )
+}
 
 export default OfferSmallHeader
 

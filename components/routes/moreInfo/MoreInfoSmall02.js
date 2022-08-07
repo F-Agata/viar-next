@@ -7,91 +7,93 @@ import TitleAndText from '../../../styles/TitleAndText'
 
 import MoreInfoTextPart02 from './MoreInfoTextPart02'
 
-const MoreInfoSmall02 = () => (
-  <Box
-    // border={'green 2px solid'}
-    display={'flex'}
-    flexDirection={'column'}
-    justifyContent={'space-between'}
-    alignItems={'strench'}
-    width={typeof window !== 'undefined' ? `${window.innerWidth}px` : '100%'}
-  >
-    <BgxBg>
-      <Box
-        // border={'green 2px solid'}
-        display={'flex'}
-        justifyContent={'flex-end'}
-        alignItems={'center'}
-        width={'100%'}
-      >
-        <HeaderImg src={'moreInfo/windowAndBarbie.png'} alt={'photo'} />
-      </Box>
+const MoreInfoSmall02 = () => {
+  return (
+    <Box
+      // border={'green 2px solid'}
+      display={'flex'}
+      flexDirection={'column'}
+      justifyContent={'space-between'}
+      alignItems={'strench'}
+      width={typeof window !== 'undefined' ? `${window.innerWidth}px` : '100%'}
+    >
+      <BgxBg>
+        <Box
+          // border={'green 2px solid'}
+          display={'flex'}
+          justifyContent={'flex-end'}
+          alignItems={'center'}
+          width={'100%'}
+        >
+          <HeaderImg src={'moreInfo/windowAndBarbie.png'} alt={'photo'} />
+        </Box>
 
-      <BoxWrappOrnament>
-        <OrnamentImg src={' ornament.png'} alt={'photo'} />
-        <BoxWrappTextInsideOrnament>
-          <TitleAndText variant={'textSmall'} textAlign={'center'}>
-            Cras in
-          </TitleAndText>
+        <BoxWrappOrnament>
+          <OrnamentImg src={' ornament.png'} alt={'photo'} />
+          <BoxWrappTextInsideOrnament>
+            <TitleAndText variant={'textSmall'} textAlign={'center'}>
+              Cras in
+            </TitleAndText>
+            <TitleAndText
+              variant={'textSmall'}
+              textAlign={'center'}
+              color={'colorSecondary'}
+            >
+              {' '}
+              hendrerit enim
+            </TitleAndText>
+          </BoxWrappTextInsideOrnament>
+        </BoxWrappOrnament>
+
+        <BoxWrappArrow1>
+          <ArrowImg1 src={'arrowTwisting01.png'} alt={'arrow'} />
+        </BoxWrappArrow1>
+
+        <BoxWrappArrow2>
+          <ArrowImg2 src={'arrowTwisting07.png'} alt={'arrow'} />
+        </BoxWrappArrow2>
+
+        <BoxWrappGift>
+          <GiftImg src={'gift.png'} alt={'gift'} />
+        </BoxWrappGift>
+
+        <BoxWrappTxt>
           <TitleAndText
             variant={'textSmall'}
+            // variant={{_: 'textSmallVery', mobileL: 'textSmall', }}
             textAlign={'center'}
             color={'colorSecondary'}
           >
-            {' '}
-            hendrerit enim
+            Mauris non
           </TitleAndText>
-        </BoxWrappTextInsideOrnament>
-      </BoxWrappOrnament>
+          <TitleAndText
+            variant={'textSmall'}
+            // variant={{_: 'textSmallVery', mobileL: 'textSmall', }}
+            textAlign={'center'}
+          >
+            {' '}
+            erat vehicula maximus
+          </TitleAndText>
+        </BoxWrappTxt>
 
-      <BoxWrappArrow1>
-        <ArrowImg1 src={'arrowTwisting01.png'} alt={'arrow'} />
-      </BoxWrappArrow1>
+        <BoxWrappPhoto>
+          <PhotoImg src={'/moreInfo/photo1.png'} alt={'photo'} />
+        </BoxWrappPhoto>
+      </BgxBg>
 
-      <BoxWrappArrow2>
-        <ArrowImg2 src={'arrowTwisting07.png'} alt={'arrow'} />
-      </BoxWrappArrow2>
-
-      <BoxWrappGift>
-        <GiftImg src={'gift.png'} alt={'gift'} />
-      </BoxWrappGift>
-
-      <BoxWrappTxt>
-        <TitleAndText
-          variant={'textSmall'}
-          // variant={{_: 'textSmallVery', mobileL: 'textSmall', }}
-          textAlign={'center'}
-          color={'colorSecondary'}
-        >
-          Mauris non
-        </TitleAndText>
-        <TitleAndText
-          variant={'textSmall'}
-          // variant={{_: 'textSmallVery', mobileL: 'textSmall', }}
-          textAlign={'center'}
-        >
-          {' '}
-          erat vehicula maximus
-        </TitleAndText>
-      </BoxWrappTxt>
-
-      <BoxWrappPhoto>
-        <PhotoImg src={'/moreInfo/photo1.png'} alt={'photo'} />
-      </BoxWrappPhoto>
-    </BgxBg>
-
-    <Box
-      // border={'pink 2px solid'}
-      display={'flex'}
-      flexDirection={'column'}
-      justifyContent={'center'}
-      alignItems={'center'}
-      p={{ _: '0px 20px', mobileL: '0px 40px' }}
-    >
-      <MoreInfoTextPart02 />
+      <Box
+        // border={'pink 2px solid'}
+        display={'flex'}
+        flexDirection={'column'}
+        justifyContent={'center'}
+        alignItems={'center'}
+        p={{ _: '0px 20px', mobileL: '0px 40px' }}
+      >
+        <MoreInfoTextPart02 />
+      </Box>
     </Box>
-  </Box>
-)
+  )
+}
 
 export default MoreInfoSmall02
 

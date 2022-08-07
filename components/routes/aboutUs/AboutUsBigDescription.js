@@ -7,81 +7,87 @@ import Btn from '../../../styles/Btn'
 import Link from '../../../styles/Link'
 import TitleAndText from '../../../styles/TitleAndText'
 
-const AboutUsBigDescription = () => (
-  <Box
-    // border={'green 2px solid'}
-    display={'flex'}
-    flexDirection={'column'}
-    justifyContent={'space-between'}
-    alignItems={'center'}
-    p={'20px 20px'}
-  >
-    <TitleAndText variant={'title4Uppercase'} textAlign={'center'} mb={'40px '}>
-      Pellentesque luctus pellentesque tincidunt
-    </TitleAndText>
-
-    <BgxBg>
-      <Box
-        width={'100%'}
-        p={'0px 20px'}
-        m={'0 auto'}
-        display={'flex'}
-        justifyContent={'space-between'}
-        alignItems={'stretch'}
-        // border={'pink 2px solid'}
-        pt={{ _: '0', tablet: '20px' }}
+const AboutUsBigDescription = () => {
+  return (
+    <Box
+      // border={'green 2px solid'}
+      display={'flex'}
+      flexDirection={'column'}
+      justifyContent={'space-between'}
+      alignItems={'center'}
+      p={'20px 20px'}
+    >
+      <TitleAndText
+        variant={'title4Uppercase'}
+        textAlign={'center'}
+        mb={'40px '}
       >
+        Pellentesque luctus pellentesque tincidunt
+      </TitleAndText>
+
+      <BgxBg>
         <Box
-          width={{ _: '55%', tabletL: '50%' }}
-          position={'relative'}
-          // border={'olive 2px solid'}
-          // alignSelf={'center' }
-          // alignSelf={{_: 'flex-start', tabletL: 'flex-end' }}
+          width={'100%'}
+          p={'0px 20px'}
+          m={'0 auto'}
           display={'flex'}
-          justifyContent={'center'}
-          alignItems={'center'}
-
-          // p={{_: '60px 0px 0 0px', tabletL: '20px 0px 0px 0px', laptopS: '20px 0px 0px 0px', }}
+          justifyContent={'space-between'}
+          alignItems={'stretch'}
+          // border={'pink 2px solid'}
+          pt={{ _: '0', tablet: '20px' }}
         >
-          <BoxWrappOrnament>
-            <OrnamentImg src={'aboutUs/ornament02.png'} alt={'photo'} />
-            <BoxWrappTextInsideOrnament>
-              <TitleAndText variant={'textSmall'} textAlign={'center'}>
-                Nam efficitur{' '}
-              </TitleAndText>
-              <TitleAndText
-                variant={'textSmall'}
-                textAlign={'center'}
-                color={'colorSecondary'}
-              >
-                {' '}
-                tortor sed
-              </TitleAndText>
-            </BoxWrappTextInsideOrnament>
-          </BoxWrappOrnament>
+          <Box
+            width={{ _: '55%', tabletL: '50%' }}
+            position={'relative'}
+            // border={'olive 2px solid'}
+            // alignSelf={'center' }
+            // alignSelf={{_: 'flex-start', tabletL: 'flex-end' }}
+            display={'flex'}
+            justifyContent={'center'}
+            alignItems={'center'}
 
-          <BoxWrappArrow>
-            <ArrowImg src={'arrowTwisting04.png'} alt={'arrow'} />
-          </BoxWrappArrow>
+            // p={{_: '60px 0px 0 0px', tabletL: '20px 0px 0px 0px', laptopS: '20px 0px 0px 0px', }}
+          >
+            <BoxWrappOrnament>
+              <OrnamentImg src={'aboutUs/ornament02.png'} alt={'photo'} />
+              <BoxWrappTextInsideOrnament>
+                <TitleAndText variant={'textSmall'} textAlign={'center'}>
+                  Nam efficitur{' '}
+                </TitleAndText>
+                <TitleAndText
+                  variant={'textSmall'}
+                  textAlign={'center'}
+                  color={'colorSecondary'}
+                >
+                  {' '}
+                  tortor sed
+                </TitleAndText>
+              </BoxWrappTextInsideOrnament>
+            </BoxWrappOrnament>
 
-          <HeaderImg src={'aboutUs/womenWithPainting5.png'} alt={'photo'} />
+            <BoxWrappArrow>
+              <ArrowImg src={'arrowTwisting04.png'} alt={'arrow'} />
+            </BoxWrappArrow>
+
+            <HeaderImg src={'aboutUs/womenWithPainting5.png'} alt={'photo'} />
+          </Box>
+
+          <Box
+            width={{ _: '45%', tabletL: '45%', laptopS: '45%' }}
+            // border={'red 2px solid'}
+            display={'flex'}
+            // flexDirection={'column'}
+            justifyContent={'center'}
+            alignItems={'center'}
+            // p={{_: '0px 0px 0px 0px', tabletL: '0px 0px 0px 0px', laptopS: '0px 0px 0px 0px' }}
+          >
+            <AboutUsTextPartDescription />
+          </Box>
         </Box>
-
-        <Box
-          width={{ _: '45%', tabletL: '45%', laptopS: '45%' }}
-          // border={'red 2px solid'}
-          display={'flex'}
-          // flexDirection={'column'}
-          justifyContent={'center'}
-          alignItems={'center'}
-          // p={{_: '0px 0px 0px 0px', tabletL: '0px 0px 0px 0px', laptopS: '0px 0px 0px 0px' }}
-        >
-          <AboutUsTextPartDescription />
-        </Box>
-      </Box>
-    </BgxBg>
-  </Box>
-)
+      </BgxBg>
+    </Box>
+  )
+}
 
 export default AboutUsBigDescription
 

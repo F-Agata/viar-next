@@ -1,15 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled, { css } from 'styled-components'
+
+import { GrClose } from 'react-icons/gr'
+import { BiCart } from 'react-icons/bi'
+import { MdOutlineManageAccounts } from 'react-icons/md'
 
 import Logo from '../Logo'
 import SocialIcons from './SocialIcons'
 import AccountIcons from './AccountIcons'
 
 import Box from '../../styles/Box'
+import BoxIcon from '../../styles/BoxIcon'
+import Btn from '../../styles/Btn'
 import Link from '../../styles/Link'
 import TitleAndText from '../../styles/TitleAndText'
 
-const NavSmall = ({ menuItems, changeNav }) => {
+const NavSmall = ({ menuItems, setSmallNavIsOpen, changeNav }) => {
   const needCloseIcon = true
 
   const menuItem = menuItems.map((item) => (
@@ -63,6 +69,7 @@ const NavSmall = ({ menuItems, changeNav }) => {
           <Logo />
           <AccountIcons changeNav={changeNav} needCloseIcon={needCloseIcon} />
         </Box>
+
         <StyledNavigationUl>{menuItem}</StyledNavigationUl>
         <SocialIcons changeNav={changeNav} />
       </Box>
@@ -73,19 +80,23 @@ const NavSmall = ({ menuItems, changeNav }) => {
 export default NavSmall
 
 const StyledNavigationUl = styled.ul`
+  //border: green 2px solid;
   padding-bottom: 40px;
+  //text-decoration: none;
 `
 
 const StyledNavigationLi = styled.li`
-  padding: 20px 0;
-  list-style: none;
+    //border: lightcoral 2px solid;
+    padding: 20px 0;
+   list-style: none;
   cursor: pointer;
   transition: 0.3s;
-
-  :hover p {
+   :hover p {
     ${({ theme }) => css`
+      //color: ${theme.colors.colorSecondary};
       font-weight: ${theme.fontWeights.fontBold};
-      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     `};
+   }
   }
 `

@@ -5,37 +5,39 @@ import Btn from '../../../styles/Btn'
 import Link from '../../../styles/Link'
 import TitleAndText from '../../../styles/TitleAndText'
 
-const ButtonLargeAndLuminous = () => (
-  <Link href={'/contact'}>
-    <WrappButtonLargeAndLuminous>
-      <TitleAndText
-        variant={'title4Uppercase'}
-        color={'colorWhite'}
-        textAlign={'Center'}
-        mb={20}
-      >
-        {' '}
-        do you have questions?
-      </TitleAndText>
-      <TitleAndText
-        variant={'textSmall'}
-        color={'colorPrimary'}
-        textAlign={'Center'}
-      >
-        {' '}
-        Use the FAQ or contact us.{' '}
-      </TitleAndText>
-      <TitleAndText
-        variant={'textSmall'}
-        color={'colorPrimary'}
-        textAlign={'Center'}
-      >
-        {' '}
-        We will answer all your questions{' '}
-      </TitleAndText>
-    </WrappButtonLargeAndLuminous>
-  </Link>
-)
+const ButtonLargeAndLuminous = () => {
+  return (
+    <Link href={`/contact`}>
+      <WrappButtonLargeAndLuminous>
+        <TitleAndText
+          variant={'title4Uppercase'}
+          color={'colorWhite'}
+          textAlign={'Center'}
+          mb={20}
+        >
+          {' '}
+          do you have questions?
+        </TitleAndText>
+        <TitleAndText
+          variant={'textSmall'}
+          color={'colorPrimary'}
+          textAlign={'Center'}
+        >
+          {' '}
+          Use the FAQ or contact us.{' '}
+        </TitleAndText>
+        <TitleAndText
+          variant={'textSmall'}
+          color={'colorPrimary'}
+          textAlign={'Center'}
+        >
+          {' '}
+          We will answer all your questions{' '}
+        </TitleAndText>
+      </WrappButtonLargeAndLuminous>
+    </Link>
+  )
+}
 
 export default ButtonLargeAndLuminous
 

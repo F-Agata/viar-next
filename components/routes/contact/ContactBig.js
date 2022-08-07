@@ -6,15 +6,17 @@ import ContactBigHeader from './ContactBigHeader'
 import ContactBigDescription from './ContactBigDescription'
 import Faq from './faq/Faq'
 
-const ContactBig = () => (
-  <Box
-    position={'relative'}
-    // border={'green 2px solid'}
-  >
-    <ContactBigHeader />
-    <ContactBigDescription />
-    <Faq />
-  </Box>
-)
+const ContactBig = () => {
+  return (
+    <Box
+      position={'relative'}
+      // border={'green 2px solid'}
+    >
+      <ContactBigHeader />
+      <ContactBigDescription />
+      <Faq />
+    </Box>
+  )
+}
 
 export default ContactBig

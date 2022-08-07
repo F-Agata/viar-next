@@ -6,15 +6,17 @@ import AboutUsSmallHeader from './AboutUsSmallHeader'
 import AboutUsSmallDescription from './AboutUsSmallDescription'
 import AboutUsSmallSteps from './AboutUsSmallSteps'
 
-const AboutUsSmall = () => (
-  <Box
-    position={'relative'}
-    // border={'green 2px solid'}
-  >
-    <AboutUsSmallHeader />
-    <AboutUsSmallDescription />
-    <AboutUsSmallSteps />
-  </Box>
-)
+const AboutUsSmall = () => {
+  return (
+    <Box
+      position={'relative'}
+      // border={'green 2px solid'}
+    >
+      <AboutUsSmallHeader />
+      <AboutUsSmallDescription />
+      <AboutUsSmallSteps />
+    </Box>
+  )
+}
 
 export default AboutUsSmall

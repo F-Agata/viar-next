@@ -6,47 +6,49 @@ import Form from './form/Form'
 import Box from '../../../styles/Box'
 import TitleAndText from '../../../styles/TitleAndText'
 
-const ContactSmallDescription = () => (
-  <Box
-    // border={'green 2px solid'}
-    display={'flex'}
-    flexDirection={'column'}
-    justifyContent={'space-between'}
-    alignItems={'strench'}
-    p={'40px 0px'}
-  >
-    <ContactTextPartWithImg />
+const ContactSmallDescription = () => {
+  return (
     <Box
-      // border={'yellow 2px solid'}
+      // border={'green 2px solid'}
       display={'flex'}
       flexDirection={'column'}
-      justifyContent={'center'}
-      alignItems={'center'}
-      position={'relative'}
-      p={'0 20px'}
+      justifyContent={'space-between'}
+      alignItems={'strench'}
+      p={'40px 0px'}
     >
-      <DescriptionPartImg src={'contact/menWithTablet.png'} alt={'photo'} />
-      <BgxBgBorder>
-        <Box
-          display={'flex'}
-          flexDirection={'column'}
-          justifyContent={'center'}
-          alignItems={'center'}
-          p={'0px 20px'}
-        >
-          <TitleAndText
-            variant={'title4Uppercase'}
-            textAlign={'center'}
-            mb={20}
+      <ContactTextPartWithImg />
+      <Box
+        // border={'yellow 2px solid'}
+        display={'flex'}
+        flexDirection={'column'}
+        justifyContent={'center'}
+        alignItems={'center'}
+        position={'relative'}
+        p={'0 20px'}
+      >
+        <DescriptionPartImg src={'contact/menWithTablet.png'} alt={'photo'} />
+        <BgxBgBorder>
+          <Box
+            display={'flex'}
+            flexDirection={'column'}
+            justifyContent={'center'}
+            alignItems={'center'}
+            p={'0px 20px'}
           >
-            Duis a urna purus
-          </TitleAndText>
-          <Form />
-        </Box>
-      </BgxBgBorder>
+            <TitleAndText
+              variant={'title4Uppercase'}
+              textAlign={'center'}
+              mb={20}
+            >
+              Duis a urna purus
+            </TitleAndText>
+            <Form />
+          </Box>
+        </BgxBgBorder>
+      </Box>
     </Box>
-  </Box>
-)
+  )
+}
 
 export default ContactSmallDescription
 

@@ -6,15 +6,17 @@ import AboutUsBigHeader from './AboutUsBigHeader'
 import AboutUsBigDescription from './AboutUsBigDescription'
 import AboutUsBigSteps from './AboutUsBigSteps'
 
-const AboutUsBig = () => (
-  <Box
-    position={'relative'}
-    // border={'green 2px solid'}
-  >
-    <AboutUsBigHeader />
-    <AboutUsBigDescription />
-    <AboutUsBigSteps />
-  </Box>
-)
+const AboutUsBig = () => {
+  return (
+    <Box
+      position={'relative'}
+      // border={'green 2px solid'}
+    >
+      <AboutUsBigHeader />
+      <AboutUsBigDescription />
+      <AboutUsBigSteps />
+    </Box>
+  )
+}
 
 export default AboutUsBig
