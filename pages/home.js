@@ -1,18 +1,17 @@
-import React  from "react";
-import styled, { css } from "styled-components";
-import { useMediaQuery } from 'react-responsive'
+import React from 'react';
+import styled, { css } from 'styled-components';
+import { useMediaQuery } from 'react-responsive';
 
-import HomeSmall from '../components/routes/home/HomeSmall'
-import HomeBig from '../components/routes/home/HomeBig'
+import HomeSmall from '../components/routes/home/HomeSmall';
+import HomeBig from '../components/routes/home/HomeBig';
 
-import Box from "../styles/Box";
-import Btn from "../styles/Btn"
-import Link from "../styles/Link"
-import TitleAndText from  "../styles/TitleAndText"
+import Box from '../styles/Box';
+import Btn from '../styles/Btn';
+import Link from '../styles/Link';
+import TitleAndText from '../styles/TitleAndText';
 
 const Home = () => {
-
-    const modificationPage = useMediaQuery({ query: '(min-width: 768px)'})
+    const modificationPage = useMediaQuery({ query: '(min-width: 768px)' });
 
     return (
         <Box
@@ -22,8 +21,6 @@ const Home = () => {
             {modificationPage && <HomeBig/>}
         </Box>
     );
-}
+};
 
 export default Home;
-
-

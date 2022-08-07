@@ -1,18 +1,15 @@
-import { useState, useEffect } from 'react'
-import '../styles/globals.css'
+import { useState, useEffect } from 'react';
+import '../styles/globals.css';
+import { ThemeProvider } from 'styled-components';
 import theme from '../styles/theme';
-import GlobalStyle from "../styles/GlobalStyle";
-import Box from '../styles/Box'
+import GlobalStyle from '../styles/GlobalStyle';
+import Box from '../styles/Box';
 
+import Navigation from '../components/navigation/Navigation';
 
-import Navigation from "../components/navigation/Navigation";
-
-import {ThemeProvider} from "styled-components";
-import GoToTopOfPage from "../components/GoToTopOfPage";
-
+import GoToTopOfPage from '../components/GoToTopOfPage';
 
 function MyApp({ Component, pageProps }) {
-
   const [showChild, setShowChild] = useState(false);
   useEffect(() => {
     setShowChild(true);
@@ -24,8 +21,8 @@ function MyApp({ Component, pageProps }) {
 
   if (typeof window === 'undefined') {
     return <></>;
-  } else {
-    return (
+  }
+  return (
       <ThemeProvider theme={theme}>
         <GlobalStyle/>
         <Box maxWidth={1440}
@@ -46,8 +43,7 @@ function MyApp({ Component, pageProps }) {
           <GoToTopOfPage/>
         </Box>
       </ThemeProvider>
-    );
-  }
+  );
 }
 
-export default MyApp
+export default MyApp;

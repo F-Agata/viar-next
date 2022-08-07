@@ -1,26 +1,14 @@
+import styled, { css } from 'styled-components';
 
-import styled, { css } from "styled-components";
+import Box from '../styles/Box';
+import Btn from '../styles/Btn';
+import Link from '../styles/Link';
+import TitleAndText from '../styles/TitleAndText';
 
-
-
-
-import Box from "../styles/Box";
-import Btn from "../styles/Btn"
-import Link from "../styles/Link"
-import TitleAndText from  "../styles/TitleAndText"
-
-const Home = () => {
-
-
-    return (
-        <Box pt={100}
-            // border={'green 2px solid'}
-        >
-       offer
-        </Box>
-    );
-}
+const Home = () => (
+    <Box pt={100}>
+        offer
+    </Box>
+);
 
 export default Home;
-
-
