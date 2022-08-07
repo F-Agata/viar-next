@@ -11,8 +11,8 @@ const MoreInfo = () => {
 
   return (
     <Box>
-      {!modificationPage && <MoreInfoSmallSlider/>}
-      {modificationPage && <MoreInfoBigSlider/>}
+      {!modificationPage && <MoreInfoSmallSlider />}
+      {modificationPage && <MoreInfoBigSlider />}
     </Box>
   )
 }

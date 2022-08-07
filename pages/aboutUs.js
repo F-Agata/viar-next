@@ -11,8 +11,8 @@ const AboutUs = () => {
 
   return (
     <Box>
-      {!modificationPage && <AboutUsSmall/>}
-      {modificationPage && <AboutUsBig/>}
+      {!modificationPage && <AboutUsSmall />}
+      {modificationPage && <AboutUsBig />}
     </Box>
   )
 }

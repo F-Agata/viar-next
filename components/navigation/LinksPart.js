@@ -20,9 +20,7 @@ const LinksPart = ({ menuItems }) => {
       justifyContent={'center'}
       alignItems={'center'}
     >
-      <StyledNavigationUl>
-        {menuItem}
-      </StyledNavigationUl>
+      <StyledNavigationUl>{menuItem}</StyledNavigationUl>
     </Box>
   )
 }

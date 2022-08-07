@@ -28,9 +28,9 @@ const GoToTopOfPage = () => {
     <>
       {showArrow ? (
         <WrappGoToTopOfPage onClick={scrollTop}>
-          <BackgraundButtonArrow/>
+          <BackgraundButtonArrow />
           <WrappArrow>
-            <Image src={arrow.src} alt="do góry" layout="fill"/>
+            <Image src={arrow.src} alt="do góry" layout="fill" />
           </WrappArrow>
         </WrappGoToTopOfPage>
       ) : null}

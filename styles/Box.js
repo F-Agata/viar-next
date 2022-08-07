@@ -10,7 +10,7 @@ import {
   shadow,
   position,
   background,
-  typography
+  typography,
 } from 'styled-system'
 
 const Box = styled.div`

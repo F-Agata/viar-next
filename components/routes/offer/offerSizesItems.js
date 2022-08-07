@@ -19,6 +19,6 @@ const offerSizesItems = [
     size: '50x30cm',
     pathPhoto: 'offer/sizes04.png',
   },
-];
+]
 
-export default offerSizesItems;
+export default offerSizesItems

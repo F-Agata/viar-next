@@ -11,17 +11,17 @@ const SocialIcons = ({ changeNav, bigMenu }) => {
     <BoxWrappSocialIcons bigMenu={bigMenu}>
       <Link href={'/#'} onClick={changeNav}>
         <BoxIcon width={40} height={40} bg={'colorBtn2'}>
-          <StyledFaFacebook/>
+          <StyledFaFacebook />
         </BoxIcon>
       </Link>
       <Link href={'/#'} onClick={changeNav}>
         <BoxIcon width={40} height={40} bg={'colorBtn2'} ml={10}>
-          <StyledFaTwitter/>
+          <StyledFaTwitter />
         </BoxIcon>
       </Link>
       <Link href={'/#'} onClick={changeNav}>
         <BoxIcon width={40} height={40} bg={'colorBtn2'} ml={10}>
-          <StyledFaInstagram/>
+          <StyledFaInstagram />
         </BoxIcon>
       </Link>
     </BoxWrappSocialIcons>

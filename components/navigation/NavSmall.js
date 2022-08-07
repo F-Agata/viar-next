@@ -21,48 +21,50 @@ const NavSmall = ({ menuItems, changeNav }) => {
   ))
 
   return (
-    <Box position={'fixed'}
-         top={0}
-         left={0}
-         width={'100%'}
-         height={'100vh'}
-         zIndex={'999'}
+    <Box
+      position={'fixed'}
+      top={0}
+      left={0}
+      width={'100%'}
+      height={'100vh'}
+      zIndex={'999'}
     >
-      <Box onClick={changeNav}
-           position={'fixed'}
-           top={0}
-           left={0}
-           bg={'colorWhite'}
-           opacity={'80%'}
-           width={'100%'}
-           height={'100vh'}
+      <Box
+        onClick={changeNav}
+        position={'fixed'}
+        top={0}
+        left={0}
+        bg={'colorWhite'}
+        opacity={'80%'}
+        width={'100%'}
+        height={'100vh'}
       />
-      <Box position={'fixed'}
-           top={0}
-           left={0}
-           bg={'colorWhite'}
-           width={'100%'}
-           p={'40px'}
-           borderBottom={'1px solid '}
-           borderColor={'colorSecondary'}
-           display={'flex'}
-           flexDirection={'column'}
-           justifyContent={'center'}
-           alignItems={'flex-start'}
+      <Box
+        position={'fixed'}
+        top={0}
+        left={0}
+        bg={'colorWhite'}
+        width={'100%'}
+        p={'40px'}
+        borderBottom={'1px solid '}
+        borderColor={'colorSecondary'}
+        display={'flex'}
+        flexDirection={'column'}
+        justifyContent={'center'}
+        alignItems={'flex-start'}
       >
-        <Box width={'100%'}
-             display={'flex'}
-             justifyContent={'space-between'}
-             alignItems={'center'}
-             pb={40}
+        <Box
+          width={'100%'}
+          display={'flex'}
+          justifyContent={'space-between'}
+          alignItems={'center'}
+          pb={40}
         >
-          <Logo/>
-          <AccountIcons changeNav={changeNav} needCloseIcon={needCloseIcon}/>
+          <Logo />
+          <AccountIcons changeNav={changeNav} needCloseIcon={needCloseIcon} />
         </Box>
-        <StyledNavigationUl>
-          {menuItem}
-        </StyledNavigationUl>
-        <SocialIcons changeNav={changeNav}/>
+        <StyledNavigationUl>{menuItem}</StyledNavigationUl>
+        <SocialIcons changeNav={changeNav} />
       </Box>
     </Box>
   )

@@ -29,35 +29,40 @@ const Btn = styled.button`
       variants: {
         orangeDark: {
           color: 'colorWhite',
-          boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25), 0px 3px rgb(232, 113, 69) ',
+          boxShadow:
+            '0px 4px 4px rgba(0, 0, 0, 0.25), 0px 3px rgb(232, 113, 69) ',
           '&:hover': {
             background: `${theme.colors.colorSecondary}`,
             color: 'colorLight',
-            boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.5), 0px 3px rgb(232, 113, 69) ',
+            boxShadow:
+              '0px 4px 4px rgba(0, 0, 0, 0.5), 0px 3px rgb(232, 113, 69) ',
           },
           '&:active': {
             background: `${theme.colors.colorSecondary}`,
             color: 'colorLight',
-            boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.5), 0px 3px rgb(232, 113, 69) ',
+            boxShadow:
+              '0px 4px 4px rgba(0, 0, 0, 0.5), 0px 3px rgb(232, 113, 69) ',
           },
         },
         orangeLight: {
           color: 'colorWhite',
-          boxShadow: '0px 4px 4px rgba(250, 120, 70, 0.25), 0px 3px rgb(232, 113, 69) ',
+          boxShadow:
+            '0px 4px 4px rgba(250, 120, 70, 0.25), 0px 3px rgb(232, 113, 69) ',
           '&:hover': {
             background: `${theme.colors.colorSecondary}`,
             color: 'colorWhite',
-            boxShadow: '0px 3px rgb(232, 113, 69), rgba(173, 135, 128, 0.5) 0px 30px 60px -12px inset, rgba(232, 113, 69, 0.5) 0px 18px 36px -18px inset',
+            boxShadow:
+              '0px 3px rgb(232, 113, 69), rgba(173, 135, 128, 0.5) 0px 30px 60px -12px inset, rgba(232, 113, 69, 0.5) 0px 18px 36px -18px inset',
           },
           '&:active': {
             background: `${theme.colors.colorSecondary}`,
             color: 'colorWhite',
-            boxShadow: '0px 3px rgb(232, 113, 69), rgba(173, 135, 128, 0.5) 0px 30px 60px -12px inset, rgba(232, 113, 69, 0.5) 0px 18px 36px -18px inset',
+            boxShadow:
+              '0px 3px rgb(232, 113, 69), rgba(173, 135, 128, 0.5) 0px 30px 60px -12px inset, rgba(232, 113, 69, 0.5) 0px 18px 36px -18px inset',
           },
         },
       },
-    })
-  }
+    })}
 `
 
 export default Btn

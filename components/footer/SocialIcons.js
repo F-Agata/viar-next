@@ -13,17 +13,17 @@ const SocialIcons = () => (
     <BoxWrapperSocialIcons>
       <Link href={'/#'}>
         <BoxIcon width={40} height={40} bg={'colorSecondary'} ml={0}>
-          <StyledFaFacebook/>
+          <StyledFaFacebook />
         </BoxIcon>
       </Link>
       <Link href={'/#'}>
         <BoxIcon width={40} height={40} bg={'colorSecondary'} ml={10}>
-        < StyledFaTwitter/>
+          <StyledFaTwitter />
         </BoxIcon>
       </Link>
       <Link href={'/#'}>
         <BoxIcon width={40} height={40} bg={'colorSecondary'} ml={10}>
-          <StyledFaInstagram/>
+          <StyledFaInstagram />
         </BoxIcon>
       </Link>
     </BoxWrapperSocialIcons>

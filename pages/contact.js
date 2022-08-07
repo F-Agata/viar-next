@@ -11,8 +11,8 @@ const Contact = () => {
 
   return (
     <Box>
-      {!modificationPage && <ContactSmall/>}
-      {modificationPage && <ContactBig/>}
+      {!modificationPage && <ContactSmall />}
+      {modificationPage && <ContactBig />}
     </Box>
   )
 }

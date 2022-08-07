@@ -13,20 +13,36 @@ const AccountIcons = ({ needCloseIcon, needOpenIcon, changeNav }) => (
   <Box display={'flex'}>
     <Link href={'/home'}>
       <BoxIcon width={40} height={40} bg={'colorWhite'} ml={10}>
-        <StyledMdOutlineManageAccounts/>
+        <StyledMdOutlineManageAccounts />
       </BoxIcon>
     </Link>
     <Link href={'/home'}>
       <BoxIcon width={40} height={40} bg={'colorSecondary'} ml={10}>
-        <StyledBiCart/>
+        <StyledBiCart />
       </BoxIcon>
     </Link>
-    {needCloseIcon && <BoxIcon onClick={changeNav} width={40} height={40} bg={'colorWhite'} ml={10}>
-      <StyledGrClose/>
-    </BoxIcon>}
-    {needOpenIcon && <BoxIcon onClick={changeNav} width={40} height={40} bg={'colorWhite'} ml={10}>
-      <StyledFaBars/>
-    </BoxIcon>}
+    {needCloseIcon && (
+      <BoxIcon
+        onClick={changeNav}
+        width={40}
+        height={40}
+        bg={'colorWhite'}
+        ml={10}
+      >
+        <StyledGrClose />
+      </BoxIcon>
+    )}
+    {needOpenIcon && (
+      <BoxIcon
+        onClick={changeNav}
+        width={40}
+        height={40}
+        bg={'colorWhite'}
+        ml={10}
+      >
+        <StyledFaBars />
+      </BoxIcon>
+    )}
   </Box>
 )
 

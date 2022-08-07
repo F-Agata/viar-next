@@ -10,7 +10,8 @@ export default {
     colorLight: '#F3E4E1',
   },
   gradients: {
-    gradientBtn: 'linear-gradient(124deg, rgba(252,140,95,1) 0%, rgba(250,120,70,1) 100%)',
+    gradientBtn:
+      'linear-gradient(124deg, rgba(252,140,95,1) 0%, rgba(250,120,70,1) 100%)',
   },
   fontWeights: {
     fontRegular: `300`,
@@ -25,7 +26,6 @@ export default {
     fs6: '18px',
     fs7: '16px',
     fs8: '10px',
-
   },
   lineHeight: {
     lh1: '120%',
@@ -39,5 +39,3 @@ export default {
   },
   breakpoints,
 }
-
-

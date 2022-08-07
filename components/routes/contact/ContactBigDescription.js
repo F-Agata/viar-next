@@ -1,60 +1,65 @@
-import styled, { css } from 'styled-components';
+import styled, { css } from 'styled-components'
 
-import ContactTextPartWithImg from './ContactTextPartWithImg';
-import Form from './form/Form';
+import ContactTextPartWithImg from './ContactTextPartWithImg'
+import Form from './form/Form'
 
-import Box from '../../../styles/Box';
-import TitleAndText from '../../../styles/TitleAndText';
+import Box from '../../../styles/Box'
+import TitleAndText from '../../../styles/TitleAndText'
 
 const ContactBigDescription = () => (
-        <Box display={'flex'}
-              flexDirection={'column'}
-              justifyContent={'center'}
-              alignItems={'center'}
+  <Box
+    display={'flex'}
+    flexDirection={'column'}
+    justifyContent={'center'}
+    alignItems={'center'}
+  >
+    <BoxBg>
+      <ContactTextPartWithImg />
+      <BgxBgBorder>
+        <Box
+          display={'flex'}
+          flexDirection={'column'}
+          justifyContent={'center'}
+          alignItems={'center'}
+          p={'0px 20px'}
         >
-          <BoxBg>
-            <ContactTextPartWithImg/>
-            <BgxBgBorder>
-                    <Box
-                        display={'flex'}
-                        flexDirection={'column'}
-                        justifyContent={'center'}
-                        alignItems={'center'}
-                        p={ '0px 20px'}
-                    >
-                        <TitleAndText variant={'title4Uppercase'} textAlign={'center'} mb={20}>
-                            Duis a urna purus
-                        </TitleAndText>
+          <TitleAndText
+            variant={'title4Uppercase'}
+            textAlign={'center'}
+            mb={20}
+          >
+            Duis a urna purus
+          </TitleAndText>
 
-                        <Form/>
-                    </Box>
-            </BgxBgBorder>
-          </BoxBg>
+          <Form />
         </Box>
-);
+      </BgxBgBorder>
+    </BoxBg>
+  </Box>
+)
 
-export default ContactBigDescription;
+export default ContactBigDescription
 
 const BoxBg = styled(Box)`
-padding-bottom: 30px;
+  padding-bottom: 30px;
   width: 100%;
-    // border: 2px burlywood solid;
+  // border: 2px burlywood solid;
   background-image: url('contact/menWithTablet.png');
   background-repeat: no-repeat;
-   background-size: contain;
-  background-position: center top 200px ;
+  background-size: contain;
+  background-position: center top 200px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
 
   @media (min-width: 1024px) {
-    background-position: center top 100px ;
+    background-position: center top 100px;
   }
-`;
+`
 
 const BgxBgBorder = styled(Box)`
-   width: 688px;
+  width: 688px;
   max-width: 1140px;
   padding: 40px 0;
   margin-top: 40px;
@@ -65,8 +70,8 @@ const BgxBgBorder = styled(Box)`
     border: ${theme.colors.colorWhite} solid 2px;
   `};
   @media (min-width: 1024px) {
-   width: 1000px;
-   margin-top: 40px;
+    width: 1000px;
+    margin-top: 40px;
   }
   @media (min-width: 1140px) {
     width: 1100px;
@@ -75,4 +80,4 @@ const BgxBgBorder = styled(Box)`
   @media (min-width: 1366px) {
     margin-top: 120px;
   }
-`;
+`

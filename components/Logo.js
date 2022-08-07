@@ -6,7 +6,7 @@ import Link from '../styles/Link'
 const Logo = () => (
   <BoxLogo>
     <Link href={'/home'}>
-      <LogoIcon src={'logo.svg'} alt={'logo'}/>
+      <LogoIcon src={'logo.svg'} alt={'logo'} />
     </Link>
   </BoxLogo>
 )

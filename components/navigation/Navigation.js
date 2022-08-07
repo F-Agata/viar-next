@@ -23,17 +23,20 @@ const Navigation = () => {
 
   return (
     <BoxNavigation>
-      <Logo/>
-      {addSocialIcons && <SocialIcons bigMenu/>}
-      {!modificationMenuSize && <AccountIcons changeNav={changeNav} needOpenIcon={needOpenIcon}/>}
-      {modificationMenuSize && <LinksPart menuItems={menuItems}/>}
-      {modificationMenuSize && <AccountIcons/>}
-      {!modificationMenuSize && smallNavIsOpen
-        ? <NavSmall menuItems={menuItems}
-                    setSmallNavIsOpen={setSmallNavIsOpen}
-                    changeNav={changeNav}
-        /> : null
-      }
+      <Logo />
+      {addSocialIcons && <SocialIcons bigMenu />}
+      {!modificationMenuSize && (
+        <AccountIcons changeNav={changeNav} needOpenIcon={needOpenIcon} />
+      )}
+      {modificationMenuSize && <LinksPart menuItems={menuItems} />}
+      {modificationMenuSize && <AccountIcons />}
+      {!modificationMenuSize && smallNavIsOpen ? (
+        <NavSmall
+          menuItems={menuItems}
+          setSmallNavIsOpen={setSmallNavIsOpen}
+          changeNav={changeNav}
+        />
+      ) : null}
     </BoxNavigation>
   )
 }

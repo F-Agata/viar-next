@@ -21,8 +21,7 @@ const Footer = () => (
       justifyContent={{ _: 'flex-start', tablet: 'space-between' }}
       alignItems={{ _: 'center', tablet: 'stretch' }}
     >
-
-      <Logo/>
+      <Logo />
       <Box
         p={'20px 0'}
         display={'flex'}
@@ -36,11 +35,15 @@ const Footer = () => (
           alignItems={'center'}
           p={'10px 0px'}
         >
-          <Box display={'flex'} justifyContent={'center'} alignItems={'center'} mr={10}>
-            <StyledBsTelephone/>
+          <Box
+            display={'flex'}
+            justifyContent={'center'}
+            alignItems={'center'}
+            mr={10}
+          >
+            <StyledBsTelephone />
           </Box>
           <TitleAndText variant={'textSmall'}> + 48 600 500 400</TitleAndText>
-
         </Box>
 
         <Box
@@ -49,10 +52,18 @@ const Footer = () => (
           alignItems={'center'}
           p={'10px 0px'}
         >
-          <Box display={'flex'} justifyContent={'center'} alignItems={'center'} mr={10}>
-            <StyledBiEnvelope/>
+          <Box
+            display={'flex'}
+            justifyContent={'center'}
+            alignItems={'center'}
+            mr={10}
+          >
+            <StyledBiEnvelope />
           </Box>
-          <TitleAndText variant={'textSmall'}> office@viarArtCanvas.com</TitleAndText>
+          <TitleAndText variant={'textSmall'}>
+            {' '}
+            office@viarArtCanvas.com
+          </TitleAndText>
         </Box>
 
         <Box
@@ -61,17 +72,22 @@ const Footer = () => (
           alignItems={'center'}
           p={'10px 0px'}
         >
-          <Box display={'flex'} justifyContent={'center'} alignItems={'center'} mr={10}>
-            <StyledMdOutlineLocationOn/>
+          <Box
+            display={'flex'}
+            justifyContent={'center'}
+            alignItems={'center'}
+            mr={10}
+          >
+            <StyledMdOutlineLocationOn />
           </Box>
-          <TitleAndText variant={'textSmall'}> Riga, Lubanas 65, LV1073
-            Daugavpils, Stacijas 129R,
-            LV5401
+          <TitleAndText variant={'textSmall'}>
+            {' '}
+            Riga, Lubanas 65, LV1073 Daugavpils, Stacijas 129R, LV5401
           </TitleAndText>
         </Box>
       </Box>
       <Box order={{ _: '3', tablet: '2' }}>
-        <SocialIcons/>
+        <SocialIcons />
       </Box>
     </Box>
     <Box
@@ -84,10 +100,22 @@ const Footer = () => (
       justifyContent={{ _: 'flex-start', tablet: 'space-between' }}
       alignItems={{ _: 'center', tablet: 'center' }}
     >
-      <TitleAndText variant={'textSmall'} opacity={'50%'} color={'colorWhite'} mb={20}>© 2022 viarArtCanvas.com
-        <TitleAndTextStyledToTop as="span" variant={'textSmallVery'} opacity={'50%'} color={'colorWhite'}>
+      <TitleAndText
+        variant={'textSmall'}
+        opacity={'50%'}
+        color={'colorWhite'}
+        mb={20}
+      >
+        © 2022 viarArtCanvas.com
+        <TitleAndTextStyledToTop
+          as="span"
+          variant={'textSmallVery'}
+          opacity={'50%'}
+          color={'colorWhite'}
+        >
           ®
-        </TitleAndTextStyledToTop> </TitleAndText>
+        </TitleAndTextStyledToTop>{' '}
+      </TitleAndText>
       <Box
         display={'flex'}
         justifyContent={'space-between'}
@@ -95,10 +123,10 @@ const Footer = () => (
         mb={20}
       >
         <Box>
-          <img src={'footer/visa.png'} alt={'visa'}/>
+          <img src={'footer/visa.png'} alt={'visa'} />
         </Box>
         <Box ml={40}>
-          <img src={'footer/mastercard.png'} alt={'mastercard'}/>
+          <img src={'footer/mastercard.png'} alt={'mastercard'} />
         </Box>
       </Box>
     </Box>

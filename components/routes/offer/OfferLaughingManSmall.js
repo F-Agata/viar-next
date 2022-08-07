@@ -1,105 +1,138 @@
-import styled, { css } from 'styled-components';
+import styled, { css } from 'styled-components'
 
-import Box from '../../../styles/Box';
-import Btn from '../../../styles/Btn';
-import Link from '../../../styles/Link';
-import TitleAndText from '../../../styles/TitleAndText';
+import Box from '../../../styles/Box'
+import Btn from '../../../styles/Btn'
+import Link from '../../../styles/Link'
+import TitleAndText from '../../../styles/TitleAndText'
 
 const OfferLaughingManSmall = () => (
-        <Box
-            // border={'green 2px solid'}
-            width={'100%'}
-            display={'flex'}
-            flexDirection={{ _: 'column', tablet: 'row' }}
-            flexWrap={'wrap'}
-            justifyContent={{ _: 'center', tablet: 'space-between' }}
-            alignItems={{ _: 'center', tablet: 'center' }}
+  <Box
+    // border={'green 2px solid'}
+    width={'100%'}
+    display={'flex'}
+    flexDirection={{ _: 'column', tablet: 'row' }}
+    flexWrap={'wrap'}
+    justifyContent={{ _: 'center', tablet: 'space-between' }}
+    alignItems={{ _: 'center', tablet: 'center' }}
+  >
+    <Box
+      // border={'red 2px solid'}
+      width={{
+        _: '100%',
+        mobileL: '70%',
+        tablet: '40%',
+        tabletL: '40%',
+      }}
+      display={'flex'}
+      flexDirection={'column'}
+      justifyContent={{ _: 'center', tablet: 'flex-start' }}
+      alignItems={{ _: 'center', tablet: 'flex-start' }}
+      p={{
+        _: '40px 20px 80px 20px',
+        tablet: '40px 0px 40px 40px',
+        tabletL: '40px 0px 40px 100px',
+      }}
+      position={'relative'}
+    >
+      <TitleAndText
+        variant={{ _: 'title4Uppercase', tablet: 'title3Uppercase' }}
+        textAlign={{ _: 'center', tablet: 'left' }}
+        color={'colorPrimary'}
+      >
+        Ut molestie nisi -{' '}
+      </TitleAndText>
+      <TitleAndText
+        mb={40}
+        variant={{ _: 'title4Uppercase', tablet: 'title3Uppercase' }}
+        textAlign={{ _: 'center', tablet: 'left' }}
+        color={'colorSecondary'}
+      >
+        per inceptos!{' '}
+      </TitleAndText>
+
+      <TitleAndText
+        mb={40}
+        variant={{ _: 'textMiddle', tablet: 'textLarge' }}
+        textAlign={{ _: 'center', tablet: 'left' }}
+        color={'colorPrimary'}
+      >
+        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+        inceptos himenaeos.
+        <TitleAndText as="span" color={'colorSecondary'}>
+          {' '}
+          Nam eu facilisis eros, at eleifend nisi.{' '}
+        </TitleAndText>
+      </TitleAndText>
+
+      <Box
+        // border={'yellow 2px solid'}
+        width={{ _: '80%', tablet: '60%' }}
+      >
+        <Link href={'/contact'}>
+          <Btn variant="orangeDark" m={'20px 0px 40px 0'} width={'100%'}>
+            {' '}
+            Contact / FAQ
+          </Btn>
+        </Link>
+      </Box>
+
+      <BoxWrappArrow>
+        <ArrowImg src={'arrowTwisting02.png'} alt={'arrow'} />
+      </BoxWrappArrow>
+
+      <BoxWrappGift>
+        <GiftImg src={'gift.png'} alt={'gift'} />
+      </BoxWrappGift>
+
+      <BoxWrappTxt>
+        <TitleAndText
+          variant={'textSmall'}
+          // variant={{_: 'textSmallVery', mobileL: 'textSmall', }}
+          textAlign={'center'}
+          color={'colorSecondary'}
         >
+          Etiam ac{' '}
+        </TitleAndText>
+        <TitleAndText
+          variant={'textSmall'}
+          // variant={{_: 'textSmallVery', mobileL: 'textSmall', }}
+          textAlign={'center'}
+        >
+          {' '}
+          convallis massa
+        </TitleAndText>
+      </BoxWrappTxt>
+    </Box>
 
-            <Box
-                // border={'red 2px solid'}
-                width={{
-                  _: '100%', mobileL: '70%', tablet: '40%', tabletL: '40%',
-                }}
-                display={'flex'}
-                flexDirection={'column'}
-                justifyContent={{ _: 'center', tablet: 'flex-start' }}
-                alignItems={{ _: 'center', tablet: 'flex-start' }}
+    <Box
+      // border={'lightblue 2px solid'}
+      width={{ _: '100%', mobileL: '70%', tablet: '60%' }}
+      alignSelf={'flex-end'}
+      display={'flex'}
+      justifyContent={'center'}
+      alignItems={'flex-end'}
+      position={'relative'}
+    >
+      <BoxGradient />
+      <StyledImg src={'offer/laughingMan.png'} alt={'photo'} />
+    </Box>
 
-                p={{ _: '40px 20px 80px 20px', tablet: '40px 0px 40px 40px', tabletL: '40px 0px 40px 100px' }}
+    {/* <Box */}
+    {/*    // border={'pink 2px solid'} */}
+    {/*    display={'flex'} */}
+    {/*    flexDirection={'column'} */}
+    {/*    justifyContent={'center'} */}
+    {/*    alignItems={'center'} */}
+    {/*    p={{_: '0px 20px', mobileL: '0px 40px', }} */}
 
-                position={'relative'}
-            >
-                <TitleAndText variant={{ _: 'title4Uppercase', tablet: 'title3Uppercase' }} textAlign={{ _: 'center', tablet: 'left' }} color={'colorPrimary'}>
-                    Ut molestie nisi - </TitleAndText>
-                <TitleAndText mb={40} variant={{ _: 'title4Uppercase', tablet: 'title3Uppercase' }} textAlign={{ _: 'center', tablet: 'left' }} color={'colorSecondary'}>
-                    per inceptos!  </TitleAndText>
+    {/* > */}
+    {/*   */}
 
-                <TitleAndText mb={40} variant={{ _: 'textMiddle', tablet: 'textLarge' }} textAlign={{ _: 'center', tablet: 'left' }} color={'colorPrimary'}>
-                    Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-                    <TitleAndText as="span" color={'colorSecondary'}> Nam eu facilisis eros, at eleifend nisi. </TitleAndText>
-                </TitleAndText>
+    {/* </Box> */}
+  </Box>
+)
 
-                <Box
-                    // border={'yellow 2px solid'}
-                    width={{ _: '80%', tablet: '60%' }}
-                >
-                    <Link href={'/contact'}>
-                        <Btn variant="orangeDark" m={'20px 0px 40px 0'} width={'100%'}> Contact / FAQ</Btn>
-                    </Link>
-                </Box>
-
-                <BoxWrappArrow>
-                    <ArrowImg src={'arrowTwisting02.png'} alt={'arrow'} />
-                </BoxWrappArrow>
-
-                <BoxWrappGift>
-                    <GiftImg src={'gift.png'} alt={'gift'} />
-                </BoxWrappGift>
-
-                <BoxWrappTxt>
-                    <TitleAndText
-                        variant={'textSmall'}
-                        // variant={{_: 'textSmallVery', mobileL: 'textSmall', }}
-                        textAlign={'center'}color={'colorSecondary'}>Etiam ac </TitleAndText>
-                    <TitleAndText
-                        variant={'textSmall'}
-                        // variant={{_: 'textSmallVery', mobileL: 'textSmall', }}
-                        textAlign={'center'}> convallis massa</TitleAndText>
-                </BoxWrappTxt>
-
-            </Box>
-
-            <Box
-                    // border={'lightblue 2px solid'}
-                    width={{ _: '100%', mobileL: '70%', tablet: '60%' }}
-                    alignSelf={'flex-end'}
-                    display={'flex'}
-                    justifyContent={'center'}
-                    alignItems={'flex-end'}
-                    position={'relative'}
-            >
-                    <BoxGradient/>
-                    <StyledImg src={'offer/laughingMan.png'} alt={'photo'} />
-            </Box>
-
-            {/* <Box */}
-            {/*    // border={'pink 2px solid'} */}
-            {/*    display={'flex'} */}
-            {/*    flexDirection={'column'} */}
-            {/*    justifyContent={'center'} */}
-            {/*    alignItems={'center'} */}
-            {/*    p={{_: '0px 20px', mobileL: '0px 40px', }} */}
-
-            {/* > */}
-            {/*   */}
-
-            {/* </Box> */}
-
-        </Box>
-);
-
-export default OfferLaughingManSmall;
+export default OfferLaughingManSmall
 
 const BoxGradient = styled(Box)`
   position: absolute;
@@ -116,21 +149,21 @@ const BoxGradient = styled(Box)`
     width: 338px;
     height: 365px;
   }
-`;
+`
 
 const StyledImg = styled.img`
-   //border: 2px solid blueviolet;
+  //border: 2px solid blueviolet;
   //position: relative;
   z-index: 3;
   width: 150%;
   margin-right: -70px;
-   @media (min-width: 568px) {
-     margin-right: 0px;
-   }
-`;
+  @media (min-width: 568px) {
+    margin-right: 0px;
+  }
+`
 
 const BoxWrappArrow = styled(Box)`
-   //border: yellow 2px solid;
+  //border: yellow 2px solid;
   position: absolute;
   width: 22%;
   bottom: 5%;
@@ -156,11 +189,11 @@ const BoxWrappArrow = styled(Box)`
     bottom: 2%;
     left: 46%;
   }
-`;
+`
 
 const ArrowImg = styled.img`
-width: 100%
-`;
+  width: 100%;
+`
 
 const BoxWrappGift = styled(Box)`
   // border: yellow 2px solid;
@@ -185,11 +218,11 @@ const BoxWrappGift = styled(Box)`
     bottom: 6%;
     left: 76%;
   }
-`;
+`
 
 const GiftImg = styled.img`
-  width: 100%
-`;
+  width: 100%;
+`
 const BoxWrappTxt = styled(Box)`
    // border: yellow 2px solid;
   position: absolute;
@@ -213,4 +246,4 @@ const BoxWrappTxt = styled(Box)`
     left: 60%;
   }
   }
-`;
+`

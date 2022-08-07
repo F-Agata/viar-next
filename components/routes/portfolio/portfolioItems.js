@@ -7,6 +7,6 @@ const portfolioItems = [
   'portfolio/slide06.png',
   'portfolio/slide07.png',
   'portfolio/slide08.png',
-];
+]
 
-export default portfolioItems;
+export default portfolioItems

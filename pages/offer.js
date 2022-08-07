@@ -11,8 +11,8 @@ const Offer = () => {
 
   return (
     <Box>
-      {!modificationPage && <OfferSmall/>}
-      {modificationPage && <OfferBig/>}
+      {!modificationPage && <OfferSmall />}
+      {modificationPage && <OfferBig />}
     </Box>
   )
 }

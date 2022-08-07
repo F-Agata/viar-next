@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react'
 
 const useForm = (validationRules, submittedForm) => {
   const [values, setValues] = useState({
@@ -6,53 +6,52 @@ const useForm = (validationRules, submittedForm) => {
     email: '',
     message: '',
     accept: false,
-  });
+  })
 
-  const [errors, setErrors] = useState({});
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errors, setErrors] = useState({})
+  const [isSubmitting, setIsSubmitting] = useState(false)
 
   const handleChange = (e) => {
-    const {
-      type, name, value, checked,
-    } = e.target;
+    const { type, name, value, checked } = e.target
 
     if (type === 'number' || type === 'email' || type === 'textarea') {
       setValues({
         ...values,
         [name]: value,
-      });
+      })
     } else if (type === 'checkbox') {
       setValues({
         ...values,
         [name]: checked,
-      });
+      })
     }
-  };
+  }
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    setErrors(validationRules(values));
-    setIsSubmitting(true);
-  };
+    e.preventDefault()
+    setErrors(validationRules(values))
+    setIsSubmitting(true)
+  }
 
-  useEffect(
-    () => {
-      if (Object.keys(errors).length === 0 && isSubmitting) {
-        submittedForm();
-        setValues({
-          phone: '',
-          email: '',
-          message: '',
-          agreement: false,
-        });
-        setIsSubmitting(false);
-      }
-    },
-  );
+  useEffect(() => {
+    if (Object.keys(errors).length === 0 && isSubmitting) {
+      submittedForm()
+      setValues({
+        phone: '',
+        email: '',
+        message: '',
+        agreement: false,
+      })
+      setIsSubmitting(false)
+    }
+  })
 
   return {
-    values, errors, handleChange, handleSubmit,
-  };
-};
+    values,
+    errors,
+    handleChange,
+    handleSubmit,
+  }
+}
 
-export default useForm;
+export default useForm
