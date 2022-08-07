@@ -1,17 +1,20 @@
-import React from 'react';
-import styled, { css } from 'styled-components';
+import React from 'react'
 
-import Box from '../styles/Box';
-import Btn from '../styles/Btn';
-import Link from '../styles/Link';
-import TitleAndText from '../styles/TitleAndText';
+import Box from '../styles/Box'
+import useBetterMediaQuery from '../hooks/useBetterMediaQuery'
 
-const AboutUs = () => (
-    <Box pt={100}
-        // border={'green 2px solid'}
-    >
-        about us
+import AboutUsSmall from '../components/routes/aboutUs/AboutUsSmall'
+import AboutUsBig from '../components/routes/aboutUs/AboutUsBig'
+
+const AboutUs = () => {
+  const modificationPage = useBetterMediaQuery('(min-width: 768px)')
+
+  return (
+    <Box>
+      {!modificationPage && <AboutUsSmall/>}
+      {modificationPage && <AboutUsBig/>}
     </Box>
-);
+  )
+}
 
-export default AboutUs;
+export default AboutUs

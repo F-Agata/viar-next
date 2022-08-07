@@ -1,14 +1,20 @@
-import styled, { css } from 'styled-components';
+import React from 'react'
 
-import Box from '../styles/Box';
-import Btn from '../styles/Btn';
-import Link from '../styles/Link';
-import TitleAndText from '../styles/TitleAndText';
+import Box from '../styles/Box'
+import useBetterMediaQuery from '../hooks/useBetterMediaQuery'
 
-const Home = () => (
-    <Box pt={100}>
-        offer
+import OfferSmall from '../components/routes/offer/OfferSmall'
+import OfferBig from '../components/routes/offer/OfferBig'
+
+const Offer = () => {
+  const modificationPage = useBetterMediaQuery('(min-width: 768px)')
+
+  return (
+    <Box>
+      {!modificationPage && <OfferSmall/>}
+      {modificationPage && <OfferBig/>}
     </Box>
-);
+  )
+}
 
-export default Home;
+export default Offer

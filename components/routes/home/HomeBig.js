@@ -1,11 +1,16 @@
-import styled, { css } from 'styled-components';
 
-import Box from '../../../styles/Box';
-import Btn from '../../../styles/Btn';
-import Link from '../../../styles/Link';
-import TitleAndText from '../../../styles/TitleAndText';
+import styled, { css } from "styled-components";
 
-const HomeBig = () => (
+
+import Box from "../../../styles/Box";
+import Btn from "../../../styles/Btn"
+import Link from "../../../styles/Link"
+import TitleAndText from "../../../styles/TitleAndText"
+
+const HomeBig = () => {
+
+
+    return (
         <Box
             // border={'green 2px solid'}
             // height={'100vh'}
@@ -15,53 +20,56 @@ const HomeBig = () => (
             alignItems={'strench'}
         >
             <BgxBg>
-              <Box width={'100%'}
+              <Box width={"100%"}
                     maxWidth={1140}
                     p={'0px 20px'}
-                    m={'0 auto'}
+                    m={"0 auto"}
                    display={'flex'}
                    justifyContent={'space-between'}
                    alignItems={'stretch'}
+                  // border={'pink 2px solid'}
+                   pt={{_: '0', tablet: '20px', }}
+
               >
 
                 <Box
-                    width={{ _: '40%', tabletL: '40%', laptopS: '40%' }}
+                    width={{_: '40%', tabletL: '40%', laptopS: '40%' }}
                     // border={'pink 2px solid'}
                     display={'flex'}
                     flexDirection={'column'}
                     justifyContent={'center'}
                     alignItems={'flex-start'}
-                    p={{ _: '100px 20px 20px 20px', tabletL: '100px 20px 20px 20px', laptopS: '100px 20px 20px 20px' }}
+                    p={{_: '100px 20px 20px 20px', tabletL: '100px 20px 20px 20px', laptopS: '100px 20px 20px 20px' }}
 
                 >
-                    <TitleAndText variant={'title3'} textAlign={'left'} m={'10px 0 20px 0'}> <TitleAndText as="span" color={'colorSecondary'}>Lorem ipsum</TitleAndText> dolor sit amet</TitleAndText>
-                    <TitleAndText variant={'textSmallBold'} textAlign={'left'} mb={20}><TitleAndText as="span" color={'colorSecondary'}>Donec luctus tortor</TitleAndText>  consectetur adipiscing elit. Suspendisse massa.                    </TitleAndText>
-                    <TitleAndText variant={'textSmallBold'} textAlign={'left'} mb={20}><TitleAndText as="span" color={'colorSecondary'}>Mauris vel </TitleAndText> nulla vitae odio</TitleAndText>
-                    <TitleAndText variant={'textSmallBold'} textAlign={'left'} mb={20}><TitleAndText as="span" color={'colorSecondary'}>Nunc ac mattis</TitleAndText>  libero, non rhoncus erat. Sed</TitleAndText>
+                    <TitleAndText variant={"title3Uppercase"}  textAlign={'left'} m={"10px 0 20px 0"}> <TitleAndText as="span"   color={'colorSecondary'}>Lorem ipsum</TitleAndText> dolor sit amet</TitleAndText>
+                    <TitleAndText variant={"textSmallBold"}  textAlign={'left'} mb={20}><TitleAndText as="span"  color={'colorSecondary'}>Donec luctus tortor</TitleAndText>  consectetur adipiscing elit. Suspendisse massa.                    </TitleAndText>
+                    <TitleAndText variant={"textSmallBold"}  textAlign={'left'} mb={20}><TitleAndText as="span"   color={'colorSecondary'}>Mauris vel </TitleAndText> nulla vitae odio</TitleAndText>
+                    <TitleAndText variant={"textSmallBold"}  textAlign={'left'} mb={20}><TitleAndText as="span"   color={'colorSecondary'}>Nunc ac mattis</TitleAndText>  libero, non rhoncus erat. Sed</TitleAndText>
                     <Box
                         // border={'yellow 2px solid'}
-                        width={'60%'}
+                        width={"60%"}
                         p={'0 0px'}
                     >
-                        <Link href={'/#'}>
-                            <Btn variant="orangeDark" m={'20px 0px 40px 0'} width={'100%'}> More...</Btn>
+                        <Link href={`/moreInfo`}>
+                            <Btn variant="orangeDark"  m={'20px 0px 40px 0'} width={"100%"}> More...</Btn>
                         </Link>
                     </Box>
                 </Box>
 
                 <Box
-                    width={{ _: '60%', tabletL: '50%', laptopS: '50%' }}
+                    width={{_: '60%', tabletL: '50%', laptopS: '50%' }}
                     // border={'yellow 2px solid'}
                     display={'flex'}
                     justifyContent={'center'}
                     alignItems={'flex-end'}
-                    p={{ _: '200px 0px 48px 0px', tabletL: '120px 0px 43px 0px', laptopS: '120px 0px 45px 0px' }}
+                    p={{_: '200px 0px 48px 0px', tabletL: '120px 0px 43px 0px', laptopS: '120px 0px 45px 0px', }}
                 >
-                    <HeaderImg src={'home/womenWithPaintingBig01.png'} alt={'photo'} />
+                    <HeaderImg src={'home/womenWithPaintingBig01.png'} alt={"photo"} />
                 </Box>
 
                 <BoxWrappOrnament>
-                    <OrnamentImg src={' ornament.png'} alt={'photo'} />
+                    <OrnamentImg src={' ornament.png'} alt={"photo"} />
                     <BoxWrappTextInsideOrnament>
 
                         <TitleAndText
@@ -78,21 +86,22 @@ const HomeBig = () => (
                 </BoxWrappOrnament>
 
                 <BoxWrappArrow>
-                    <ArrowImg src={'arrowTwisting02.png'} alt={'arrow'} />
+                    <ArrowImg src={'arrowTwisting02.png'} alt={"arrow"} />
                 </BoxWrappArrow>
 
                 <BoxWrappGift>
-                    <GiftImg src={'gift.png'} alt={'gift'} />
+                    <GiftImg src={'gift.png'} alt={"gift"} />
                 </BoxWrappGift>
 
                 <BoxWrappTxt>
-                    <TitleAndText variant={'textSmall'} textAlign={'center'}color={'colorSecondary'}>Lorem ipsum</TitleAndText>
+                    <TitleAndText variant={'textSmall'}  textAlign={'center'}color={'colorSecondary'}>Lorem ipsum</TitleAndText>
                     <TitleAndText variant={'textSmall'} textAlign={'center'}> consectetur adipiscing elit</TitleAndText>
                 </BoxWrappTxt>
               </Box>
             </BgxBg>
         </Box>
-);
+    );
+}
 
 export default HomeBig;
 
@@ -112,12 +121,12 @@ const BgxBg = styled(Box)`
   align-items: center;
   
   
-`;
+`
 
 const HeaderImg = styled.img`
    //border: 2px solid blueviolet;
 width: 100%;
- `;
+ `
 
 const BoxWrappArrow = styled(Box)`
    //border: yellow 2px solid;
@@ -135,11 +144,11 @@ const BoxWrappArrow = styled(Box)`
     width: 14%;
     top: 82%;
     left: 28%;
-`;
+`
 
 const ArrowImg = styled.img`
 width: 100%
-`;
+`
 
 const BoxWrappGift = styled(Box)`
   // border: yellow 2px solid;
@@ -157,36 +166,36 @@ const BoxWrappGift = styled(Box)`
    width: 8%;
   top: 50%;
   left: 40%;
-  `;
+  `
 
 const GiftImg = styled.img`
   width: 100%
-`;
+`
 
 const BoxWrappOrnament = styled(Box)`
-  // border: yellow 2px solid;
+   //border: yellow 2px solid;
   position: absolute;
-  width: 18%;
+  width: 20%;
   top: 13%;
-  right: -5%;
+  right: -7%;
   transform: translate(-50%, 0);
   z-index: 2;
   @media (min-width: 1024px) {
     width: 16%;
-    top: 10%;
+    top: 13%;
     right: 38%;
   }
   @media (min-width: 1140px) {
     width: 15%;
-    top: 12%;
+    top: 16%;
     right: -7%;
   }
   @media (min-width: 1366px) {
     width: 15%;
-    top: 12%;
-    right: -3%;
+    top: 14%;
+    right: -2%;
   }
-    `;
+    `
 
 const BoxWrappTextInsideOrnament = styled(Box)`
   width: 80%;
@@ -203,11 +212,11 @@ const BoxWrappTextInsideOrnament = styled(Box)`
     width: 70%;
     top: 18%;
       }
-`;
+`
 
 const OrnamentImg = styled.img`
   width: 100%
-`;
+`
 
 const BoxWrappTxt = styled(Box)`
     //border: yellow 2px solid;
@@ -227,4 +236,4 @@ const BoxWrappTxt = styled(Box)`
     top: 70%;
     left: 40%;
   }
-`;
+`

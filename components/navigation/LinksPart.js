@@ -1,43 +1,41 @@
-import styled, { css } from 'styled-components';
-import { useMediaQuery } from 'react-responsive';
+import styled, { css } from 'styled-components'
 
-import Box from '../../styles/Box';
-import Link from '../../styles/Link';
-import TitleAndText from '../../styles/TitleAndText';
-import Btn from '../../styles/Btn';
+import Box from '../../styles/Box'
+import Link from '../../styles/Link'
+import TitleAndText from '../../styles/TitleAndText'
 
 const LinksPart = ({ menuItems }) => {
-    const menuItem = menuItems.map((item) => (
-          <StyledNavigationLi key={item.id}>
-              <Link href={`/${item.id}`}>
-                  <TitleAndText variant={'textSmall'}> {item.name}</TitleAndText>
-              </Link>
-          </StyledNavigationLi>
-    ));
+  const menuItem = menuItems.map((item) => (
+    <StyledNavigationLi key={item.id}>
+      <Link href={`/${item.id}`}>
+        <TitleAndText variant={'textSmall'}> {item.name}</TitleAndText>
+      </Link>
+    </StyledNavigationLi>
+  ))
 
-    return (
-        <Box
-            flexGrow={'1'}
-            display={'flex'}
-            justifyContent={'center'}
-            alignItems={'center'}
-        >
-            <StyledNavigationUl >
-                {menuItem}
-            </StyledNavigationUl>
-        </Box>
-    );
-};
+  return (
+    <Box
+      flexGrow={'1'}
+      display={'flex'}
+      justifyContent={'center'}
+      alignItems={'center'}
+    >
+      <StyledNavigationUl>
+        {menuItem}
+      </StyledNavigationUl>
+    </Box>
+  )
+}
 
-export default LinksPart;
+export default LinksPart
 
 const StyledNavigationUl = styled.ul`
   display: flex;
   justify-content: flex-end;
   @media (min-width: 1024px) {
-   justify-content: space-between;
+    justify-content: space-between;
   }
-`;
+`
 
 const StyledNavigationLi = styled.li`
   list-style: none;
@@ -45,22 +43,25 @@ const StyledNavigationLi = styled.li`
   padding: 0 10px;
   cursor: pointer;
   transition: 0.3s;
-  :hover  {
+
+  :hover {
     ${({ theme }) => css`
-      font-weight: ${theme.fontWeights.fontBold}; 
-      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      font-weight: ${theme.fontWeights.fontBold};
+      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     `};
   }
+
   :active {
     ${({ theme }) => css`
       font-weight: ${theme.fontWeights.fontBold};
-      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     `};
   }
+
   :focus {
     ${({ theme }) => css`
-      font-weight: ${theme.fontWeights.fontBold}; 
-      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      font-weight: ${theme.fontWeights.fontBold};
+      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     `};
   }
-`;
+`
