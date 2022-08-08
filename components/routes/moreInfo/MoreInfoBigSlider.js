@@ -16,7 +16,7 @@ const MoreInfoBigSlider = () => {
   function handleScrollToSlide01() {
     slide01Ref.current.scrollIntoView({
       behavior: 'smooth',
-      block: 'center',
+      block: 'nearest',
       inline: 'center',
     })
   }
@@ -24,7 +24,7 @@ const MoreInfoBigSlider = () => {
   function handleScrollToSlide02() {
     slide02Ref.current.scrollIntoView({
       behavior: 'smooth',
-      block: 'center',
+      block: 'nearest',
       inline: 'center',
     })
   }
@@ -32,7 +32,7 @@ const MoreInfoBigSlider = () => {
   function handleScrollToSlide03() {
     slide03Ref.current.scrollIntoView({
       behavior: 'smooth',
-      block: 'center',
+      block: 'nearest',
       inline: 'center',
     })
   }
@@ -47,38 +47,40 @@ const MoreInfoBigSlider = () => {
         overflow={'hidden'}
         display="flex"
         flexWrap="nowrap"
-        width={
-          typeof window !== 'undefined' ? `${window.innerWidth}px` : '100%'
-        }
-      >
-        <Box ref={slide01Ref}>
-          <MoreInfoBig01 />
-        </Box>
-        <Box ref={slide02Ref}>
-          <MoreInfoBig02 />
-        </Box>
-        <Box ref={slide03Ref}>
-          <MoreInfoBig03 />
-        </Box>
-      </Box>
-      <Box
-        // border={'orange 2px solid'}
-        // width={`${window.innerWidth}px`}
+          // width={
+          //   typeof window !== 'undefined' ? `${window.innerWidth}px` : '100%'
+          // }
         width={'100%'}
-        height={'100%'}
-        position={'absolute'}
-        zIndex={'10'}
-        top={0}
-        left={0}
       >
-        <SlidersArrowsAndDots
-          handleScrollToSlide01={handleScrollToSlide01}
-          handleScrollToSlide02={handleScrollToSlide02}
-          handleScrollToSlide03={handleScrollToSlide03}
-          // whichSlide
-          // setWhichSlide
-        />
+        <MoreInfoBig01 />
+      {/*  <Box ref={slide01Ref}>*/}
+      {/*    <MoreInfoBig01 />*/}
+      {/*  </Box>*/}
+      {/*  <Box ref={slide02Ref}>*/}
+      {/*    <MoreInfoBig02 />*/}
+      {/*  </Box>*/}
+      {/*  <Box ref={slide03Ref}>*/}
+      {/*    <MoreInfoBig03 />*/}
+      {/*  </Box>*/}
       </Box>
+      {/*<Box*/}
+      {/*  border={'blue 2px solid'}*/}
+      {/*  // width={`${window.innerWidth}px`}*/}
+      {/*  width={'100%'}*/}
+      {/*  height={'100%'}*/}
+      {/*  position={'absolute'}*/}
+      {/*  zIndex={'10'}*/}
+      {/*  top={0}*/}
+      {/*  left={0}*/}
+      {/*>*/}
+      {/*  <SlidersArrowsAndDots*/}
+      {/*    handleScrollToSlide01={handleScrollToSlide01}*/}
+      {/*    handleScrollToSlide02={handleScrollToSlide02}*/}
+      {/*    handleScrollToSlide03={handleScrollToSlide03}*/}
+      {/*    // whichSlide*/}
+      {/*    // setWhichSlide*/}
+      {/*  />*/}
+      {/*</Box>*/}
     </Box>
   )
 }

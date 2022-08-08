@@ -15,7 +15,7 @@ const MoreInfoBig03 = () => {
       display={'flex'}
       flexDirection={'column'}
       justifyContent={'space-between'}
-      alignItems={'strench'}
+      alignItems={'stretch'}
       pb={20}
     >
       <BgxBg>

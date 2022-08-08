@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import styled, { css } from 'styled-components'
+import useBetterMediaQuery from '../../hooks/useBetterMediaQuery'
 import { FaBars } from 'react-icons/fa'
 import { BiCart } from 'react-icons/bi'
 import { MdOutlineManageAccounts } from 'react-icons/md'
@@ -12,7 +13,7 @@ import SocialIcons from './SocialIcons'
 import menuItems from './menuItems'
 import LinksPart from './LinksPart'
 import NavSmall from './NavSmall'
-import useBetterMediaQuery from '../../hooks/useBetterMediaQuery'
+
 
 const Navigation = () => {
   const [smallNavIsOpen, setSmallNavIsOpen] = useState(false)

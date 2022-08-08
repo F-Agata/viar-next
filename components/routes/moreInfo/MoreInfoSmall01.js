@@ -14,9 +14,9 @@ const MoreInfoSmall01 = () => {
       display={'flex'}
       flexDirection={'column'}
       justifyContent={'space-between'}
-      alignItems={'strench'}
-      width={typeof window !== 'undefined' ? `${window.innerWidth}px` : '100%'}
-      // width={'100%'}
+      alignItems={'stretch'}
+      // width={typeof window !== 'undefined' ? `${window.innerWidth}px` : '100%'}
+      width={'100%'}
     >
       <BgxBg>
         <Box

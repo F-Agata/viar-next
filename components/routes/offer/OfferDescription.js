@@ -27,11 +27,7 @@ const OfferDescription = () => {
         display={'flex'}
         flexDirection={{ _: 'column', tablet: 'row' }}
         flexWrap={'wrap'}
-        justifyContent={{
-          _: 'center',
-          tablet: 'space-evenly',
-          tabletL: 'space-evenly',
-        }}
+        justifyContent={{ _: 'center', tablet: 'space-evenly', tabletL: 'space-evenly'}}
         alignItems={{ _: 'center', tablet: 'stretch' }}
         // p={{_: '0',  tabletL: '0px 40px',}}
         mt={40}
@@ -42,11 +38,13 @@ const OfferDescription = () => {
           display={'flex'}
           flexDirection={'column'}
           justifyContent={'center'}
+          // justifyContent={{ _: 'center', tablet: 'stretch' }}
+          // alignItems={{ _: 'center', tablet: 'stretch' }}
           alignItems={'center'}
           p={'20px 0'}
         >
           <TitleAndText
-            variant={{ _: 'title3Uppercase', tablet: 'title4Uppercase' }}
+            variant={{ _: 'title4Uppercase', tablet: 'title3Uppercase' }}
             textAlign={'center'}
           >
             Quisque egestas lorem sit amet
@@ -112,7 +110,7 @@ const OfferDescription = () => {
             variant={{ _: 'title4Uppercase', tablet: 'title3Uppercase' }}
             textAlign={'center'}
           >
-            Nunc vestibulum sodales rhoncus
+            Nunc vestibul sodales rhocus
           </TitleAndText>
           <Box
             // border={'crimson 2px solid'}

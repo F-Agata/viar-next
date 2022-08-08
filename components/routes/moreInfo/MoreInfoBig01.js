@@ -11,11 +11,12 @@ const MoreInfoBig01 = () => {
   return (
     <Box
       // border={'green 2px solid'}
-      width={typeof window !== 'undefined' ? `${window.innerWidth}px` : '100%'}
+      // width={typeof window !== 'undefined' ? `${window.innerWidth}px` : '100%'}
+        width={'100%'}
       display={'flex'}
       flexDirection={'column'}
       justifyContent={'space-between'}
-      alignItems={'strench'}
+      alignItems={'stretch'}
       pb={20}
     >
       <BgxBg>

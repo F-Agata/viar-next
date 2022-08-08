@@ -43,21 +43,35 @@ const MoreInfoSmallSlider = () => {
       position={'relative'}
     >
       <Box
-        // border={'green 2px solid'}
+        // border={'crimson 2px solid'}
         overflow={'hidden'}
         display="flex"
         flexWrap="nowrap"
-        width={
-          typeof window !== 'undefined' ? `${window.innerWidth}px` : '100%'
-        }
+        // width={
+        //   typeof window !== 'undefined' ? `${window.innerWidth}px` : '100%'
+        // }
+        width={'100%'}
       >
-        <Box ref={slide01Ref}>
+        {/*<MoreInfoSmall01 />*/}
+        <Box ref={slide01Ref}
+            border={'green 2px solid'}
+             width={'100%'}
+             overflow={'hidden'}
+            >
           <MoreInfoSmall01 />
         </Box>
-        <Box ref={slide02Ref}>
+        <Box ref={slide02Ref}
+             border={'green 2px solid'}
+             width={'100%'}
+             overflow={'hidden'}
+        >
           <MoreInfoSmall02 />
         </Box>
-        <Box ref={slide03Ref}>
+        <Box ref={slide03Ref}
+             border={'green 2px solid'}
+             width={'100%'}
+             overflow={'hidden'}
+        >
           <MoreInfoSmall03 />
         </Box>
       </Box>
