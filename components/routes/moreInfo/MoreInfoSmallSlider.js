@@ -5,6 +5,7 @@ import MoreInfoSmall01 from './MoreInfoSmall01'
 import MoreInfoSmall02 from './MoreInfoSmall02'
 import MoreInfoSmall03 from './MoreInfoSmall03'
 import Arrow from './Arrow'
+import Dots from './Dots'
 
 import Box from '../../../styles/Box'
 
@@ -72,6 +73,7 @@ const MoreInfoSmallSlider = () => {
       </BoxSliderContent>
       <Arrow direction={"left"} moveSlide={prevSlide} />
       <Arrow direction={"right"} moveSlide={nextSlide} />
+      <Dots  activeIndex={activeIndex} />
     </Box>
   )
 }
