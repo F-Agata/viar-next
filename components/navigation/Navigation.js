@@ -80,12 +80,10 @@ const BoxNavigation = styled(Box)`
   align-items: center;
   max-width: 1440px;
   width: 100%;
-  height: 70px;
-  padding: 10px 20px;
+  padding: 15px 20px;
   margin: 0 auto;
   z-index: 100;
   @media (min-width: 768px) {
-    height: 90px;
     padding: 20px 40px;
   }
 `
