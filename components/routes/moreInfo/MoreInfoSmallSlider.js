@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import styled from 'styled-components'
 
 import MoreInfoSmall01 from './MoreInfoSmall01'
@@ -9,9 +9,52 @@ import Dots from './Dots'
 
 import Box from '../../../styles/Box'
 
+
+
+
+// const getWidth = () => window.innerWidth
+
+
 const MoreInfoSmallSlider = () => {
 
-   const getWidth = () => window.innerWidth
+
+
+  // `${window.innerWidth}px`
+
+    const [getWidth, setGetWidth] = useState(undefined)
+    // const [getWidth, setGetWidth] = useState(null)
+    // const [getWidth, setGetWidth] = useState(`${window.innerWidth}px`)
+
+    //
+    // useEffect(() => {
+    //     window.innerWidth ? console.log(`${window.innerWidth}px`, "`${window.innerWidth}px`") : console.log("nie mam windowa")
+    //     // window.innerWidth ? console.log(typeof window.innerWidth, "typeof window.innerWidth") : console.log("nie mam windowa"),
+    //     console.log(getWidth3,`${getWidth3}px`, "getWidth3")
+    //
+    // },[])
+    //
+
+  const startGetWidth = () => {
+    setGetWidth(window.innerWidth)
+  }
+
+  useEffect(() => {
+    if(typeof window !== undefined)
+             {startGetWidth()}
+     }, []);
+
+  useEffect(() => {
+    if(typeof window !== undefined) {
+      window.addEventListener('resize', startGetWidth())
+    }
+  }, []);
+
+
+
+    useEffect(() => {
+            window.innerWidth ? console.log(getWidth, "getWidth") : console.log("nie mam windowa");},
+        []);
+
 
   const [state, setState] = useState({
     activeIndex: 0,
@@ -34,7 +77,7 @@ const MoreInfoSmallSlider = () => {
     setState({
       ...state,
       activeIndex: activeIndex + 1,
-      translate: (activeIndex + 1) * getWidth()
+      translate: (activeIndex + 1) * getWidth
     })
   }
 
@@ -42,7 +85,7 @@ const MoreInfoSmallSlider = () => {
     if (activeIndex === 0) {
       return setState({
         ...state,
-        translate: (3 - 1) * getWidth(),
+        translate: (3 - 1) * getWidth,
         activeIndex: 3 - 1
       })
     }
@@ -50,7 +93,7 @@ const MoreInfoSmallSlider = () => {
     setState({
       ...state,
       activeIndex: activeIndex - 1,
-      translate: (activeIndex - 1) * getWidth()
+      translate: (activeIndex - 1) * getWidth
     })
   }
 
@@ -61,16 +104,27 @@ const MoreInfoSmallSlider = () => {
       overflow={'hidden'}
       width={'100%'}
     >
-      <BoxSliderContent  translate={translate}
-                         transition={transition}
-                         width={getWidth() * 3}
-                         >
+      {getWidth !== undefined && <BoxSliderContent  translate={translate}
+                                                    transition={transition}
+                                                    width={getWidth * 3}
+      >
 
-          <MoreInfoSmall01 />
-          <MoreInfoSmall02 />
-          <MoreInfoSmall03 />
+        <MoreInfoSmall01 />
+        <MoreInfoSmall02 />
+        <MoreInfoSmall03 />
 
-      </BoxSliderContent>
+      </BoxSliderContent>}
+
+      {/*<BoxSliderContent  translate={translate}*/}
+      {/*                   transition={transition}*/}
+      {/*                   width={getWidth * 3}*/}
+      {/*>*/}
+
+      {/*    <MoreInfoSmall01 />*/}
+      {/*    <MoreInfoSmall02 />*/}
+      {/*    <MoreInfoSmall03 />*/}
+
+      {/*</BoxSliderContent>*/}
       <Arrow direction={"left"} moveSlide={prevSlide} />
       <Arrow direction={"right"} moveSlide={nextSlide} />
       <Dots  activeIndex={activeIndex} />
