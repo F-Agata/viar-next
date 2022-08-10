@@ -9,52 +9,18 @@ import Dots from './Dots'
 
 import Box from '../../../styles/Box'
 
-
-
-
-// const getWidth = () => window.innerWidth
-
-
 const MoreInfoSmallSlider = () => {
 
-
-
-  // `${window.innerWidth}px`
-
-    const [getWidth, setGetWidth] = useState(undefined)
-    // const [getWidth, setGetWidth] = useState(null)
-    // const [getWidth, setGetWidth] = useState(`${window.innerWidth}px`)
-
-    //
-    // useEffect(() => {
-    //     window.innerWidth ? console.log(`${window.innerWidth}px`, "`${window.innerWidth}px`") : console.log("nie mam windowa")
-    //     // window.innerWidth ? console.log(typeof window.innerWidth, "typeof window.innerWidth") : console.log("nie mam windowa"),
-    //     console.log(getWidth3,`${getWidth3}px`, "getWidth3")
-    //
-    // },[])
-    //
-
-  const startGetWidth = () => {
-    setGetWidth(window.innerWidth)
-  }
-
+  const [getWidth, setGetWidth] = useState(0); // default width, detect on server.
+  const handleResize = () => setGetWidth(window.innerWidth);
   useEffect(() => {
-    if(typeof window !== undefined)
-             {startGetWidth()}
-     }, []);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, [handleResize]);
 
-  useEffect(() => {
-    if(typeof window !== undefined) {
-      window.addEventListener('resize', startGetWidth())
-    }
-  }, []);
-
-
-
-    useEffect(() => {
-            window.innerWidth ? console.log(getWidth, "getWidth") : console.log("nie mam windowa");},
-        []);
-
+  useEffect(()=>{
+    setGetWidth(window.innerWidth);
+  }, [])
 
   const [state, setState] = useState({
     activeIndex: 0,
@@ -104,7 +70,7 @@ const MoreInfoSmallSlider = () => {
       overflow={'hidden'}
       width={'100%'}
     >
-      {getWidth !== undefined && <BoxSliderContent  translate={translate}
+      {getWidth !== 0 && <BoxSliderContent  translate={translate}
                                                     transition={transition}
                                                     width={getWidth * 3}
       >
