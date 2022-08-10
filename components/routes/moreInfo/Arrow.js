@@ -13,6 +13,10 @@ import {
 
 const Arrow = ({ direction, whichSlide, setWhichSlide, slide01Ref, slide02Ref, slide03Ref}) => {
 
+  useEffect(()=>{
+    console.log(whichSlide, "whichSlide z Arrow");
+  }, [whichSlide])
+
 
   const moveLeft = () => {
     if (whichSlide === 1) {
@@ -23,14 +27,14 @@ const Arrow = ({ direction, whichSlide, setWhichSlide, slide01Ref, slide02Ref, s
       setWhichSlide(2)
     }
 
-    console.log(whichSlide, 'whichSlide')
+    console.log(whichSlide, 'whichSlide wewnątrz moveLeft')
 
     if (whichSlide === 1) {
-      handleScrollToSlide01(slide01Ref)
+      handleScrollToSlide01(slide03Ref)
     } else if (whichSlide === 2) {
-      handleScrollToSlide02(slide02Ref)
+      handleScrollToSlide02(slide01Ref)
     } else if (whichSlide === 3) {
-      handleScrollToSlide03(slide03Ref)
+      handleScrollToSlide03(slide02Ref)
     }
   }
 
@@ -41,17 +45,16 @@ const Arrow = ({ direction, whichSlide, setWhichSlide, slide01Ref, slide02Ref, s
       setWhichSlide((prevWhichSlide) => prevWhichSlide + 1)
     }
 
-    console.log(whichSlide, 'whichSlide')
+    console.log(whichSlide, 'whichSlide wewnątrz moveRight')
 
     if (whichSlide === 1) {
-      handleScrollToSlide01(slide01Ref)
+      handleScrollToSlide01(slide02Ref)
     } else if (whichSlide === 2) {
-      handleScrollToSlide02(slide02Ref)
+      handleScrollToSlide02(slide03Ref)
     } else if (whichSlide === 3) {
-      handleScrollToSlide03(slide03Ref)
+      handleScrollToSlide03(slide01Ref)
     }
   }
-
 
     return (
             <StyledBoxIconArrowLeftOrRight onClick={direction === 'right' ? moveRight :  moveLeft} direction={direction}>
@@ -75,7 +78,7 @@ const StyledBoxIconArrowLeftOrRight = styled(Box)`
 
   width: 48px;
   height: 48px;
-  position: absolute;
+  position: fixed;
   z-index: 10;
   top: 50%;
   transform: translate(0%, -50%);
@@ -90,7 +93,6 @@ const StyledBoxIconArrowLeftOrRight = styled(Box)`
   :hover {
     ${({ theme }) => css`
       background-color: ${theme.colors.colorWhite};
-  
     `}
   }
   :hover * {

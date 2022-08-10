@@ -25,6 +25,10 @@ const MoreInfo = () => {
     setGetWidth(window.innerWidth);
   }, [])
 
+  useEffect(()=>{
+    console.log(whichSlide, "whichSlide z początku");
+  }, [whichSlide])
+
   return (
     <Box >
       {!modificationPage && <MoreInfoSmallSlider getWidth={getWidth} whichSlide={whichSlide} setWhichSlide={setWhichSlide}/>}

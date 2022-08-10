@@ -43,26 +43,28 @@ const MoreInfoSmallSlider = ({getWidth, whichSlide, setWhichSlide}) => {
   return (
     <Box
       // border={'red 2px solid'}
-      // position={'relative'}
+      overflow={'hidden'}
+      position={'relative'}
     >
       {getWidth !== 0 &&   <Box
-        // border={'green 2px solid'}
+        // border={'pink 2px solid'}
+          overflow={'hidden'}
         display="flex"
         width={getWidth * 3}
 
       >
         <Box ref={slide01Ref}
-            border={'green 2px solid'}
+            // border={'green 2px solid'}
             >
           <MoreInfoSmall01 />
         </Box>
         <Box ref={slide02Ref}
-            border={'green 2px solid'}
+            // border={'green 2px solid'}
         >
           <MoreInfoSmall02 />
         </Box>
         <Box ref={slide03Ref}
-            border={'green 2px solid'}
+            // border={'green 2px solid'}
         >
           <MoreInfoSmall03 />
         </Box>
