@@ -6,29 +6,54 @@ import { BsDot } from 'react-icons/bs'
 
 import Box from '../../../styles/Box'
 
+import {
+    handleScrollToSlide01,
+    handleScrollToSlide02,
+    handleScrollToSlide03
+} from "../../../helpers/helpersMoveSlideInMoreInfo";
 
-const Dots = ({ activeIndex}) => {
+
+const Dots = ({ whichSlide, slide01Ref, slide02Ref, slide03Ref}) => {
+
+    const moveToChoiceSlide = () => {
+        if (active)
+        if (whichSlide === 1) {
+            setWhichSlide(3)
+        } else if (whichSlide === 2) {
+            setWhichSlide(1)
+        } else if (whichSlide === 3) {
+            setWhichSlide(2)
+        }
+
+        if (whichSlide === 1) {
+            handleScrollToSlide01(slide03Ref)
+        } else if (whichSlide === 2) {
+            handleScrollToSlide02(slide01Ref)
+        } else if (whichSlide === 3) {
+            handleScrollToSlide03(slide02Ref)
+        }
+    }
 
 
     return (
            <BoxWrappIconsDots>
                 <StyledBoxIconDot
-                    // onClick={handleScrollToSlide01}
-                    active={activeIndex === 0}
+                    onClick={moveToChoiceSlide}
+                    active={whichSlide === 1}
                 >
                     <StyledBsDot />
                 </StyledBoxIconDot>
 
                <StyledBoxIconDot
-                   // onClick={handleScrollToSlide01}
-                   active={activeIndex === 1}
+                   onClick={moveToChoiceSlide}
+                   active={whichSlide === 2}
                >
                     <StyledBsDot />
                 </StyledBoxIconDot>
 
                <StyledBoxIconDot
-                   // onClick={handleScrollToSlide01}
-                   active={activeIndex === 2}
+                   onClick={moveToChoiceSlide}
+                   active={whichSlide === 3}
                >
                 </StyledBoxIconDot>
             </BoxWrappIconsDots>

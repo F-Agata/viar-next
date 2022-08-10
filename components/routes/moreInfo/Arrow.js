@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import styled, { css } from 'styled-components'
 
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai'
@@ -13,11 +13,6 @@ import {
 
 const Arrow = ({ direction, whichSlide, setWhichSlide, slide01Ref, slide02Ref, slide03Ref}) => {
 
-  useEffect(()=>{
-    console.log(whichSlide, "whichSlide z Arrow");
-  }, [whichSlide])
-
-
   const moveLeft = () => {
     if (whichSlide === 1) {
       setWhichSlide(3)
@@ -26,8 +21,6 @@ const Arrow = ({ direction, whichSlide, setWhichSlide, slide01Ref, slide02Ref, s
     } else if (whichSlide === 3) {
       setWhichSlide(2)
     }
-
-    console.log(whichSlide, 'whichSlide wewnątrz moveLeft')
 
     if (whichSlide === 1) {
       handleScrollToSlide01(slide03Ref)
@@ -44,8 +37,6 @@ const Arrow = ({ direction, whichSlide, setWhichSlide, slide01Ref, slide02Ref, s
     } else {
       setWhichSlide((prevWhichSlide) => prevWhichSlide + 1)
     }
-
-    console.log(whichSlide, 'whichSlide wewnątrz moveRight')
 
     if (whichSlide === 1) {
       handleScrollToSlide01(slide02Ref)
@@ -78,7 +69,7 @@ const StyledBoxIconArrowLeftOrRight = styled(Box)`
 
   width: 48px;
   height: 48px;
-  position: fixed;
+  position: absolute;
   z-index: 10;
   top: 50%;
   transform: translate(0%, -50%);

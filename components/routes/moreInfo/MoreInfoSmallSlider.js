@@ -4,7 +4,6 @@ import styled, { css } from 'styled-components'
 import MoreInfoSmall01 from './MoreInfoSmall01'
 import MoreInfoSmall02 from './MoreInfoSmall02'
 import MoreInfoSmall03 from './MoreInfoSmall03'
-import SlidersArrowsAndDots from './SlidersArrowsAndDots'
 import Arrow from "./Arrow";
 import Dots from "./Dots";
 
@@ -16,30 +15,6 @@ const MoreInfoSmallSlider = ({getWidth, whichSlide, setWhichSlide}) => {
   const slide02Ref = useRef(null)
   const slide03Ref = useRef(null)
 
-  // function handleScrollToSlide01() {
-  //   slide01Ref.current.scrollIntoView({
-  //     behavior: 'smooth',
-  //     block: 'nearest',
-  //     inline: 'center',
-  //   })
-  // }
-  //
-  // function handleScrollToSlide02() {
-  //   slide02Ref.current.scrollIntoView({
-  //     behavior: 'smooth',
-  //     block: 'nearest',
-  //     inline: 'center',
-  //   })
-  // }
-  //
-  // function handleScrollToSlide03() {
-  //   slide03Ref.current.scrollIntoView({
-  //     behavior: 'smooth',
-  //     block: 'nearest',
-  //     inline: 'center',
-  //   })
-  // }
-
   return (
     <Box
       // border={'red 2px solid'}
@@ -47,19 +22,19 @@ const MoreInfoSmallSlider = ({getWidth, whichSlide, setWhichSlide}) => {
       position={'relative'}
     >
       {getWidth !== 0 &&   <Box
-        // border={'pink 2px solid'}
+        border={'red 2px solid'}
           overflow={'hidden'}
         display="flex"
         width={getWidth * 3}
 
       >
         <Box ref={slide01Ref}
-            // border={'green 2px solid'}
+            border={'green 2px solid'}
             >
           <MoreInfoSmall01 />
         </Box>
         <Box ref={slide02Ref}
-            // border={'green 2px solid'}
+            border={'green 2px solid'}
         >
           <MoreInfoSmall02 />
         </Box>
@@ -73,7 +48,7 @@ const MoreInfoSmallSlider = ({getWidth, whichSlide, setWhichSlide}) => {
 
       <Arrow direction={"left"}  whichSlide={whichSlide} setWhichSlide={setWhichSlide} slide01Ref={slide01Ref} slide02Ref={slide02Ref} slide03Ref={slide03Ref}/>
       <Arrow direction={"right"}  whichSlide={whichSlide} setWhichSlide={setWhichSlide} slide01Ref={slide01Ref} slide02Ref={slide02Ref} slide03Ref={slide03Ref}/>
-      {/*<Dots  activeIndex={} />*/}
+      <Dots  whichSlide={whichSlide} slide01Ref={slide01Ref} slide02Ref={slide02Ref} slide03Ref={slide03Ref}/>
     </Box>
   )
 }
