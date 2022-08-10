@@ -8,7 +8,7 @@ import SlidersArrowsAndDots from './SlidersArrowsAndDots'
 
 import Box from '../../../styles/Box'
 
-const MoreInfoSmallSlider = () => {
+const MoreInfoSmallSlider = ({getWidth}) => {
   const slide01Ref = useRef(null)
   const slide02Ref = useRef(null)
   const slide03Ref = useRef(null)
@@ -42,14 +42,11 @@ const MoreInfoSmallSlider = () => {
       // border={'red 2px solid'}
       position={'relative'}
     >
-      <Box
+      {getWidth !== 0 &&   <Box
         // border={'green 2px solid'}
-        overflow={'hidden'}
         display="flex"
-        flexWrap="nowrap"
-        width={
-          typeof window !== 'undefined' ? `${window.innerWidth}px` : '100%'
-        }
+        width={getWidth * 3}
+
       >
         <Box ref={slide01Ref}>
           <MoreInfoSmall01 />
@@ -60,25 +57,26 @@ const MoreInfoSmallSlider = () => {
         <Box ref={slide03Ref}>
           <MoreInfoSmall03 />
         </Box>
-      </Box>
-      <Box
-        // border={'orange 2px solid'}
-        // width={`${window.innerWidth}px`}
-        width={'100%'}
-        height={'100%'}
-        position={'absolute'}
-        zIndex={'10'}
-        top={0}
-        left={0}
-      >
-        <SlidersArrowsAndDots
-          handleScrollToSlide01={handleScrollToSlide01}
-          handleScrollToSlide02={handleScrollToSlide02}
-          handleScrollToSlide03={handleScrollToSlide03}
-          // whichSlide
-          // setWhichSlide
-        />
-      </Box>
+      </Box> }
+
+      {/*<Box*/}
+      {/*  // border={'orange 2px solid'}*/}
+      {/*  // width={`${window.innerWidth}px`}*/}
+      {/*  width={'100%'}*/}
+      {/*  height={'100%'}*/}
+      {/*  position={'absolute'}*/}
+      {/*  zIndex={'10'}*/}
+      {/*  top={0}*/}
+      {/*  left={0}*/}
+      {/*>*/}
+      {/*  <SlidersArrowsAndDots*/}
+      {/*    handleScrollToSlide01={handleScrollToSlide01}*/}
+      {/*    handleScrollToSlide02={handleScrollToSlide02}*/}
+      {/*    handleScrollToSlide03={handleScrollToSlide03}*/}
+      {/*    // whichSlide*/}
+      {/*    // setWhichSlide*/}
+      {/*  />*/}
+      {/*</Box>*/}
     </Box>
   )
 }

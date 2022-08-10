@@ -33,7 +33,7 @@ const StyledBoxIconArrowLeftOrRight = styled(Box)`
   height: 48px;
   position: absolute;
   z-index: 10;
-    top: 50%;
+  top: 50%;
   transform: translate(0%, -50%);
 
   cursor: pointer;
@@ -46,6 +46,7 @@ const StyledBoxIconArrowLeftOrRight = styled(Box)`
   :hover {
     ${({ theme }) => css`
       background-color: ${theme.colors.colorWhite};
+      transform: scale(1.1)
     `}
   }
   :hover * {
@@ -55,8 +56,6 @@ const StyledBoxIconArrowLeftOrRight = styled(Box)`
     `};
   }
 `
-
-
 
 const StyledAiOutlineArrowLeft = styled(AiOutlineArrowLeft)`
   transition: 0.3s;
