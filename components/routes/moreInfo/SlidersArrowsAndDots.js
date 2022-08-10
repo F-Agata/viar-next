@@ -14,43 +14,43 @@ const SlidersArrowsAndDots = ({
 }) => {
   const [whichSlide, setWhichSlide] = useState(1)
 
-  const moveLeft = () => {
-    if (whichSlide === 1) {
-      setWhichSlide(3)
-    } else if (whichSlide === 2) {
-      setWhichSlide(1)
-    } else if (whichSlide === 3) {
-      setWhichSlide(2)
-    }
-
-    console.log(whichSlide, 'whichSlide')
-
-    if (whichSlide === 1) {
-      handleScrollToSlide01()
-    } else if (whichSlide === 2) {
-      handleScrollToSlide02()
-    } else if (whichSlide === 3) {
-      handleScrollToSlide03()
-    }
-  }
-
-  const moveRight = () => {
-    if (whichSlide === 3) {
-      setWhichSlide(1)
-    } else {
-      setWhichSlide((prevWhichSlide) => prevWhichSlide + 1)
-    }
-
-    console.log(whichSlide, 'whichSlide')
-
-    if (whichSlide === 1) {
-      handleScrollToSlide01()
-    } else if (whichSlide === 2) {
-      handleScrollToSlide02()
-    } else if (whichSlide === 3) {
-      handleScrollToSlide03()
-    }
-  }
+  // const moveLeft = () => {
+  //   if (whichSlide === 1) {
+  //     setWhichSlide(3)
+  //   } else if (whichSlide === 2) {
+  //     setWhichSlide(1)
+  //   } else if (whichSlide === 3) {
+  //     setWhichSlide(2)
+  //   }
+  //
+  //   console.log(whichSlide, 'whichSlide')
+  //
+  //   if (whichSlide === 1) {
+  //     handleScrollToSlide01()
+  //   } else if (whichSlide === 2) {
+  //     handleScrollToSlide02()
+  //   } else if (whichSlide === 3) {
+  //     handleScrollToSlide03()
+  //   }
+  // }
+  //
+  // const moveRight = () => {
+  //   if (whichSlide === 3) {
+  //     setWhichSlide(1)
+  //   } else {
+  //     setWhichSlide((prevWhichSlide) => prevWhichSlide + 1)
+  //   }
+  //
+  //   console.log(whichSlide, 'whichSlide')
+  //
+  //   if (whichSlide === 1) {
+  //     handleScrollToSlide01()
+  //   } else if (whichSlide === 2) {
+  //     handleScrollToSlide02()
+  //   } else if (whichSlide === 3) {
+  //     handleScrollToSlide03()
+  //   }
+  // }
 
   return (
     <Box

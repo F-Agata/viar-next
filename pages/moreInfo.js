@@ -7,9 +7,12 @@ import MoreInfoSmallSlider from '../components/routes/moreInfo/MoreInfoSmallSlid
 import MoreInfoBigSlider from '../components/routes/moreInfo/MoreInfoBigSlider'
 
 const MoreInfo = () => {
+
   const modificationPage = useBetterMediaQuery('(min-width: 768px)')
 
   const [getWidth, setGetWidth] = useState(0);
+
+  const [whichSlide, setWhichSlide] = useState(1)
 
   const handleResize = () => setGetWidth(window.innerWidth);
 
@@ -24,7 +27,7 @@ const MoreInfo = () => {
 
   return (
     <Box >
-      {!modificationPage && <MoreInfoSmallSlider getWidth={getWidth}/>}
+      {!modificationPage && <MoreInfoSmallSlider getWidth={getWidth} whichSlide={whichSlide} setWhichSlide={setWhichSlide}/>}
       {modificationPage && <MoreInfoBigSlider getWidth={getWidth}/>}
     </Box>
   )

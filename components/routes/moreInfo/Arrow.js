@@ -5,12 +5,56 @@ import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai'
 
 import Box from '../../../styles/Box'
 
-const Arrow = ({  direction, moveSlide }) => {
+import {
+  handleScrollToSlide01,
+  handleScrollToSlide02,
+  handleScrollToSlide03
+} from "../../../helpers/helpersMoveSlideInMoreInfo";
 
+const Arrow = ({ direction, whichSlide, setWhichSlide, slide01Ref, slide02Ref, slide03Ref}) => {
+
+
+  const moveLeft = () => {
+    if (whichSlide === 1) {
+      setWhichSlide(3)
+    } else if (whichSlide === 2) {
+      setWhichSlide(1)
+    } else if (whichSlide === 3) {
+      setWhichSlide(2)
+    }
+
+    console.log(whichSlide, 'whichSlide')
+
+    if (whichSlide === 1) {
+      handleScrollToSlide01(slide01Ref)
+    } else if (whichSlide === 2) {
+      handleScrollToSlide02(slide02Ref)
+    } else if (whichSlide === 3) {
+      handleScrollToSlide03(slide03Ref)
+    }
+  }
+
+  const moveRight = () => {
+    if (whichSlide === 3) {
+      setWhichSlide(1)
+    } else {
+      setWhichSlide((prevWhichSlide) => prevWhichSlide + 1)
+    }
+
+    console.log(whichSlide, 'whichSlide')
+
+    if (whichSlide === 1) {
+      handleScrollToSlide01(slide01Ref)
+    } else if (whichSlide === 2) {
+      handleScrollToSlide02(slide02Ref)
+    } else if (whichSlide === 3) {
+      handleScrollToSlide03(slide03Ref)
+    }
+  }
 
 
     return (
-            <StyledBoxIconArrowLeftOrRight onClick={moveSlide} direction={direction}>
+            <StyledBoxIconArrowLeftOrRight onClick={direction === 'right' ? moveRight :  moveLeft} direction={direction}>
                 {direction === 'right' ? <StyledAiOutlineArrowRight /> :  <StyledAiOutlineArrowLeft />}
             </StyledBoxIconArrowLeftOrRight>
     )
@@ -46,7 +90,7 @@ const StyledBoxIconArrowLeftOrRight = styled(Box)`
   :hover {
     ${({ theme }) => css`
       background-color: ${theme.colors.colorWhite};
-      transform: scale(1.1)
+  
     `}
   }
   :hover * {
