@@ -7,7 +7,7 @@ import Btn from '../../../styles/Btn'
 import Link from '../../../styles/Link'
 import TitleAndText from '../../../styles/TitleAndText'
 
-const MoreInfoSmall01 = () => {
+const MoreInfoSmall01 = ({getWidth}) => {
   return (
     <Box
       // border={'green 2px solid'}
@@ -15,7 +15,8 @@ const MoreInfoSmall01 = () => {
       flexDirection={'column'}
       justifyContent={'space-between'}
       alignItems={'strench'}
-      width={typeof window !== 'undefined' ? `${window.innerWidth}px` : '100%'}
+      // width={typeof window !== 'undefined' ? `${window.innerWidth}px` : '100%'}
+      width={getWidth }
       // width={'100%'}
     >
       <BgxBg>

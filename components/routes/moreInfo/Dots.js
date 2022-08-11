@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import styled, { css } from 'styled-components'
 
-
 import { BsDot } from 'react-icons/bs'
 
 import Box from '../../../styles/Box'
@@ -13,63 +12,45 @@ import {
 } from "../../../helpers/helpersMoveSlideInMoreInfo";
 
 
-const Dots = ({ whichSlide, slide01Ref, slide02Ref, slide03Ref}) => {
+const Dots = ({ whichSlide, setWhichSlide, slide01Ref, slide02Ref, slide03Ref}) => {
 
-    const moveToChoiceSlide = () => {
-        if (active)
-        if (whichSlide === 1) {
-            setWhichSlide(3)
-        } else if (whichSlide === 2) {
-            setWhichSlide(1)
-        } else if (whichSlide === 3) {
-            setWhichSlide(2)
-        }
+    const howManyDots = [slide01Ref, slide02Ref, slide03Ref]
+
+    const moveToChoiceSlide = (myChoice, item) => {
+        setWhichSlide(myChoice)
 
         if (whichSlide === 1) {
-            handleScrollToSlide01(slide03Ref)
+            handleScrollToSlide01(item)
         } else if (whichSlide === 2) {
-            handleScrollToSlide02(slide01Ref)
+            handleScrollToSlide02(item)
         } else if (whichSlide === 3) {
-            handleScrollToSlide03(slide02Ref)
+            handleScrollToSlide03(item)
         }
     }
 
+    const singleDot = howManyDots.map((item, index ) => (
+        <StyledBoxIconDot key={`${item} + ${item} * ${item}`}
+            onClick={() => moveToChoiceSlide(index+1, item)}
+            active={whichSlide === item}
+        >
+            <StyledBsDot />
+        </StyledBoxIconDot>
+    ))
 
     return (
            <BoxWrappIconsDots>
-                <StyledBoxIconDot
-                    onClick={moveToChoiceSlide}
-                    active={whichSlide === 1}
-                >
-                    <StyledBsDot />
-                </StyledBoxIconDot>
-
-               <StyledBoxIconDot
-                   onClick={moveToChoiceSlide}
-                   active={whichSlide === 2}
-               >
-                    <StyledBsDot />
-                </StyledBoxIconDot>
-
-               <StyledBoxIconDot
-                   onClick={moveToChoiceSlide}
-                   active={whichSlide === 3}
-               >
-                </StyledBoxIconDot>
-            </BoxWrappIconsDots>
-
+               {singleDot}
+           </BoxWrappIconsDots>
     )
 }
 
 export default Dots
 
-
-
 const BoxWrappIconsDots = styled(Box)`
   //border: 2px solid red;
-  position: absolute;
+  position: fixed;
   z-index: 10;
-  bottom: 0px;
+  bottom: 600px;
   left: 50%;
   transform: translate(-50%, 0%);
   display: flex;

@@ -17,38 +17,38 @@ const MoreInfoSmallSlider = ({getWidth, whichSlide, setWhichSlide}) => {
 
   return (
     <Box
-      // border={'red 2px solid'}
+      border={'red 2px solid'}
       overflow={'hidden'}
       position={'relative'}
     >
       {getWidth !== 0 &&   <Box
-        border={'red 2px solid'}
+        // border={'red 2px solid'}
           overflow={'hidden'}
         display="flex"
         width={getWidth * 3}
 
       >
         <Box ref={slide01Ref}
-            border={'green 2px solid'}
+            // border={'green 2px solid'}
             >
-          <MoreInfoSmall01 />
+          <MoreInfoSmall01 getWidth={getWidth}/>
         </Box>
         <Box ref={slide02Ref}
-            border={'green 2px solid'}
+            // border={'green 2px solid'}
         >
-          <MoreInfoSmall02 />
+          <MoreInfoSmall02 getWidth={getWidth}/>
         </Box>
         <Box ref={slide03Ref}
             // border={'green 2px solid'}
         >
-          <MoreInfoSmall03 />
+          <MoreInfoSmall03 getWidth={getWidth}/>
         </Box>
       </Box>
       }
 
       <Arrow direction={"left"}  whichSlide={whichSlide} setWhichSlide={setWhichSlide} slide01Ref={slide01Ref} slide02Ref={slide02Ref} slide03Ref={slide03Ref}/>
       <Arrow direction={"right"}  whichSlide={whichSlide} setWhichSlide={setWhichSlide} slide01Ref={slide01Ref} slide02Ref={slide02Ref} slide03Ref={slide03Ref}/>
-      <Dots  whichSlide={whichSlide} slide01Ref={slide01Ref} slide02Ref={slide02Ref} slide03Ref={slide03Ref}/>
+      <Dots  whichSlide={whichSlide} setWhichSlide={setWhichSlide} slide01Ref={slide01Ref} slide02Ref={slide02Ref} slide03Ref={slide03Ref}/>
     </Box>
   )
 }

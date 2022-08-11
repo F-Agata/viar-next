@@ -7,7 +7,7 @@ import TitleAndText from '../../../styles/TitleAndText'
 
 import MoreInfoTextPart03 from './MoreInfoTextPart03'
 
-const MoreInfoSmall03 = () => {
+const MoreInfoSmall03 = ({getWidth}) => {
   return (
     <Box
       // border={'green 2px solid'}
@@ -17,7 +17,9 @@ const MoreInfoSmall03 = () => {
       flexDirection={'column'}
       justifyContent={'space-between'}
       alignItems={'strench'}
-      width={typeof window !== 'undefined' ? `${window.innerWidth}px` : '100%'}
+      width={getWidth }
+
+      // width={typeof window !== 'undefined' ? `${window.innerWidth}px` : '100%'}
     >
       <BgxBg>
         <Box
