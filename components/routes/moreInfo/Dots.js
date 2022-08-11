@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import styled, { css } from 'styled-components'
-
 
 import { BsDot } from 'react-icons/bs'
 
@@ -32,9 +31,11 @@ const Dots = ({ whichSlide, setWhichSlide, slide01Ref, slide02Ref, slide03Ref}) 
     const singleDot = howManyDots.map((item, index ) => (
         <StyledBoxIconDot key={`${item} + ${item} * ${item}`}
             onClick={() => moveToChoiceSlide(index+1, item)}
-            active={whichSlide === item}
+            isActive={whichSlide === index+1}
         >
-            <StyledBsDot />
+            <StyledBsDot
+                isActive={whichSlide === index+1}
+            />
         </StyledBoxIconDot>
     ))
 
@@ -74,9 +75,12 @@ const StyledBoxIconDot = styled(Box)`
   height: 20px;
   margin: 0px 20px;
   
-  ${({ theme }) => css`
-    background-color: ${theme.colors.colorSecondary};
+  ${({ theme, isActive }) => css`
+    border: ${theme.colors.colorSecondary} 1px solid;
+    background-color: ${ isActive ? theme.colors.colorWhite : theme.colors.colorSecondary};
+    color: ${ isActive ? theme.colors.colorSecondary : theme.colors.colorWhite };
   `};
+    
   :hover {
     ${({ theme }) => css`
       background-color: ${theme.colors.colorWhite};
@@ -101,10 +105,11 @@ const StyledBoxIconDot = styled(Box)`
 const StyledBsDot = styled(BsDot)`
   transition: 0.3s;
   cursor: pointer;
-  ${({ theme }) => css`
-    background-color: ${theme.colors.colorSecondary};
-    color: ${theme.colors.colorWhite};
+    ${({ theme, isActive }) => css`
+    background-color: ${ isActive ? theme.colors.colorWhite : theme.colors.colorSecondary};
+    color: ${ isActive ? theme.colors.colorSecondary : theme.colors.colorWhite };
   `};
+  
   :hover {
     ${({ theme }) => css`
       background-color: ${theme.colors.colorWhite};
