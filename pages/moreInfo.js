@@ -32,7 +32,7 @@ const MoreInfo = () => {
   return (
     <Box >
       {!modificationPage && <MoreInfoSmallSlider getWidth={getWidth} whichSlide={whichSlide} setWhichSlide={setWhichSlide}/>}
-      {modificationPage && <MoreInfoBigSlider getWidth={getWidth}/>}
+      {modificationPage && <MoreInfoBigSlider getWidth={getWidth} whichSlide={whichSlide} setWhichSlide={setWhichSlide}/>}
     </Box>
   )
 }

@@ -7,11 +7,11 @@ import Btn from '../../../styles/Btn'
 import Link from '../../../styles/Link'
 import TitleAndText from '../../../styles/TitleAndText'
 
-const MoreInfoBig02 = () => {
+const MoreInfoBig02 = ({getWidth}) => {
   return (
     <Box
       // border={'green 2px solid'}
-      width={typeof window !== 'undefined' ? `${window.innerWidth}px` : '100%'}
+        width={getWidth }
       display={'flex'}
       flexDirection={'column'}
       justifyContent={'space-between'}

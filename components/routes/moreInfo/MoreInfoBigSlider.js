@@ -1,85 +1,47 @@
 import { useRef, useState } from 'react'
-import styled, { css } from 'styled-components'
 
 import MoreInfoBig01 from '../moreInfo/MoreInfoBig01'
 import MoreInfoBig02 from '../moreInfo/MoreInfoBig02'
 import MoreInfoBig03 from '../moreInfo/MoreInfoBig03'
-import SlidersArrowsAndDots from './SlidersArrowsAndDots'
 
 import Box from '../../../styles/Box'
+import Arrow from "./Arrow";
+import Dots from "./Dots";
 
-const MoreInfoBigSlider = () => {
+const MoreInfoBigSlider = ({getWidth, whichSlide, setWhichSlide}) => {
   const slide01Ref = useRef(null)
   const slide02Ref = useRef(null)
   const slide03Ref = useRef(null)
 
-  function handleScrollToSlide01() {
-    slide01Ref.current.scrollIntoView({
-      behavior: 'smooth',
-      block: 'center',
-      inline: 'center',
-    })
-  }
-
-  function handleScrollToSlide02() {
-    slide02Ref.current.scrollIntoView({
-      behavior: 'smooth',
-      block: 'center',
-      inline: 'center',
-    })
-  }
-
-  function handleScrollToSlide03() {
-    slide03Ref.current.scrollIntoView({
-      behavior: 'smooth',
-      block: 'center',
-      inline: 'center',
-    })
-  }
-
   return (
-    <Box
-      // border={'red 2px solid'}
-      position={'relative'}
-    >
       <Box
-        // border={'green 2px solid'}
-        overflow={'hidden'}
-        display="flex"
-        flexWrap="nowrap"
-        width={
-          typeof window !== 'undefined' ? `${window.innerWidth}px` : '100%'
-        }
+          border={'red 2px solid'}
+          overflow={'hidden'}
+          position={'relative'}
       >
+        {getWidth !== 0 &&   <Box
+            // border={'red 2px solid'}
+            overflow={'hidden'}
+            display="flex"
+            width={getWidth * 3}
+
+        >
         <Box ref={slide01Ref}>
-          <MoreInfoBig01 />
+          <MoreInfoBig01 getWidth={getWidth} />
         </Box>
         <Box ref={slide02Ref}>
-          <MoreInfoBig02 />
+          <MoreInfoBig02 getWidth={getWidth} />
         </Box>
         <Box ref={slide03Ref}>
-          <MoreInfoBig03 />
+          <MoreInfoBig03 getWidth={getWidth} />
         </Box>
+        </Box>
+        }
+
+        <Arrow direction={"left"}  whichSlide={whichSlide} setWhichSlide={setWhichSlide} slide01Ref={slide01Ref} slide02Ref={slide02Ref} slide03Ref={slide03Ref}/>
+        <Arrow direction={"right"}  whichSlide={whichSlide} setWhichSlide={setWhichSlide} slide01Ref={slide01Ref} slide02Ref={slide02Ref} slide03Ref={slide03Ref}/>
+        <Dots  whichSlide={whichSlide} setWhichSlide={setWhichSlide} slide01Ref={slide01Ref} slide02Ref={slide02Ref} slide03Ref={slide03Ref}/>
       </Box>
-      <Box
-        // border={'orange 2px solid'}
-        // width={`${window.innerWidth}px`}
-        width={'100%'}
-        height={'100%'}
-        position={'absolute'}
-        zIndex={'10'}
-        top={0}
-        left={0}
-      >
-        <SlidersArrowsAndDots
-          handleScrollToSlide01={handleScrollToSlide01}
-          handleScrollToSlide02={handleScrollToSlide02}
-          handleScrollToSlide03={handleScrollToSlide03}
-          // whichSlide
-          // setWhichSlide
-        />
-      </Box>
-    </Box>
   )
 }
 export default MoreInfoBigSlider
