@@ -1,10 +1,18 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 
-import Box from '../styles/Box'
 import useBetterMediaQuery from '../hooks/useBetterMediaQuery'
 
-import MoreInfoSmallSlider from '../components/routes/moreInfo/MoreInfoSmallSlider'
-import MoreInfoBigSlider from '../components/routes/moreInfo/MoreInfoBigSlider'
+import Box from '../styles/Box'
+
+import MoreInfoSmall01 from '../components/routes/moreInfo/MoreInfoSmall01'
+import MoreInfoSmall02 from '../components/routes/moreInfo/MoreInfoSmall02'
+import MoreInfoSmall03 from '../components/routes/moreInfo/MoreInfoSmall03'
+import MoreInfoBig01 from '../components/routes/moreInfo/MoreInfoBig01'
+import MoreInfoBig02 from '../components/routes/moreInfo/MoreInfoBig02'
+import MoreInfoBig03 from '../components/routes/moreInfo/MoreInfoBig03'
+import Arrow from "../components/routes/moreInfo/Arrow";
+import Dots from "../components/routes/moreInfo/Dots";
+
 
 const MoreInfo = () => {
 
@@ -13,6 +21,10 @@ const MoreInfo = () => {
   const [getWidth, setGetWidth] = useState(0);
 
   const [whichSlide, setWhichSlide] = useState(1)
+
+  const slide01Ref = useRef(null)
+  const slide02Ref = useRef(null)
+  const slide03Ref = useRef(null)
 
   const handleResize = () => setGetWidth(window.innerWidth);
 
@@ -30,10 +42,37 @@ const MoreInfo = () => {
   }, [whichSlide])
 
   return (
-    <Box >
-      {!modificationPage && <MoreInfoSmallSlider getWidth={getWidth} whichSlide={whichSlide} setWhichSlide={setWhichSlide}/>}
-      {modificationPage && <MoreInfoBigSlider getWidth={getWidth} whichSlide={whichSlide} setWhichSlide={setWhichSlide}/>}
-    </Box>
+      <Box
+          border={'red 2px solid'}
+          overflow={'hidden'}
+          position={'relative'}
+      >
+        {getWidth !== 0 &&   <Box
+            // border={'red 2px solid'}
+            overflow={'hidden'}
+            display="flex"
+            width={getWidth * 3}
+        >
+          <Box ref={slide01Ref}>
+            {!modificationPage &&   <MoreInfoSmall01 getWidth={getWidth} />}
+            {modificationPage &&   <MoreInfoBig01 getWidth={getWidth} />}
+
+          </Box>
+          <Box ref={slide02Ref}>
+            {!modificationPage &&   <MoreInfoSmall02 getWidth={getWidth} />}
+            {modificationPage &&   <MoreInfoBig02 getWidth={getWidth} />}
+          </Box>
+          <Box ref={slide03Ref}>
+            {!modificationPage &&   <MoreInfoSmall03 getWidth={getWidth} />}
+            {modificationPage &&   <MoreInfoBig03 getWidth={getWidth} />}
+          </Box>
+        </Box>
+        }
+        <Arrow direction={"left"}  whichSlide={whichSlide} setWhichSlide={setWhichSlide} slide01Ref={slide01Ref} slide02Ref={slide02Ref} slide03Ref={slide03Ref}/>
+        <Arrow direction={"right"}  whichSlide={whichSlide} setWhichSlide={setWhichSlide} slide01Ref={slide01Ref} slide02Ref={slide02Ref} slide03Ref={slide03Ref}/>
+        <Dots  whichSlide={whichSlide} setWhichSlide={setWhichSlide} slide01Ref={slide01Ref} slide02Ref={slide02Ref} slide03Ref={slide03Ref}/>
+      </Box>
+
   )
 }
 
