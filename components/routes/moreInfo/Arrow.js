@@ -69,10 +69,11 @@ const StyledBoxIconArrowLeftOrRight = styled(Box)`
 
   width: 48px;
   height: 48px;
-  position: fixed;
+  position: absolute;
   z-index: 10;
-  top: 50%;
-  transform: translate(0%, -50%);
+  top: 40%;
+  
+  //transform: translate(0%, -50%);
 
   cursor: pointer;
   

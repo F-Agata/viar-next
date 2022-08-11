@@ -43,9 +43,13 @@ const MoreInfo = () => {
 
   return (
       <Box
-          border={'red 2px solid'}
-          overflow={'hidden'}
+          // border={'blue 2px solid'}
           position={'relative'}
+      >
+        <Box
+          // border={'red 2px solid'}
+          overflow={'hidden'}
+
       >
         {getWidth !== 0 &&   <Box
             // border={'red 2px solid'}
@@ -56,7 +60,6 @@ const MoreInfo = () => {
           <Box ref={slide01Ref}>
             {!modificationPage &&   <MoreInfoSmall01 getWidth={getWidth} />}
             {modificationPage &&   <MoreInfoBig01 getWidth={getWidth} />}
-
           </Box>
           <Box ref={slide02Ref}>
             {!modificationPage &&   <MoreInfoSmall02 getWidth={getWidth} />}
@@ -68,9 +71,13 @@ const MoreInfo = () => {
           </Box>
         </Box>
         }
-        <Arrow direction={"left"}  whichSlide={whichSlide} setWhichSlide={setWhichSlide} slide01Ref={slide01Ref} slide02Ref={slide02Ref} slide03Ref={slide03Ref}/>
-        <Arrow direction={"right"}  whichSlide={whichSlide} setWhichSlide={setWhichSlide} slide01Ref={slide01Ref} slide02Ref={slide02Ref} slide03Ref={slide03Ref}/>
-        <Dots  whichSlide={whichSlide} setWhichSlide={setWhichSlide} slide01Ref={slide01Ref} slide02Ref={slide02Ref} slide03Ref={slide03Ref}/>
+        {/*<Arrow direction={"left"}  whichSlide={whichSlide} setWhichSlide={setWhichSlide} slide01Ref={slide01Ref} slide02Ref={slide02Ref} slide03Ref={slide03Ref}/>*/}
+        {/*<Arrow direction={"right"}  whichSlide={whichSlide} setWhichSlide={setWhichSlide} slide01Ref={slide01Ref} slide02Ref={slide02Ref} slide03Ref={slide03Ref}/>*/}
+        {/*<Dots  whichSlide={whichSlide} setWhichSlide={setWhichSlide} slide01Ref={slide01Ref} slide02Ref={slide02Ref} slide03Ref={slide03Ref}/>*/}
+        </Box>
+         <Arrow direction={"left"}  whichSlide={whichSlide} setWhichSlide={setWhichSlide} slide01Ref={slide01Ref} slide02Ref={slide02Ref} slide03Ref={slide03Ref}/>
+         <Arrow direction={"right"}  whichSlide={whichSlide} setWhichSlide={setWhichSlide} slide01Ref={slide01Ref} slide02Ref={slide02Ref} slide03Ref={slide03Ref}/>
+         <Dots  whichSlide={whichSlide} setWhichSlide={setWhichSlide} slide01Ref={slide01Ref} slide02Ref={slide02Ref} slide03Ref={slide03Ref}/>
       </Box>
 
   )

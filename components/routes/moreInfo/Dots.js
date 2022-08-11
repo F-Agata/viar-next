@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import styled, { css } from 'styled-components'
 
+
 import { BsDot } from 'react-icons/bs'
 
 import Box from '../../../styles/Box'
@@ -48,9 +49,9 @@ export default Dots
 
 const BoxWrappIconsDots = styled(Box)`
   //border: 2px solid red;
-  position: fixed;
+  position: absolute;
   z-index: 10;
-  bottom: 600px;
+  bottom: 0;
   left: 50%;
   transform: translate(-50%, 0%);
   display: flex;

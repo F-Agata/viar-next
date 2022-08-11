@@ -14,7 +14,7 @@ const MoreInfoSmall01 = ({getWidth}) => {
       display={'flex'}
       flexDirection={'column'}
       justifyContent={'space-between'}
-      alignItems={'strench'}
+      alignItems={'stretch'}
       // width={typeof window !== 'undefined' ? `${window.innerWidth}px` : '100%'}
       width={getWidth }
       // width={'100%'}
