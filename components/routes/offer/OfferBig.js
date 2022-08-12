@@ -7,8 +7,7 @@ import OfferLaughingManSmall from './OfferLaughingManSmall'
 
 const OfferBig = () => {
   return (
-    <Box
-    >
+    <Box>
       <OfferBigHeader />
       <OfferDescription />
       <OfferSizes />

@@ -23,26 +23,23 @@ const OfferLaughingManBig = () => {
           alignItems={'stretch'}
           pt={{ _: '0', tablet: '20px' }}
         >
-                   <Box
+          <Box
             width={{ _: '50%', tabletL: '60%', laptopS: '60%' }}
             position={'relative'}
-                        alignSelf={'flex-end'}
-                       display={'flex'}
+            alignSelf={'flex-end'}
+            display={'flex'}
             justifyContent={'center'}
-                     mt={50}
-                     >
+            mt={50}
+          >
             <BoxWrappOrnament>
               <OrnamentImg src={' ornament.png'} alt={'photo'} />
               <BoxWrappTextInsideOrnament>
-                <TitleAndText
-                  variant={'textSmall'}
-                                 textAlign={'center'}
-                                 >
+                <TitleAndText variant={'textSmall'} textAlign={'center'}>
                   Lorem ipsum
                 </TitleAndText>
                 <TitleAndText
                   variant={'textSmall'}
-                                textAlign={'center'}
+                  textAlign={'center'}
                   color={'colorSecondary'}
                 >
                   {' '}
@@ -85,7 +82,7 @@ export default OfferLaughingManBig
 
 const BgxBg = styled(Box)`
   width: 100%;
-    background-image: url('bg3-sliderBig.png');
+  background-image: url('bg3-sliderBig.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -97,7 +94,7 @@ const BgxBg = styled(Box)`
 `
 
 const HeaderImg = styled.img`
-    width: 460px;
+  width: 460px;
   margin-bottom: 30px;
   @media (min-width: 1024px) {
     width: 100%;
@@ -106,7 +103,7 @@ const HeaderImg = styled.img`
 `
 
 const BoxWrappArrow = styled(Box)`
-    position: absolute;
+  position: absolute;
   width: 14%;
   top: 22%;
   left: 60%;
@@ -142,8 +139,8 @@ const BoxWrappGift = styled(Box)`
     left: 40%;
   }
   @media (min-width: 1140px) {
-      top: 50%;
-      }
+    top: 50%;
+  }
   @media (min-width: 1366px) {
     width: 8%;
     left: 42%;
@@ -155,20 +152,20 @@ const GiftImg = styled.img`
 `
 
 const BoxWrappOrnament = styled(Box)`
-   position: absolute;
+  position: absolute;
   width: 160px;
   top: 10px;
-  right: 0%; 
+  right: 0%;
   z-index: 2;
   @media (min-width: 1024px) {
     top: 60px;
     right: 0%;
   }
-  `
+`
 
 const BoxWrappTextInsideOrnament = styled(Box)`
   width: 80%;
-    position: absolute;
+  position: absolute;
   top: 23%;
   left: 50%;
   transform: translate(-50%, 0);
@@ -183,7 +180,7 @@ const OrnamentImg = styled.img`
 `
 
 const BoxWrappTxt = styled(Box)`
-   position: absolute;
+  position: absolute;
   width: 30%;
   top: 16%;
   left: 56%;

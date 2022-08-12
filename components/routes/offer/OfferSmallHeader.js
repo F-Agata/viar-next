@@ -8,14 +8,14 @@ import OfferTextPartHeader from './OfferTextPartHeader'
 const OfferSmallHeader = () => {
   return (
     <Box
-          display={'flex'}
+      display={'flex'}
       flexDirection={'column'}
       justifyContent={'space-between'}
       alignItems={'strench'}
     >
       <BgxBg>
         <Box
-                 display={'flex'}
+          display={'flex'}
           justifyContent={'center'}
           alignItems={'center'}
           width={'100%'}
@@ -26,10 +26,7 @@ const OfferSmallHeader = () => {
         <BoxWrappOrnament>
           <OrnamentImg src={' ornament.png'} alt={'photo'} />
           <BoxWrappTextInsideOrnament>
-            <TitleAndText
-              variant={'textSmall'}
-              textAlign={'center'}
-            >
+            <TitleAndText variant={'textSmall'} textAlign={'center'}>
               Aenean{' '}
             </TitleAndText>
             <TitleAndText
@@ -59,10 +56,7 @@ const OfferSmallHeader = () => {
           >
             Morbi{' '}
           </TitleAndText>
-          <TitleAndText
-            variant={'textSmall'}
-            textAlign={'center'}
-          >
+          <TitleAndText variant={'textSmall'} textAlign={'center'}>
             {' '}
             vitae risus
           </TitleAndText>

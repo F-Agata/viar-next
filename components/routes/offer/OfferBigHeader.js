@@ -8,7 +8,7 @@ import TitleAndText from '../../../styles/TitleAndText'
 const OfferBigHeader = () => {
   return (
     <Box
-           display={'flex'}
+      display={'flex'}
       flexDirection={'column'}
       justifyContent={'space-between'}
       alignItems={'strench'}
@@ -23,11 +23,11 @@ const OfferBigHeader = () => {
           display={'flex'}
           justifyContent={'space-between'}
           alignItems={'stretch'}
-                   pt={{ _: '0', tablet: '20px' }}
+          pt={{ _: '0', tablet: '20px' }}
         >
           <Box
             width={{ _: '50%', tabletL: '45%', laptopS: '45%' }}
-                        display={'flex'}
+            display={'flex'}
             flexDirection={'column'}
             justifyContent={'center'}
             alignItems={'flex-start'}
@@ -43,23 +43,20 @@ const OfferBigHeader = () => {
           <Box
             width={{ _: '50%', tabletL: '60%', laptopS: '60%' }}
             position={'relative'}
-                   alignSelf={'flex-end'}
-                      display={'flex'}
+            alignSelf={'flex-end'}
+            display={'flex'}
             justifyContent={'center'}
-                  mt={50}
-                  >
+            mt={50}
+          >
             <BoxWrappOrnament>
               <OrnamentImg src={' ornament.png'} alt={'photo'} />
               <BoxWrappTextInsideOrnament>
-                <TitleAndText
-                  variant={'textSmall'}
-                                 textAlign={'center'}
-                               >
+                <TitleAndText variant={'textSmall'} textAlign={'center'}>
                   Morbi
                 </TitleAndText>
                 <TitleAndText
                   variant={'textSmall'}
-                                textAlign={'center'}
+                  textAlign={'center'}
                   color={'colorSecondary'}
                 >
                   {' '}
@@ -102,7 +99,7 @@ export default OfferBigHeader
 
 const BgxBg = styled(Box)`
   width: 100%;
-   background-image: url('bg3-sliderBig.png');
+  background-image: url('bg3-sliderBig.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -114,7 +111,7 @@ const BgxBg = styled(Box)`
 `
 
 const HeaderImg = styled.img`
-   width: 460px;
+  width: 460px;
   margin-bottom: 32px;
   margin-left: -20%;
   @media (min-width: 1024px) {
@@ -127,7 +124,7 @@ const HeaderImg = styled.img`
 `
 
 const BoxWrappArrow = styled(Box)`
-   position: absolute;
+  position: absolute;
   width: 10%;
   top: 28%;
   left: 50%;
@@ -144,7 +141,7 @@ const ArrowImg = styled.img`
 `
 
 const BoxWrappGift = styled(Box)`
-    position: absolute;
+  position: absolute;
   width: 14%;
   top: 10%;
   left: 56%;
@@ -160,7 +157,7 @@ const GiftImg = styled.img`
 `
 
 const BoxWrappOrnament = styled(Box)`
-   position: absolute;
+  position: absolute;
   width: 160px;
   top: -15%;
   right: 0%;
@@ -173,7 +170,7 @@ const BoxWrappOrnament = styled(Box)`
 
 const BoxWrappTextInsideOrnament = styled(Box)`
   width: 80%;
-   position: absolute;
+  position: absolute;
   top: 23%;
   left: 50%;
   transform: translate(-50%, 0);
@@ -188,7 +185,7 @@ const OrnamentImg = styled.img`
 `
 
 const BoxWrappTxt = styled(Box)`
-    position: absolute;
+  position: absolute;
   width: 30%;
   top: 22%;
   left: 38%;

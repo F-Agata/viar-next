@@ -5,27 +5,25 @@ import Box from '../../../styles/Box'
 import TitleAndText from '../../../styles/TitleAndText'
 
 const OfferDescription = () => {
+  const [container1Height, setContainer1Height] = useState(0)
+  const [container2Height, setContainer2Height] = useState(0)
+  const [heightOfTheTallerContainer, setHeightOfTheTallerContainer] =
+    useState(0)
 
-  const [container1Height, setContainer1Height] = useState(0);
-  const [container2Height, setContainer2Height] = useState(0);
-  const [heightOfTheTallerContainer, setHeightOfTheTallerContainer] = useState(0)
+  const container1Ref = useRef(null)
+  const container2Ref = useRef(null)
 
-  const container1Ref = useRef(null);
-  const container2Ref = useRef(null);
-
-  useEffect(()=>{
-    setContainer1Height(container1Ref?.current?.offsetHeight);
-    setContainer2Height(container2Ref?.current?.offsetHeight);
-
+  useEffect(() => {
+    setContainer1Height(container1Ref?.current?.offsetHeight)
+    setContainer2Height(container2Ref?.current?.offsetHeight)
   }, [container1Ref, container1Height, container2Ref, container2Height])
 
-  useEffect( () => {
-      if (container1Height > container2Height) {
-        setHeightOfTheTallerContainer(container1Height)
-      } else {
-        setHeightOfTheTallerContainer(container2Height)
-      }
-
+  useEffect(() => {
+    if (container1Height > container2Height) {
+      setHeightOfTheTallerContainer(container1Height)
+    } else {
+      setHeightOfTheTallerContainer(container2Height)
+    }
   }, [container1Ref, container1Height, container2Ref, container2Height])
 
   return (
@@ -65,19 +63,23 @@ const OfferDescription = () => {
           alignItems={'center'}
           p={'20px 0'}
         >
-                 <Box
-              ref={container1Ref}
-              height={heightOfTheTallerContainer > 0 ? heightOfTheTallerContainer : 'auto'}
+          <Box
+            ref={container1Ref}
+            height={
+              heightOfTheTallerContainer > 0
+                ? heightOfTheTallerContainer
+                : 'auto'
+            }
           >
             <TitleAndText
-                variant={{ _: 'title4Uppercase', tablet: 'title3Uppercase' }}
-                textAlign={'center'}
+              variant={{ _: 'title4Uppercase', tablet: 'title3Uppercase' }}
+              textAlign={'center'}
             >
               Quisque egestas lofem amef
             </TitleAndText>
           </Box>
           <Box
-                      position={'relative'}
+            position={'relative'}
             width={{ _: '350px', tablet: '335px', tabletL: '420px' }}
             height={{ _: '460px', tablet: '440px', tabletL: '550px' }}
           >
@@ -90,7 +92,7 @@ const OfferDescription = () => {
             </BoxWrappPicture>
           </Box>
           <Box
-                    display={'flex'}
+            display={'flex'}
             flexDirection={'column'}
             justifyContent={'space-between'}
             alignItems={'stretch'}
@@ -123,7 +125,7 @@ const OfferDescription = () => {
         </Box>
 
         <Box
-                  width={{ _: '350px', tablet: '335px', tabletL: '420px' }}
+          width={{ _: '350px', tablet: '335px', tabletL: '420px' }}
           display={'flex'}
           flexDirection={'column'}
           justifyContent={'center'}
@@ -131,19 +133,22 @@ const OfferDescription = () => {
           p={'20px 0'}
         >
           <Box
-              ref={container2Ref}
-              height={heightOfTheTallerContainer > 0 ? heightOfTheTallerContainer : 'auto'}
-              >
+            ref={container2Ref}
+            height={
+              heightOfTheTallerContainer > 0
+                ? heightOfTheTallerContainer
+                : 'auto'
+            }
+          >
             <TitleAndText
-                variant={{ _: 'title4Uppercase', tablet: 'title3Uppercase' }}
-                textAlign={'center'}
+              variant={{ _: 'title4Uppercase', tablet: 'title3Uppercase' }}
+              textAlign={'center'}
             >
               Nunc vestibulum sodales rhoncus
             </TitleAndText>
-
           </Box>
           <Box
-                     position={'relative'}
+            position={'relative'}
             width={{ _: '350px', tablet: '335px', tabletL: '420px' }}
             height={{ _: '460px', tablet: '440px', tabletL: '550px' }}
           >
@@ -156,7 +161,7 @@ const OfferDescription = () => {
             </BoxWrappPicture>
           </Box>
           <Box
-                        display={'flex'}
+            display={'flex'}
             flexDirection={'column'}
             justifyContent={'space-between'}
             alignItems={'stretch'}

@@ -8,7 +8,7 @@ import TitleAndText from '../../../styles/TitleAndText'
 const OfferLaughingManSmall = () => {
   return (
     <Box
-          width={'100%'}
+      width={'100%'}
       display={'flex'}
       flexDirection={{ _: 'column', tablet: 'row' }}
       flexWrap={'wrap'}
@@ -16,7 +16,7 @@ const OfferLaughingManSmall = () => {
       alignItems={{ _: 'center', tablet: 'center' }}
     >
       <Box
-             width={{ _: '100%', mobileL: '70%', tablet: '40%', tabletL: '40%' }}
+        width={{ _: '100%', mobileL: '70%', tablet: '40%', tabletL: '40%' }}
         display={'flex'}
         flexDirection={'column'}
         justifyContent={{ _: 'center', tablet: 'flex-start' }}
@@ -58,9 +58,7 @@ const OfferLaughingManSmall = () => {
           </TitleAndText>
         </TitleAndText>
 
-        <Box
-                   width={{ _: '80%', tablet: '60%' }}
-        >
+        <Box width={{ _: '80%', tablet: '60%' }}>
           <Link href={`/contact`}>
             <Btn variant="orangeDark" m={'20px 0px 40px 0'} width={'100%'}>
               {' '}
@@ -80,15 +78,12 @@ const OfferLaughingManSmall = () => {
         <BoxWrappTxt>
           <TitleAndText
             variant={'textSmall'}
-                       textAlign={'center'}
+            textAlign={'center'}
             color={'colorSecondary'}
           >
             Etiam ac{' '}
           </TitleAndText>
-          <TitleAndText
-            variant={'textSmall'}
-                       textAlign={'center'}
-          >
+          <TitleAndText variant={'textSmall'} textAlign={'center'}>
             {' '}
             convallis massa
           </TitleAndText>
@@ -96,7 +91,7 @@ const OfferLaughingManSmall = () => {
       </Box>
 
       <Box
-              width={{ _: '100%', mobileL: '70%', tablet: '60%' }}
+        width={{ _: '100%', mobileL: '70%', tablet: '60%' }}
         alignSelf={'flex-end'}
         display={'flex'}
         justifyContent={'center'}
@@ -106,8 +101,6 @@ const OfferLaughingManSmall = () => {
         <BoxGradient />
         <StyledImg src={'offer/laughingMan.png'} alt={'photo'} />
       </Box>
-
-
     </Box>
   )
 }
@@ -132,7 +125,7 @@ const BoxGradient = styled(Box)`
 `
 
 const StyledImg = styled.img`
-    z-index: 3;
+  z-index: 3;
   width: 150%;
   margin-right: -70px;
   @media (min-width: 568px) {
@@ -141,7 +134,7 @@ const StyledImg = styled.img`
 `
 
 const BoxWrappArrow = styled(Box)`
-   position: absolute;
+  position: absolute;
   width: 22%;
   bottom: 5%;
   left: 14%;
@@ -150,7 +143,7 @@ const BoxWrappArrow = styled(Box)`
     left: 10%;
   }
   @media (min-width: 768px) {
-        bottom: 76%;
+    bottom: 76%;
     left: 100%;
   }
   @media (min-width: 1024px) {
@@ -160,7 +153,6 @@ const BoxWrappArrow = styled(Box)`
   }
   @media (min-width: 1140px) {
     bottom: 2%;
-   
   }
 `
 
@@ -169,13 +161,13 @@ const ArrowImg = styled.img`
 `
 
 const BoxWrappGift = styled(Box)`
-   position: absolute;
+  position: absolute;
   width: 18%;
   bottom: 3%;
   left: 38%;
   z-index: 2;
   @media (min-width: 568px) {
-        left: 34%;
+    left: 34%;
   }
   @media (min-width: 768px) {
     bottom: 82%;

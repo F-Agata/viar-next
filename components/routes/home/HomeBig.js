@@ -7,14 +7,13 @@ import Link from '../../../styles/Link'
 import TitleAndText from '../../../styles/TitleAndText'
 
 const HomeBig = () => {
+  const [containerHeight, setContainerHeight] = useState(0)
 
-  const [containerHeight, setContainerHeight] = useState(0);
+  const containerRef = useRef(null)
 
-  const containerRef = useRef(null);
-
-  useEffect(()=>{
-    setContainerHeight(containerRef?.current?.offsetHeight);
-    console.log('containerHeight', containerHeight);
+  useEffect(() => {
+    setContainerHeight(containerRef?.current?.offsetHeight)
+    console.log('containerHeight', containerHeight)
   }, [containerRef, containerHeight])
 
   return (
