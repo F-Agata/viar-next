@@ -1,5 +1,3 @@
-import styled, { css } from 'styled-components'
-
 import Box from '../../../styles/Box'
 import TitleAndText from '../../../styles/TitleAndText'
 
@@ -8,7 +6,6 @@ import OfferSingleSize from './OfferSingleSize'
 const OfferSizes = () => {
   return (
     <Box
-      // border={'green 2px solid'}
       display={'flex'}
       flexDirection={'column'}
       justifyContent={'center'}

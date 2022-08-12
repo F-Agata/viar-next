@@ -1,8 +1,6 @@
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 
 import Box from '../../../styles/Box'
-import Btn from '../../../styles/Btn'
-import Link from '../../../styles/Link'
 import TitleAndText from '../../../styles/TitleAndText'
 
 import OfferTextPartHeader from './OfferTextPartHeader'
@@ -10,16 +8,14 @@ import OfferTextPartHeader from './OfferTextPartHeader'
 const OfferSmallHeader = () => {
   return (
     <Box
-      // border={'green 2px solid'}
-      display={'flex'}
+          display={'flex'}
       flexDirection={'column'}
       justifyContent={'space-between'}
       alignItems={'strench'}
     >
       <BgxBg>
         <Box
-          // border={'lightblue 2px solid'}
-          display={'flex'}
+                 display={'flex'}
           justifyContent={'center'}
           alignItems={'center'}
           width={'100%'}
@@ -32,15 +28,12 @@ const OfferSmallHeader = () => {
           <BoxWrappTextInsideOrnament>
             <TitleAndText
               variant={'textSmall'}
-              // variant={{_: 'textSmallVery', mobileL: 'textSmall', }}
               textAlign={'center'}
-              // pb={{_: '0', mobileL: '10px', }}
             >
               Aenean{' '}
             </TitleAndText>
             <TitleAndText
               variant={'textSmall'}
-              // variant={{_: 'textSmallVery', mobileL: 'textSmall', }}
               textAlign={'center'}
               color={'colorSecondary'}
             >
@@ -61,7 +54,6 @@ const OfferSmallHeader = () => {
         <BoxWrappTxt>
           <TitleAndText
             variant={'textSmall'}
-            // variant={{_: 'textSmallVery', mobileL: 'textSmall', }}
             textAlign={'center'}
             color={'colorSecondary'}
           >
@@ -69,7 +61,6 @@ const OfferSmallHeader = () => {
           </TitleAndText>
           <TitleAndText
             variant={'textSmall'}
-            // variant={{_: 'textSmallVery', mobileL: 'textSmall', }}
             textAlign={'center'}
           >
             {' '}
@@ -79,7 +70,6 @@ const OfferSmallHeader = () => {
       </BgxBg>
 
       <Box
-        // border={'pink 2px solid'}
         display={'flex'}
         flexDirection={'column'}
         justifyContent={'center'}
@@ -95,7 +85,6 @@ const OfferSmallHeader = () => {
 export default OfferSmallHeader
 
 const BgxBg = styled(Box)`
-  //border: 2px burlywood solid;
   background-image: url('bg3-sliderSmall.png');
   background-repeat: no-repeat;
   background-size: cover;
@@ -109,7 +98,6 @@ const BgxBg = styled(Box)`
 `
 
 const HeaderImg = styled.img`
-  //border: 2px solid blueviolet;
   width: 70%;
   margin-right: -50px;
   @media (min-width: 568px) {
@@ -118,7 +106,6 @@ const HeaderImg = styled.img`
 `
 
 const BoxWrappArrow = styled(Box)`
-  //border: yellow 2px solid;
   position: absolute;
   width: 18%;
   top: 46%;
@@ -136,7 +123,6 @@ const ArrowImg = styled.img`
 `
 
 const BoxWrappGift = styled(Box)`
-  // border: yellow 2px solid;
   position: absolute;
   width: 20%;
   top: 18%;
@@ -153,7 +139,6 @@ const GiftImg = styled.img`
 `
 
 const BoxWrappOrnament = styled(Box)`
-  // border: yellow 2px solid;
   position: absolute;
   width: 36%;
   bottom: 0%;
@@ -167,7 +152,6 @@ const BoxWrappOrnament = styled(Box)`
 
 const BoxWrappTextInsideOrnament = styled(Box)`
   width: 120px;
-  //border: yellow 2px solid;
   position: absolute;
   top: 15%;
   left: 50%;
@@ -183,14 +167,9 @@ const OrnamentImg = styled.img`
 `
 
 const BoxWrappTxt = styled(Box)`
-  //border: yellow 2px solid;
   position: absolute;
   width: 60px;
   top: 32%;
   left: 5%;
   z-index: 2;
-  @media (min-width: 568px) {
-    top: 32%;
-    left: 5%;
-  }
 `

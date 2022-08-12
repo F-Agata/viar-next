@@ -1,14 +1,11 @@
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 
 import Box from '../../../styles/Box'
-import Btn from '../../../styles/Btn'
-import Link from '../../../styles/Link'
 import TitleAndText from '../../../styles/TitleAndText'
 
 const OfferLaughingManBig = () => {
   return (
     <Box
-      // border={'green 2px solid'}
       display={'flex'}
       flexDirection={'column'}
       justifyContent={'space-between'}
@@ -24,49 +21,28 @@ const OfferLaughingManBig = () => {
           display={'flex'}
           justifyContent={'space-between'}
           alignItems={'stretch'}
-          // border={'pink 2px solid'}
           pt={{ _: '0', tablet: '20px' }}
         >
-          {/*<Box*/}
-          {/*    width={{_: '50%', tabletL: '45%', laptopS: '45%' }}*/}
-          {/*    // border={'red 2px solid'}*/}
-          {/*    display={'flex'}*/}
-          {/*    flexDirection={'column'}*/}
-          {/*    justifyContent={'center'}*/}
-          {/*    alignItems={'flex-start'}*/}
-          {/*    p={{_: '120px 20px 20px 0px', tabletL: '120px 20px 20px 20px', laptopS: '100px 20px 20px 20px' }}*/}
-
-          {/*>*/}
-          {/*   */}
-          {/*</Box>*/}
-
-          <Box
+                   <Box
             width={{ _: '50%', tabletL: '60%', laptopS: '60%' }}
             position={'relative'}
-            // border={'olive 2px solid'}
-            alignSelf={'flex-end'}
-            // alignSelf={{_: 'flex-start', tabletL: 'flex-end' }}
-            display={'flex'}
+                        alignSelf={'flex-end'}
+                       display={'flex'}
             justifyContent={'center'}
-            // alignItems={'flex-end'}
-            mt={50}
-            // p={{_: '60px 0px 0 0px', tabletL: '20px 0px 0px 0px', laptopS: '20px 0px 0px 0px', }}
-          >
+                     mt={50}
+                     >
             <BoxWrappOrnament>
               <OrnamentImg src={' ornament.png'} alt={'photo'} />
               <BoxWrappTextInsideOrnament>
                 <TitleAndText
                   variant={'textSmall'}
-                  // variant={{_: 'textSmallVery', tabletL: 'textSmall', }}
-                  textAlign={'center'}
-                  // pb={{_: '0', mobileL: '10px', }}
-                >
+                                 textAlign={'center'}
+                                 >
                   Lorem ipsum
                 </TitleAndText>
                 <TitleAndText
                   variant={'textSmall'}
-                  // variant={{_: 'textSmallVery', tabletL: 'textSmall', }}
-                  textAlign={'center'}
+                                textAlign={'center'}
                   color={'colorSecondary'}
                 >
                   {' '}
@@ -109,8 +85,7 @@ export default OfferLaughingManBig
 
 const BgxBg = styled(Box)`
   width: 100%;
-  //border: 2px burlywood solid;
-  background-image: url('bg3-sliderBig.png');
+    background-image: url('bg3-sliderBig.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -122,10 +97,8 @@ const BgxBg = styled(Box)`
 `
 
 const HeaderImg = styled.img`
-  //border: 2px solid blueviolet;
-  width: 460px;
+    width: 460px;
   margin-bottom: 30px;
-
   @media (min-width: 1024px) {
     width: 100%;
     margin-bottom: 32px;
@@ -133,8 +106,7 @@ const HeaderImg = styled.img`
 `
 
 const BoxWrappArrow = styled(Box)`
-  //border: yellow 2px solid;
-  position: absolute;
+    position: absolute;
   width: 14%;
   top: 22%;
   left: 60%;
@@ -145,13 +117,11 @@ const BoxWrappArrow = styled(Box)`
     left: 30%;
   }
   @media (min-width: 1140px) {
-    width: 16%;
     top: 74%;
     left: 32%;
   }
   @media (min-width: 1366px) {
     width: 12%;
-    top: 74%;
     left: 33%;
   }
 `
@@ -161,12 +131,10 @@ const ArrowImg = styled.img`
 `
 
 const BoxWrappGift = styled(Box)`
-  // border: yellow 2px solid;
   position: absolute;
   width: 14%;
   top: 12%;
   left: 44%;
-  //transform: translate(-50%, 0);
   z-index: 2;
   @media (min-width: 1024px) {
     width: 10%;
@@ -174,14 +142,10 @@ const BoxWrappGift = styled(Box)`
     left: 40%;
   }
   @media (min-width: 1140px) {
-    width: 10%;
-    top: 50%;
-    left: 40%;
-  }
+      top: 50%;
+      }
   @media (min-width: 1366px) {
     width: 8%;
-    top: 50%;
-    top: 50%;
     left: 42%;
   }
 `
@@ -191,33 +155,20 @@ const GiftImg = styled.img`
 `
 
 const BoxWrappOrnament = styled(Box)`
-  //border: yellow 2px solid;
-  position: absolute;
+   position: absolute;
   width: 160px;
   top: 10px;
-  right: 0%;
-  //transform: translate(-50%, 0);
+  right: 0%; 
   z-index: 2;
   @media (min-width: 1024px) {
     top: 60px;
     right: 0%;
   }
-  //@media (min-width: 1140px) {
-  //  width: 15%;
-  //  top: 16%;
-  //  right: -7%;
-  //}
-  //@media (min-width: 1366px) {
-  //  width: 15%;
-  //  top: 14%;
-  //  right: -2%;
-  //}
-`
+  `
 
 const BoxWrappTextInsideOrnament = styled(Box)`
   width: 80%;
-  //border: yellow 2px solid;
-  position: absolute;
+    position: absolute;
   top: 23%;
   left: 50%;
   transform: translate(-50%, 0);
@@ -232,8 +183,7 @@ const OrnamentImg = styled.img`
 `
 
 const BoxWrappTxt = styled(Box)`
-  //border: yellow 2px solid;
-  position: absolute;
+   position: absolute;
   width: 30%;
   top: 16%;
   left: 56%;

@@ -1,5 +1,3 @@
-import styled, { css } from 'styled-components'
-
 import Box from '../../../styles/Box'
 
 import OfferBigHeader from './OfferBigHeader'
@@ -10,7 +8,6 @@ import OfferLaughingManSmall from './OfferLaughingManSmall'
 const OfferBig = () => {
   return (
     <Box
-    // border={'green 2px solid'}
     >
       <OfferBigHeader />
       <OfferDescription />

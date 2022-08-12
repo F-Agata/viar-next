@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 
 import Box from '../../../styles/Box'
 import TitleAndText from '../../../styles/TitleAndText'
@@ -8,8 +8,7 @@ import offerSizesItems from './offerSizesItems'
 const OfferSingleSize = () => {
   return (
     <Box
-      // border={'purple 2px solid'}
-      width={'100%'}
+           width={'100%'}
       display={'flex'}
       flexDirection={{ _: 'column', tablet: 'row' }}
       flexWrap={'wrap'}
@@ -20,8 +19,7 @@ const OfferSingleSize = () => {
       {offerSizesItems.map((item) => (
         <Box
           key={`${item.title}.${item.size}`}
-          // border={'lightgreen 2px solid'}
-          width={{ _: '100%', tablet: '45%', tabletL: '24%' }}
+                    width={{ _: '100%', tablet: '45%', tabletL: '24%' }}
           display={'flex'}
           flexDirection={'column'}
           justifyContent={'center'}
@@ -29,8 +27,7 @@ const OfferSingleSize = () => {
           mb={40}
         >
           <Box
-            // border={'orange 2px solid'}
-            mb={20}
+                     mb={20}
             width={'100%'}
             display={'flex'}
             flexDirection={'column'}
@@ -49,8 +46,7 @@ const OfferSingleSize = () => {
             </TitleAndText>
           </Box>
           <Box
-            // border={'orange 2px solid'}
-            display={'flex'}
+                      display={'flex'}
             justifyContent={'center'}
             alignItems={'center'}
             mb={20}

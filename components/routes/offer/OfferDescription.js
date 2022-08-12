@@ -4,7 +4,6 @@ import styled from 'styled-components'
 import Box from '../../../styles/Box'
 import TitleAndText from '../../../styles/TitleAndText'
 
-
 const OfferDescription = () => {
 
   const [container1Height, setContainer1Height] = useState(0);
@@ -29,10 +28,8 @@ const OfferDescription = () => {
 
   }, [container1Ref, container1Height, container2Ref, container2Height])
 
-
   return (
     <Box
-      // border={'green 2px solid'}
       display={'flex'}
       flexDirection={'column'}
       justifyContent={'center'}
@@ -48,7 +45,6 @@ const OfferDescription = () => {
       </TitleAndText>
 
       <Box
-        // border={'purple 2px solid'}
         width={'100%'}
         display={'flex'}
         flexDirection={{ _: 'column', tablet: 'row' }}
@@ -59,11 +55,9 @@ const OfferDescription = () => {
           tabletL: 'space-evenly',
         }}
         alignItems={{ _: 'center', tablet: 'stretch' }}
-        // p={{_: '0',  tabletL: '0px 40px',}}
         mt={40}
       >
         <Box
-          // border={'green 2px solid'}
           width={{ _: '350px', tablet: '335px', tabletL: '420px' }}
           display={'flex'}
           flexDirection={'column'}
@@ -71,12 +65,7 @@ const OfferDescription = () => {
           alignItems={'center'}
           p={'20px 0'}
         >
-
-
-
-
-          <Box
-              border={' aqua 2px solid'}
+                 <Box
               ref={container1Ref}
               height={heightOfTheTallerContainer > 0 ? heightOfTheTallerContainer : 'auto'}
           >
@@ -84,18 +73,11 @@ const OfferDescription = () => {
                 variant={{ _: 'title4Uppercase', tablet: 'title3Uppercase' }}
                 textAlign={'center'}
             >
-              Quisque egestas lofghfhfhfghrem sfghghfhfghit amefsssssddfdfsdf sfdfgfdgssdsfsdf dsfsdfsdf asfsf
+              Quisque egestas lofem amef
             </TitleAndText>
           </Box>
-
-
-
-
-
-
           <Box
-            // border={'crimson 2px solid'}
-            position={'relative'}
+                      position={'relative'}
             width={{ _: '350px', tablet: '335px', tabletL: '420px' }}
             height={{ _: '460px', tablet: '440px', tabletL: '550px' }}
           >
@@ -108,8 +90,7 @@ const OfferDescription = () => {
             </BoxWrappPicture>
           </Box>
           <Box
-            // border={'crimson 2px solid'}
-            display={'flex'}
+                    display={'flex'}
             flexDirection={'column'}
             justifyContent={'space-between'}
             alignItems={'stretch'}
@@ -142,20 +123,14 @@ const OfferDescription = () => {
         </Box>
 
         <Box
-          // border={'green 2px solid'}
-          width={{ _: '350px', tablet: '335px', tabletL: '420px' }}
+                  width={{ _: '350px', tablet: '335px', tabletL: '420px' }}
           display={'flex'}
           flexDirection={'column'}
           justifyContent={'center'}
           alignItems={'center'}
           p={'20px 0'}
         >
-
-
-
-
           <Box
-              border={' aqua 2px solid'}
               ref={container2Ref}
               height={heightOfTheTallerContainer > 0 ? heightOfTheTallerContainer : 'auto'}
               >
@@ -167,15 +142,8 @@ const OfferDescription = () => {
             </TitleAndText>
 
           </Box>
-
-
-
-
-
-
           <Box
-            // border={'crimson 2px solid'}
-            position={'relative'}
+                     position={'relative'}
             width={{ _: '350px', tablet: '335px', tabletL: '420px' }}
             height={{ _: '460px', tablet: '440px', tabletL: '550px' }}
           >
@@ -188,8 +156,7 @@ const OfferDescription = () => {
             </BoxWrappPicture>
           </Box>
           <Box
-            // border={'crimson 2px solid'}
-            display={'flex'}
+                        display={'flex'}
             flexDirection={'column'}
             justifyContent={'space-between'}
             alignItems={'stretch'}
@@ -239,8 +206,7 @@ const BoxGradient = styled(Box)`
 `
 
 const BoxWrappFrame = styled(Box)`
-  //border: lightcoral 2px solid;
-  position: absolute;
+    position: absolute;
  width: 280px;
   top: 40px;
   left: 0;
@@ -268,7 +234,6 @@ const BoxWrappPicture = styled(Box)`
   @media (min-width: 1024px) {
     width: 420px;
     left: 20px;
-   
 `
 
 const PictureImg = styled.img`

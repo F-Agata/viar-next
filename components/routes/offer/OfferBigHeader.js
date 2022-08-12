@@ -1,17 +1,14 @@
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 
 import OfferTextPartHeader from './OfferTextPartHeader'
 
 import Box from '../../../styles/Box'
-import Btn from '../../../styles/Btn'
-import Link from '../../../styles/Link'
 import TitleAndText from '../../../styles/TitleAndText'
 
 const OfferBigHeader = () => {
   return (
     <Box
-      // border={'green 2px solid'}
-      display={'flex'}
+           display={'flex'}
       flexDirection={'column'}
       justifyContent={'space-between'}
       alignItems={'strench'}
@@ -26,13 +23,11 @@ const OfferBigHeader = () => {
           display={'flex'}
           justifyContent={'space-between'}
           alignItems={'stretch'}
-          // border={'pink 2px solid'}
-          pt={{ _: '0', tablet: '20px' }}
+                   pt={{ _: '0', tablet: '20px' }}
         >
           <Box
             width={{ _: '50%', tabletL: '45%', laptopS: '45%' }}
-            // border={'red 2px solid'}
-            display={'flex'}
+                        display={'flex'}
             flexDirection={'column'}
             justifyContent={'center'}
             alignItems={'flex-start'}
@@ -48,30 +43,23 @@ const OfferBigHeader = () => {
           <Box
             width={{ _: '50%', tabletL: '60%', laptopS: '60%' }}
             position={'relative'}
-            // border={'olive 2px solid'}
-            alignSelf={'flex-end'}
-            // alignSelf={{_: 'flex-start', tabletL: 'flex-end' }}
-            display={'flex'}
+                   alignSelf={'flex-end'}
+                      display={'flex'}
             justifyContent={'center'}
-            // alignItems={'flex-end'}
-            mt={50}
-            // p={{_: '60px 0px 0 0px', tabletL: '20px 0px 0px 0px', laptopS: '20px 0px 0px 0px', }}
-          >
+                  mt={50}
+                  >
             <BoxWrappOrnament>
               <OrnamentImg src={' ornament.png'} alt={'photo'} />
               <BoxWrappTextInsideOrnament>
                 <TitleAndText
                   variant={'textSmall'}
-                  // variant={{_: 'textSmallVery', tabletL: 'textSmall', }}
-                  textAlign={'center'}
-                  // pb={{_: '0', mobileL: '10px', }}
-                >
+                                 textAlign={'center'}
+                               >
                   Morbi
                 </TitleAndText>
                 <TitleAndText
                   variant={'textSmall'}
-                  // variant={{_: 'textSmallVery', tabletL: 'textSmall', }}
-                  textAlign={'center'}
+                                textAlign={'center'}
                   color={'colorSecondary'}
                 >
                   {' '}
@@ -114,8 +102,7 @@ export default OfferBigHeader
 
 const BgxBg = styled(Box)`
   width: 100%;
-  //border: 2px burlywood solid;
-  background-image: url('bg3-sliderBig.png');
+   background-image: url('bg3-sliderBig.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -127,11 +114,9 @@ const BgxBg = styled(Box)`
 `
 
 const HeaderImg = styled.img`
-  //border: 2px solid blueviolet;
-  width: 460px;
+   width: 460px;
   margin-bottom: 32px;
   margin-left: -20%;
-
   @media (min-width: 1024px) {
     width: 100%;
     margin-bottom: 36px;
@@ -142,8 +127,7 @@ const HeaderImg = styled.img`
 `
 
 const BoxWrappArrow = styled(Box)`
-  //border: yellow 2px solid;
-  position: absolute;
+   position: absolute;
   width: 10%;
   top: 28%;
   left: 50%;
@@ -160,8 +144,7 @@ const ArrowImg = styled.img`
 `
 
 const BoxWrappGift = styled(Box)`
-  // border: yellow 2px solid;
-  position: absolute;
+    position: absolute;
   width: 14%;
   top: 10%;
   left: 56%;
@@ -177,8 +160,7 @@ const GiftImg = styled.img`
 `
 
 const BoxWrappOrnament = styled(Box)`
-  //border: yellow 2px solid;
-  position: absolute;
+   position: absolute;
   width: 160px;
   top: -15%;
   right: 0%;
@@ -191,8 +173,7 @@ const BoxWrappOrnament = styled(Box)`
 
 const BoxWrappTextInsideOrnament = styled(Box)`
   width: 80%;
-  //border: yellow 2px solid;
-  position: absolute;
+   position: absolute;
   top: 23%;
   left: 50%;
   transform: translate(-50%, 0);
@@ -207,8 +188,7 @@ const OrnamentImg = styled.img`
 `
 
 const BoxWrappTxt = styled(Box)`
-  //border: yellow 2px solid;
-  position: absolute;
+    position: absolute;
   width: 30%;
   top: 22%;
   left: 38%;

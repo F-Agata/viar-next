@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 
 import Box from '../../../styles/Box'
 import Btn from '../../../styles/Btn'
@@ -8,8 +8,7 @@ import TitleAndText from '../../../styles/TitleAndText'
 const OfferLaughingManSmall = () => {
   return (
     <Box
-      // border={'green 2px solid'}
-      width={'100%'}
+          width={'100%'}
       display={'flex'}
       flexDirection={{ _: 'column', tablet: 'row' }}
       flexWrap={'wrap'}
@@ -17,8 +16,7 @@ const OfferLaughingManSmall = () => {
       alignItems={{ _: 'center', tablet: 'center' }}
     >
       <Box
-        // border={'red 2px solid'}
-        width={{ _: '100%', mobileL: '70%', tablet: '40%', tabletL: '40%' }}
+             width={{ _: '100%', mobileL: '70%', tablet: '40%', tabletL: '40%' }}
         display={'flex'}
         flexDirection={'column'}
         justifyContent={{ _: 'center', tablet: 'flex-start' }}
@@ -61,8 +59,7 @@ const OfferLaughingManSmall = () => {
         </TitleAndText>
 
         <Box
-          // border={'yellow 2px solid'}
-          width={{ _: '80%', tablet: '60%' }}
+                   width={{ _: '80%', tablet: '60%' }}
         >
           <Link href={`/contact`}>
             <Btn variant="orangeDark" m={'20px 0px 40px 0'} width={'100%'}>
@@ -83,16 +80,14 @@ const OfferLaughingManSmall = () => {
         <BoxWrappTxt>
           <TitleAndText
             variant={'textSmall'}
-            // variant={{_: 'textSmallVery', mobileL: 'textSmall', }}
-            textAlign={'center'}
+                       textAlign={'center'}
             color={'colorSecondary'}
           >
             Etiam ac{' '}
           </TitleAndText>
           <TitleAndText
             variant={'textSmall'}
-            // variant={{_: 'textSmallVery', mobileL: 'textSmall', }}
-            textAlign={'center'}
+                       textAlign={'center'}
           >
             {' '}
             convallis massa
@@ -101,8 +96,7 @@ const OfferLaughingManSmall = () => {
       </Box>
 
       <Box
-        // border={'lightblue 2px solid'}
-        width={{ _: '100%', mobileL: '70%', tablet: '60%' }}
+              width={{ _: '100%', mobileL: '70%', tablet: '60%' }}
         alignSelf={'flex-end'}
         display={'flex'}
         justifyContent={'center'}
@@ -113,18 +107,7 @@ const OfferLaughingManSmall = () => {
         <StyledImg src={'offer/laughingMan.png'} alt={'photo'} />
       </Box>
 
-      {/*<Box*/}
-      {/*    // border={'pink 2px solid'}*/}
-      {/*    display={'flex'}*/}
-      {/*    flexDirection={'column'}*/}
-      {/*    justifyContent={'center'}*/}
-      {/*    alignItems={'center'}*/}
-      {/*    p={{_: '0px 20px', mobileL: '0px 40px', }}*/}
 
-      {/*>*/}
-      {/*   */}
-
-      {/*</Box>*/}
     </Box>
   )
 }
@@ -149,9 +132,7 @@ const BoxGradient = styled(Box)`
 `
 
 const StyledImg = styled.img`
-  //border: 2px solid blueviolet;
-  //position: relative;
-  z-index: 3;
+    z-index: 3;
   width: 150%;
   margin-right: -70px;
   @media (min-width: 568px) {
@@ -160,20 +141,16 @@ const StyledImg = styled.img`
 `
 
 const BoxWrappArrow = styled(Box)`
-  //border: yellow 2px solid;
-  position: absolute;
+   position: absolute;
   width: 22%;
   bottom: 5%;
   left: 14%;
   z-index: 2;
   @media (min-width: 568px) {
-    width: 22%;
-    bottom: 5%;
     left: 10%;
   }
   @media (min-width: 768px) {
-    width: 22%;
-    bottom: 76%;
+        bottom: 76%;
     left: 100%;
   }
   @media (min-width: 1024px) {
@@ -182,9 +159,8 @@ const BoxWrappArrow = styled(Box)`
     left: 46%;
   }
   @media (min-width: 1140px) {
-    width: 26%;
     bottom: 2%;
-    left: 46%;
+   
   }
 `
 
@@ -193,15 +169,13 @@ const ArrowImg = styled.img`
 `
 
 const BoxWrappGift = styled(Box)`
-  // border: yellow 2px solid;
-  position: absolute;
+   position: absolute;
   width: 18%;
   bottom: 3%;
   left: 38%;
   z-index: 2;
   @media (min-width: 568px) {
-    bottom: 3%;
-    left: 34%;
+        left: 34%;
   }
   @media (min-width: 768px) {
     bottom: 82%;
@@ -211,18 +185,13 @@ const BoxWrappGift = styled(Box)`
     bottom: 6%;
     left: 76%;
   }
-  @media (min-width: 1140px) {
-    bottom: 6%;
-    left: 76%;
-  }
 `
 
 const GiftImg = styled.img`
   width: 100%;
 `
 const BoxWrappTxt = styled(Box)`
-   // border: yellow 2px solid;
-  position: absolute;
+    position: absolute;
   width: 40%;
   bottom: 4%;
   left: 50%;
@@ -237,10 +206,6 @@ const BoxWrappTxt = styled(Box)`
     bottom: -4%;
     left: 60%;
   }
-  @media (min-width: 1140px) {
-    width: 40%;
-    bottom: -4%;
-    left: 60%;
-  }
+ 
   }
 `
