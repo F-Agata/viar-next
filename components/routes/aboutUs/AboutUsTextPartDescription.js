@@ -1,14 +1,11 @@
 import styled, { css } from 'styled-components'
 
 import Box from '../../../styles/Box'
-import Btn from '../../../styles/Btn'
-import Link from '../../../styles/Link'
 import TitleAndText from '../../../styles/TitleAndText'
 
 const AboutUsTextPartDescription = () => {
   return (
     <Box
-      // border={'red 2px solid'}
       bg={'colorLightBg'}
       display={'flex'}
       flexDirection={'column'}
@@ -18,7 +15,6 @@ const AboutUsTextPartDescription = () => {
     >
       <BoxSingleItem>
         <Box
-          // border={'red 2px solid'}
           height={{ _: '100%' }}
           mr={10}
           position={'absolute'}
@@ -43,7 +39,6 @@ const AboutUsTextPartDescription = () => {
 
       <BoxSingleItem>
         <Box
-          // border={'red 2px solid'}
           height={{ _: '100%' }}
           mr={10}
           position={'absolute'}
@@ -68,7 +63,6 @@ const AboutUsTextPartDescription = () => {
 
       <BoxSingleItem>
         <Box
-          // border={'red 2px solid'}
           height={{ _: '100%' }}
           mr={10}
           position={'absolute'}
@@ -97,7 +91,6 @@ const AboutUsTextPartDescription = () => {
 
       <BoxSingleItem>
         <Box
-          // border={'red 2px solid'}
           height={{ _: '100%' }}
           mr={10}
           position={'absolute'}
@@ -142,7 +135,6 @@ const BoxSingleItem = styled(Box)`
 `
 
 const StyledImg = styled.img`
-  //border: 2px solid darkslategrey;
   width: 100px;
   max-height: 100%;
 `

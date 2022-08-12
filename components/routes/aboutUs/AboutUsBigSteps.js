@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 
 import AboutUsTitleAndWatchPart from './AboutUsTitleAndWatchPart'
 import BoxStepNumber from './BoxStepNumber'
@@ -13,7 +13,6 @@ const AboutUsBigSteps = () => {
 
   return (
     <Box
-      // border={'pink 2px solid'}
       display={'flex'}
       flexDirection={'column'}
       justifyContent={'center'}
@@ -25,14 +24,12 @@ const AboutUsBigSteps = () => {
       <AboutUsTitleAndWatchPart />
 
       <Box
-        // border={'yellow 2px solid'}
         display={'flex'}
         flexWrap={'wrap'}
         justifyContent={'space-evenly'}
-        alignItems={'strench'}
+        alignItems={'stretch'}
       >
         <Box
-          // border={'blue 2px solid'}
           width={'247px'}
           display={'flex'}
           flexDirection={'column'}
@@ -54,7 +51,6 @@ const AboutUsBigSteps = () => {
           />
 
           <Box
-            // border={'green 2px solid'}
             position={'relative'}
             display={'flex'}
             justifyContent={'center'}
@@ -91,7 +87,6 @@ const AboutUsBigSteps = () => {
         </Box>
 
         <Box
-          // border={'blue 2px solid'}
           width={'247px'}
           display={'flex'}
           flexDirection={'column'}
@@ -113,7 +108,6 @@ const AboutUsBigSteps = () => {
           />
 
           <Box
-            // border={'green 2px solid'}
             position={'relative'}
             display={'flex'}
             justifyContent={'center'}
@@ -150,7 +144,6 @@ const AboutUsBigSteps = () => {
         </Box>
 
         <Box
-          // border={'blue 2px solid'}
           width={'247px'}
           display={'flex'}
           flexDirection={'column'}
@@ -172,7 +165,6 @@ const AboutUsBigSteps = () => {
           />
 
           <Box
-            // border={'green 2px solid'}
             position={'relative'}
             display={'flex'}
             justifyContent={'center'}
@@ -195,7 +187,6 @@ const AboutUsBigSteps = () => {
 
           <TitleAndText
             variant={'textSmall'}
-            textAlign={'left'}
             color={'colorWhite'}
             textAlign={'Center'}
           >
@@ -209,7 +200,6 @@ const AboutUsBigSteps = () => {
         </Box>
 
         <Box
-          // border={'blue 2px solid'}
           width={'247px'}
           display={'flex'}
           flexDirection={'column'}
@@ -231,7 +221,6 @@ const AboutUsBigSteps = () => {
           />
 
           <Box
-            // border={'green 2px solid'}
             position={'relative'}
             display={'flex'}
             justifyContent={'center'}
@@ -254,7 +243,6 @@ const AboutUsBigSteps = () => {
 
           <TitleAndText
             variant={'textSmall'}
-            textAlign={'left'}
             color={'colorWhite'}
             textAlign={'Center'}
           >
@@ -268,7 +256,6 @@ const AboutUsBigSteps = () => {
         </Box>
 
         <Box
-          // border={'blue 2px solid'}
           width={'247px'}
           display={'flex'}
           flexDirection={'column'}
@@ -290,7 +277,6 @@ const AboutUsBigSteps = () => {
           />
 
           <Box
-            // border={'green 2px solid'}
             position={'relative'}
             display={'flex'}
             justifyContent={'center'}
@@ -313,7 +299,6 @@ const AboutUsBigSteps = () => {
 
           <TitleAndText
             variant={'textSmall'}
-            textAlign={'left'}
             color={'colorWhite'}
             textAlign={'Center'}
           >
@@ -347,15 +332,12 @@ const AboutUsBigSteps = () => {
           <BoxWrappTextInsideOrnament>
             <TitleAndText
               variant={'textSmall'}
-              // variant={{_: 'textSmallVery', tabletL: 'textSmall', }}
               textAlign={'center'}
-              // pb={{_: '0', mobileL: '10px', }}
             >
               Lorem ipsum
             </TitleAndText>
             <TitleAndText
               variant={'textSmall'}
-              // variant={{_: 'textSmallVery', tabletL: 'textSmall', }}
               textAlign={'center'}
               color={'colorSecondary'}
             >
@@ -378,7 +360,6 @@ const StyledImg = styled.img`
 `
 
 const BoxWrappArrow1 = styled(Box)`
-  //border: yellow 2px solid;
   position: absolute;
   width: 14%;
   top: 80%;
@@ -400,7 +381,6 @@ const ArrowImg1 = styled.img`
 `
 
 const BoxWrappArrow2 = styled(Box)`
-  //border: yellow 2px solid;
   position: absolute;
   width: 10%;
   top: 11%;
@@ -409,7 +389,6 @@ const BoxWrappArrow2 = styled(Box)`
   @media (min-width: 1140px) {
     width: 8%;
     top: 12%;
-    left: 75%;
   }
   @media (min-width: 1366px) {
     width: 6%;
@@ -423,7 +402,6 @@ const ArrowImg2 = styled.img`
 `
 
 const BoxWrappOrnament = styled(Box)`
-  //border: yellow 2px solid;
   position: absolute;
   width: 160px;
   top: 4%;
@@ -432,7 +410,6 @@ const BoxWrappOrnament = styled(Box)`
 
   @media (min-width: 1140px) {
     width: 14%;
-    top: 4%;
     right: 4%;
   }
   @media (min-width: 1366px) {
@@ -444,7 +421,6 @@ const BoxWrappOrnament = styled(Box)`
 
 const BoxWrappTextInsideOrnament = styled(Box)`
   width: 82%;
-  //border: yellow 2px solid;
   position: absolute;
   top: 23%;
   left: 50%;

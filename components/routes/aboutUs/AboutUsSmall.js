@@ -1,5 +1,3 @@
-import styled, { css } from 'styled-components'
-
 import Box from '../../../styles/Box'
 
 import AboutUsSmallHeader from './AboutUsSmallHeader'
@@ -10,7 +8,6 @@ const AboutUsSmall = () => {
   return (
     <Box
       position={'relative'}
-      // border={'green 2px solid'}
     >
       <AboutUsSmallHeader />
       <AboutUsSmallDescription />

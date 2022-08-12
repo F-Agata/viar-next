@@ -8,11 +8,10 @@ import AboutUsTextPartDescription from './AboutUsTextPartDescription'
 const AboutUsSmallDescription = () => {
   return (
     <Box
-      // border={'green 2px solid'}
       display={'flex'}
       flexDirection={'column'}
       justifyContent={'space-between'}
-      alignItems={'strench'}
+      alignItems={'stretch'}
       p={{ _: '0px 20px 40px 20px', mobileL: '0px 40px 40px 40px' }}
     >
       <TitleAndText
@@ -25,18 +24,15 @@ const AboutUsSmallDescription = () => {
 
       <BgxBg>
         <Box
-          // border={'pink 2px solid'}
           display={'flex'}
           flexDirection={'column'}
           justifyContent={'center'}
           alignItems={'center'}
-          // p={{_: '0px 20px', mobileL: '0px 40px', }}
         >
           <AboutUsTextPartDescription />
         </Box>
 
         <Box
-          // border={'lightblue 2px solid'}
           display={'flex'}
           justifyContent={'center'}
           alignItems={'center'}
@@ -78,8 +74,7 @@ const AboutUsSmallDescription = () => {
 export default AboutUsSmallDescription
 
 const BgxBg = styled(Box)`
-  border-radius: 8px;
-  //position: relative;
+  border-radius: 8px; 
   ${({ theme }) => css`
     background-color: ${theme.colors.colorLightBg};
     outline: ${theme.colors.colorLightBg} solid 8px;
@@ -88,12 +83,10 @@ const BgxBg = styled(Box)`
 `
 
 const HeaderImg = styled.img`
-  //border: 2px solid blueviolet;
   width: 95%;
 `
 
 const BoxWrappArrow = styled(Box)`
-  //border: yellow 2px solid;
   position: absolute;
   width: 28%;
   top: 5%;
@@ -106,7 +99,6 @@ const ArrowImg = styled.img`
 `
 
 const BoxWrappOrnament = styled(Box)`
-  // border: yellow 2px solid;
   position: absolute;
   width: 30%;
   top: 10%;
@@ -116,13 +108,11 @@ const BoxWrappOrnament = styled(Box)`
 
 const BoxWrappTextInsideOrnament = styled(Box)`
   width: 80%;
-  //border: yellow 2px solid;
   position: absolute;
   top: 20%;
   left: 50%;
   transform: translate(-50%, 0);
   @media (min-width: 568px) {
-    width: 80%;
     top: 22%;
   }
 `
@@ -131,15 +121,4 @@ const OrnamentImg = styled.img`
   width: 100%;
 `
 
-const BoxWrappTxt = styled(Box)`
-  // border: yellow 2px solid;
-  position: absolute;
-  width: 20%;
-  top: 38%;
-  left: 2%;
-  z-index: 2;
-  @media (min-width: 568px) {
-    top: 32%;
-    left: 3%;
-  }
-`
+

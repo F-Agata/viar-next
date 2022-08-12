@@ -6,7 +6,6 @@ import TitleAndText from '../../../styles/TitleAndText'
 const AboutUsTitleAndWatchPart = () => {
   return (
     <Box
-      // border={'pink 2px solid'}
       display={'flex'}
       flexDirection={'column'}
       justifyContent={'center'}
@@ -24,7 +23,6 @@ const AboutUsTitleAndWatchPart = () => {
       </TitleAndText>
 
       <Box
-        // border={'orange 2px solid'}
         display={'flex'}
         justifyContent={'center'}
         alignItems={'center'}
@@ -45,7 +43,6 @@ const AboutUsTitleAndWatchPart = () => {
       </Box>
 
       <Box
-        // border={'blue 2px solid'}
         display={'flex'}
         justifyContent={'space-between'}
         alignItems={'center'}

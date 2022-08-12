@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 
 import Box from '../../../styles/Box'
 import Btn from '../../../styles/Btn'
@@ -8,7 +8,6 @@ import TitleAndText from '../../../styles/TitleAndText'
 const AboutUsTextPartHeader = () => {
   return (
     <Box
-      // border={'pink 2px solid'}
       display={'flex'}
       flexDirection={'column'}
       justifyContent={'center'}
@@ -29,14 +28,12 @@ const AboutUsTextPartHeader = () => {
       </TitleAndText>
 
       <Box
-        // border={'orange 2px solid'}
         display={'flex'}
         justifyContent={'left'}
         alignItems={'center'}
         mb={20}
       >
         <Box
-          // border={'red 2px solid'}
           width={{ _: '25px', tablet: '30px' }}
           height={{ _: '25px', tablet: '30px' }}
           mr={10}
@@ -53,14 +50,12 @@ const AboutUsTextPartHeader = () => {
       </Box>
 
       <Box
-        // border={'orange 2px solid'}
         display={'flex'}
         justifyContent={'left'}
         alignItems={'center'}
         mb={20}
       >
         <Box
-          // border={'red 2px solid'}
           width={{ _: '25px', tablet: '30px' }}
           height={{ _: '25px', tablet: '30px' }}
           mr={10}
@@ -76,14 +71,12 @@ const AboutUsTextPartHeader = () => {
       </Box>
 
       <Box
-        // border={'orange 2px solid'}
         display={'flex'}
         justifyContent={'left'}
         alignItems={'center'}
         mb={20}
       >
         <Box
-          // border={'red 2px solid'}
           width={{ _: '25px', tablet: '30px' }}
           height={{ _: '25px', tablet: '30px' }}
           mr={10}
@@ -104,14 +97,12 @@ const AboutUsTextPartHeader = () => {
       </Box>
 
       <Box
-        // border={'orange 2px solid'}
         display={'flex'}
         justifyContent={'left'}
         alignItems={'center'}
         mb={20}
       >
         <Box
-          // border={'red 2px solid'}
           width={{ _: '25px', tablet: '30px' }}
           height={{ _: '25px', tablet: '30px' }}
           mr={10}
@@ -132,7 +123,6 @@ const AboutUsTextPartHeader = () => {
       </Box>
 
       <Box
-        // border={'yellow 2px solid'}
         width={{ _: '100%', tablet: '70%' }}
         p={'0 20px'}
       >

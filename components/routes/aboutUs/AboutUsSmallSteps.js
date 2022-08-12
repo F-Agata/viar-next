@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 
 import AboutUsTitleAndWatchPart from './AboutUsTitleAndWatchPart'
 import BoxStepNumber from './BoxStepNumber'
@@ -10,7 +10,6 @@ import TitleAndText from '../../../styles/TitleAndText'
 const AboutUsSmallSteps = () => {
   return (
     <Box
-      // border={'pink 2px solid'}
       display={'flex'}
       flexDirection={'column'}
       justifyContent={'center'}
@@ -21,7 +20,6 @@ const AboutUsSmallSteps = () => {
       <AboutUsTitleAndWatchPart />
 
       <Box
-        // border={'blue 2px solid'}
         width={'330px'}
         display={'flex'}
         flexDirection={'column'}
@@ -43,7 +41,6 @@ const AboutUsSmallSteps = () => {
         />
 
         <Box
-          // border={'green 2px solid'}
           position={'relative'}
           display={'flex'}
           justifyContent={'center'}
@@ -80,7 +77,6 @@ const AboutUsSmallSteps = () => {
       </Box>
 
       <Box
-        // border={'blue 2px solid'}
         width={'330px'}
         display={'flex'}
         flexDirection={'column'}
@@ -102,7 +98,6 @@ const AboutUsSmallSteps = () => {
         />
 
         <Box
-          // border={'green 2px solid'}
           position={'relative'}
           display={'flex'}
           justifyContent={'center'}
@@ -139,7 +134,6 @@ const AboutUsSmallSteps = () => {
       </Box>
 
       <Box
-        // border={'blue 2px solid'}
         width={'330px'}
         display={'flex'}
         flexDirection={'column'}
@@ -161,7 +155,6 @@ const AboutUsSmallSteps = () => {
         />
 
         <Box
-          // border={'green 2px solid'}
           position={'relative'}
           display={'flex'}
           justifyContent={'center'}
@@ -198,7 +191,6 @@ const AboutUsSmallSteps = () => {
       </Box>
 
       <Box
-        // border={'blue 2px solid'}
         width={330}
         display={'flex'}
         flexDirection={'column'}
@@ -220,7 +212,6 @@ const AboutUsSmallSteps = () => {
         />
 
         <Box
-          // border={'green 2px solid'}
           position={'relative'}
           display={'flex'}
           justifyContent={'center'}
@@ -257,7 +248,6 @@ const AboutUsSmallSteps = () => {
       </Box>
 
       <Box
-        // border={'blue 2px solid'}
         width={330}
         display={'flex'}
         flexDirection={'column'}
@@ -279,7 +269,6 @@ const AboutUsSmallSteps = () => {
         />
 
         <Box
-          // border={'green 2px solid'}
           position={'relative'}
           display={'flex'}
           justifyContent={'center'}
