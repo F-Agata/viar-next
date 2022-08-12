@@ -65,10 +65,7 @@ const HomeBig = () => {
               </TitleAndText>{' '}
               libero, non rhoncus erat. Sed
             </TitleAndText>
-            <Box
-              width={'60%'}
-              p={'0 0px'}
-            >
+            <Box width={'60%'} p={'0 0px'}>
               <Link href={`/moreInfo`}>
                 <Btn variant="orangeDark" m={'20px 0px 40px 0'} width={'100%'}>
                   {' '}
@@ -95,10 +92,7 @@ const HomeBig = () => {
           <BoxWrappOrnament>
             <OrnamentImg src={' ornament.png'} alt={'photo'} />
             <BoxWrappTextInsideOrnament>
-              <TitleAndText
-                variant={'textSmall'}
-                textAlign={'center'}
-              >
+              <TitleAndText variant={'textSmall'} textAlign={'center'}>
                 Lorem ipsum
               </TitleAndText>
               <TitleAndText

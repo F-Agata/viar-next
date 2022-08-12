@@ -8,18 +8,13 @@ import TitleAndText from '../../../styles/TitleAndText'
 const HomeSmall = () => {
   return (
     <Box
-
       display={'flex'}
       flexDirection={'column'}
       justifyContent={'space-between'}
       alignItems={'strench'}
     >
       <BgxBg>
-        <Box
-          display={'flex'}
-          justifyContent={'center'}
-          alignItems={'center'}
-        >
+        <Box display={'flex'} justifyContent={'center'} alignItems={'center'}>
           <HeaderImg src={'home/womenWithPaintingBig01.png'} alt={'photo'} />
         </Box>
 
@@ -102,10 +97,7 @@ const HomeSmall = () => {
           </TitleAndText>{' '}
           libero, non rhoncus erat. Sed
         </TitleAndText>
-        <Box
-          width={'100%'}
-          p={'0 20px'}
-        >
+        <Box width={'100%'} p={'0 20px'}>
           <Link href={`/moreInfo`}>
             <Btn variant="orangeDark" m={'40px 0'} width={'100%'}>
               {' '}
@@ -158,8 +150,8 @@ const BoxWrappGift = styled(Box)`
   left: 5%;
   z-index: 2;
   @media (min-width: 568px) {
-        top: 10%;
-      }
+    top: 10%;
+  }
 `
 
 const GiftImg = styled.img`
@@ -167,7 +159,6 @@ const GiftImg = styled.img`
 `
 
 const BoxWrappOrnament = styled(Box)`
- 
   position: absolute;
   width: 40%;
   bottom: -15%;
@@ -195,7 +186,7 @@ const OrnamentImg = styled.img`
 `
 
 const BoxWrappTxt = styled(Box)`
-    position: absolute;
+  position: absolute;
   width: 40%;
   top: 35%;
   left: 24%;
