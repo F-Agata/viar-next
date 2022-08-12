@@ -1,21 +1,18 @@
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 
 import MoreInfoTextPart01 from './MoreInfoTextPart01'
 
 import Box from '../../../styles/Box'
-import Btn from '../../../styles/Btn'
-import Link from '../../../styles/Link'
 import TitleAndText from '../../../styles/TitleAndText'
 
 const MoreInfoBig01 = ({getWidth}) => {
   return (
     <Box
-      // border={'green 2px solid'}
         width={getWidth }
       display={'flex'}
       flexDirection={'column'}
       justifyContent={'space-between'}
-      alignItems={'strench'}
+      alignItems={'stretch'}
       pb={20}
     >
       <BgxBg>
@@ -27,13 +24,11 @@ const MoreInfoBig01 = ({getWidth}) => {
           display={'flex'}
           justifyContent={'space-between'}
           alignItems={'center'}
-          // border={'pink 2px solid'}
           pt={{ _: '0', tablet: '20px' }}
         >
           <Box
             width={{ _: '50%', tabletL: '45%', laptopS: '45%' }}
-            // border={'red 2px solid'}
-            display={'flex'}
+                      display={'flex'}
             flexDirection={'column'}
             justifyContent={'center'}
             alignItems={'flex-start'}
@@ -49,7 +44,6 @@ const MoreInfoBig01 = ({getWidth}) => {
           <Box
             width={{ _: '50%', tabletL: '50%', laptopS: '50%' }}
             position={'relative'}
-            // border={'olive 2px solid'}
             alignSelf={{ _: 'flex-start', tabletL: 'flex-end' }}
             display={'flex'}
             justifyContent={'center'}
@@ -111,21 +105,18 @@ export default MoreInfoBig01
 
 const BgxBg = styled(Box)`
   width: 100%;
-  //border: 2px burlywood solid;
   background-image: url('bg3-sliderBig.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   padding-bottom: 56px;
   position: relative;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
 `
 
 const HeaderImg = styled.img`
-  //border: 2px solid blueviolet;
   width: 440px;
   margin-left: -50px;
   @media (min-width: 1024px) {
@@ -135,7 +126,6 @@ const HeaderImg = styled.img`
 `
 
 const BoxWrappArrow = styled(Box)`
-   //border: yellow 2px solid;
   position: absolute;
   width: 20%;
   bottom: 13%;
@@ -148,12 +138,7 @@ const BoxWrappArrow = styled(Box)`
   }
   @media (min-width: 1140px) {
     width: 16%;
-    bottom: 15%;
     left: 34%;
-    @media (min-width: 1366px) {
-      width: 16%;
-      bottom: 15%;
-      left: 34%;
 `
 
 const ArrowImg = styled.img`
@@ -161,22 +146,16 @@ const ArrowImg = styled.img`
 `
 
 const BoxWrappGift = styled(Box)`
-  // border: yellow 2px solid;
   position: absolute;
   width: 14%;
   bottom: 26%;
   left: 45%;
-  //transform: translate(-50%, 0);
   z-index: 2;
   @media (min-width: 1024px) {
     width: 10%;
     bottom: 30%;
     left: 42%;
   }
-@media (min-width: 1140px) {
-  width: 10%;
-  bottom: 30%;
-  left: 42%;
   `
 
 const GiftImg = styled.img`
@@ -184,7 +163,6 @@ const GiftImg = styled.img`
 `
 
 const BoxWrappOrnament = styled(Box)`
-  //border: yellow 2px solid;
   position: absolute;
   width: 160px;
   bottom: -68px;
@@ -200,7 +178,6 @@ const BoxWrappOrnament = styled(Box)`
 
 const BoxWrappTextInsideOrnament = styled(Box)`
   width: 80%;
-  //border: yellow 2px solid;
   position: absolute;
   top: 23%;
   left: 50%;
@@ -216,7 +193,6 @@ const OrnamentImg = styled.img`
 `
 
 const BoxWrappTxt = styled(Box)`
-  //border: yellow 2px solid;
   position: absolute;
   width: 40%;
   bottom: 22%;
@@ -230,6 +206,5 @@ const BoxWrappTxt = styled(Box)`
   @media (min-width: 1140px) {
     wwidth: 20%;
     top: 70%;
-    left: 25%;
   }
 `

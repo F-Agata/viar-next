@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 
 import Box from '../../../styles/Box'
 import Btn from '../../../styles/Btn'
@@ -8,8 +8,7 @@ import TitleAndText from '../../../styles/TitleAndText'
 const MoreInfoTextPart02 = () => {
   return (
     <Box
-      // border={'pink 2px solid'}
-      display={'flex'}
+           display={'flex'}
       flexDirection={'column'}
       justifyContent={'center'}
       alignItems={'left'}
@@ -29,15 +28,13 @@ const MoreInfoTextPart02 = () => {
       </TitleAndText>
 
       <Box
-        // border={'orange 2px solid'}
-        display={'flex'}
+              display={'flex'}
         justifyContent={'left'}
         alignItems={'center'}
         mb={20}
       >
         <Box
-          // border={'red 2px solid'}
-          width={{ _: '25px', tablet: '30px' }}
+                   width={{ _: '25px', tablet: '30px' }}
           height={{ _: '25px', tablet: '30px' }}
           mr={10}
         >
@@ -53,14 +50,12 @@ const MoreInfoTextPart02 = () => {
       </Box>
 
       <Box
-        // border={'orange 2px solid'}
-        display={'flex'}
+               display={'flex'}
         justifyContent={'left'}
         alignItems={'center'}
         mb={20}
       >
         <Box
-          // border={'red 2px solid'}
           width={{ _: '25px', tablet: '30px' }}
           height={{ _: '25px', tablet: '30px' }}
           mr={10}
@@ -81,15 +76,13 @@ const MoreInfoTextPart02 = () => {
       </Box>
 
       <Box
-        // border={'orange 2px solid'}
-        display={'flex'}
+                display={'flex'}
         justifyContent={'left'}
         alignItems={'center'}
         mb={20}
       >
         <Box
-          // border={'red 2px solid'}
-          width={{ _: '25px', tablet: '30px' }}
+                  width={{ _: '25px', tablet: '30px' }}
           height={{ _: '25px', tablet: '30px' }}
           mr={10}
         >
@@ -108,8 +101,7 @@ const MoreInfoTextPart02 = () => {
         </TitleAndText>
       </Box>
       <Box
-        // border={'yellow 2px solid'}
-        width={{ _: '100%', tablet: '70%' }}
+               width={{ _: '100%', tablet: '70%' }}
         p={'0 20px'}
       >
         <Link href={`/portfolio`}>

@@ -1,8 +1,6 @@
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 
 import Box from '../../../styles/Box'
-import Btn from '../../../styles/Btn'
-import Link from '../../../styles/Link'
 import TitleAndText from '../../../styles/TitleAndText'
 
 import MoreInfoTextPart03 from './MoreInfoTextPart03'
@@ -10,20 +8,14 @@ import MoreInfoTextPart03 from './MoreInfoTextPart03'
 const MoreInfoSmall03 = ({getWidth}) => {
   return (
     <Box
-      // border={'green 2px solid'}
-
-      // height={'100vh'}
       display={'flex'}
       flexDirection={'column'}
       justifyContent={'space-between'}
       alignItems={'stretch'}
       width={getWidth }
-
-      // width={typeof window !== 'undefined' ? `${window.innerWidth}px` : '100%'}
     >
       <BgxBg>
         <Box
-          // border={'yellow 2px solid'}
           display={'flex'}
           justifyContent={'center'}
           alignItems={'center'}
@@ -37,15 +29,12 @@ const MoreInfoSmall03 = ({getWidth}) => {
           <BoxWrappTextInsideOrnament>
             <TitleAndText
               variant={'textSmall'}
-              // variant={{_: 'textSmallVery', mobileL: 'textSmall', }}
               textAlign={'center'}
-              // pb={{_: '0', mobileL: '10px', }}
-            >
+                       >
               Nam efficitur{' '}
             </TitleAndText>
             <TitleAndText
               variant={'textSmall'}
-              // variant={{_: 'textSmallVery', mobileL: 'textSmall', }}
               textAlign={'center'}
               color={'colorSecondary'}
             >
@@ -66,7 +55,6 @@ const MoreInfoSmall03 = ({getWidth}) => {
         <BoxWrappTxt>
           <TitleAndText
             variant={'textSmall'}
-            // variant={{_: 'textSmallVery', mobileL: 'textSmall', }}
             textAlign={'center'}
             color={'colorSecondary'}
           >
@@ -74,7 +62,6 @@ const MoreInfoSmall03 = ({getWidth}) => {
           </TitleAndText>
           <TitleAndText
             variant={'textSmall'}
-            // variant={{_: 'textSmallVery', mobileL: 'textSmall', }}
             textAlign={'center'}
           >
             {' '}
@@ -84,9 +71,6 @@ const MoreInfoSmall03 = ({getWidth}) => {
       </BgxBg>
 
       <Box
-        // height={{_: '50% ', mobileL: '35%', }}
-
-        // border={'pink 2px solid'}
         display={'flex'}
         flexDirection={'column'}
         justifyContent={'center'}
@@ -102,7 +86,6 @@ const MoreInfoSmall03 = ({getWidth}) => {
 export default MoreInfoSmall03
 
 const BgxBg = styled(Box)`
-  //border: 2px burlywood solid;
   background-image: url('bg3-sliderSmall.png');
   background-repeat: no-repeat;
   background-size: cover;
@@ -116,12 +99,10 @@ const BgxBg = styled(Box)`
 `
 
 const HeaderImg = styled.img`
-  //border: 2px solid blueviolet;
   width: 90%;
 `
 
 const BoxWrappArrow = styled(Box)`
-  //border: yellow 2px solid;
   position: absolute;
   width: 22%;
   top: 15%;
@@ -139,7 +120,6 @@ const ArrowImg = styled.img`
 `
 
 const BoxWrappGift = styled(Box)`
-  // border: yellow 2px solid;
   position: absolute;
   width: 20%;
   top: 13%;
@@ -157,7 +137,6 @@ const GiftImg = styled.img`
 `
 
 const BoxWrappOrnament = styled(Box)`
-  // border: yellow 2px solid;
   position: absolute;
   width: 40%;
   bottom: 0%;
@@ -173,7 +152,6 @@ const BoxWrappOrnament = styled(Box)`
 
 const BoxWrappTextInsideOrnament = styled(Box)`
   width: 70%;
-  //border: yellow 2px solid;
   position: absolute;
   top: 20%;
   left: 50%;
@@ -189,7 +167,6 @@ const OrnamentImg = styled.img`
 `
 
 const BoxWrappTxt = styled(Box)`
-  // border: yellow 2px solid;
   position: absolute;
   width: 20%;
   top: 28%;

@@ -1,21 +1,18 @@
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 
 import MoreInfoTextPart02 from './MoreInfoTextPart02'
 
 import Box from '../../../styles/Box'
-import Btn from '../../../styles/Btn'
-import Link from '../../../styles/Link'
 import TitleAndText from '../../../styles/TitleAndText'
 
 const MoreInfoBig02 = ({getWidth}) => {
   return (
     <Box
-      // border={'green 2px solid'}
         width={getWidth }
       display={'flex'}
       flexDirection={'column'}
       justifyContent={'space-between'}
-      alignItems={'strench'}
+      alignItems={'stretch'}
       pb={20}
     >
       <BgxBg>
@@ -27,12 +24,10 @@ const MoreInfoBig02 = ({getWidth}) => {
           display={'flex'}
           justifyContent={'space-between'}
           alignItems={'stretch'}
-          // border={'pink 2px solid'}
           pt={{ _: '0', tablet: '20px' }}
         >
           <Box
             width={{ _: '47%', tabletL: '45%', laptopS: '45%' }}
-            // border={'red 2px solid'}
             display={'flex'}
             flexDirection={'column'}
             justifyContent={'center'}
@@ -49,8 +44,7 @@ const MoreInfoBig02 = ({getWidth}) => {
           <Box
             width={{ _: '50%', tabletL: '43%', laptopS: '43%' }}
             position={'relative'}
-            // border={'olive 2px solid'}
-            alignSelf={'flex-end'}
+                       alignSelf={'flex-end'}
             display={'flex'}
             justifyContent={'center'}
             mt={120}
@@ -118,22 +112,19 @@ export default MoreInfoBig02
 
 const BgxBg = styled(Box)`
   width: 100%;
-  //border: 2px burlywood solid;
-  background-image: url('bg3-sliderBig.png');
+    background-image: url('bg3-sliderBig.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   padding-bottom: 70px;
   position: relative;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
 `
 
 const HeaderImg = styled.img`
-  //border: 2px solid blueviolet;
-  width: 440px;
+   width: 440px;
   margin-left: -30px;
 
   @media (min-width: 1024px) {
@@ -143,7 +134,6 @@ const HeaderImg = styled.img`
 `
 
 const BoxWrappArrow1 = styled(Box)`
-  //border: yellow 2px solid;
   position: absolute;
   width: 14%;
   bottom: 14%;
@@ -161,7 +151,6 @@ const BoxWrappArrow1 = styled(Box)`
   }
   @media (min-width: 1366px) {
     width: 12%;
-    bottom: 22%;
     left: 33%;
   }
 `
@@ -171,7 +160,6 @@ const ArrowImg1 = styled.img`
 `
 
 const BoxWrappArrow2 = styled(Box)`
-  //border: yellow 2px solid;
   position: absolute;
   width: 9%;
   top: 30%;
@@ -187,7 +175,6 @@ const ArrowImg2 = styled.img`
 `
 
 const BoxWrappArrow3 = styled(Box)`
-  //border: yellow 2px solid;
   display: none;
   @media (min-width: 1024px) {
     display: block;
@@ -199,7 +186,6 @@ const BoxWrappArrow3 = styled(Box)`
   }
   @media (min-width: 1140px) {
     width: 8%;
-    top: 46%;
     left: 49%;
   }
 `
@@ -209,12 +195,10 @@ const ArrowImg3 = styled.img`
 `
 
 const BoxWrappGift = styled(Box)`
-  // border: yellow 2px solid;
   position: absolute;
   width: 14%;
   bottom: 26%;
   left: 40%;
-  //transform: translate(-50%, 0);
   z-index: 2;
   @media (min-width: 1024px) {
     width: 10%;
@@ -224,7 +208,6 @@ const BoxWrappGift = styled(Box)`
 @media (min-width: 1140px) {
   width: 8%;
   bottom: 34%;
-  left: 42%;
   `
 
 const GiftImg = styled.img`
@@ -232,12 +215,10 @@ const GiftImg = styled.img`
 `
 
 const BoxWrappOrnament = styled(Box)`
-  //border: yellow 2px solid;
   position: absolute;
   width: 160px;
   top: -70px;
   left: 30%;
-  //transform: translate(-50%, 0);
   z-index: 2;
   @media (min-width: 1024px) {
     width: 160px;
@@ -248,7 +229,6 @@ const BoxWrappOrnament = styled(Box)`
 
 const BoxWrappTextInsideOrnament = styled(Box)`
   width: 80%;
-  //border: yellow 2px solid;
   position: absolute;
   top: 23%;
   left: 50%;
@@ -264,7 +244,6 @@ const OrnamentImg = styled.img`
 `
 
 const BoxWrappTxt = styled(Box)`
-  //border: yellow 2px solid;
   position: absolute;
   width: 16%;
   bottom: 22%;
@@ -277,12 +256,10 @@ const BoxWrappTxt = styled(Box)`
   }
   @media (min-width: 1140px) {
     bottom: 28%;
-    left: 34%;
   }
 `
 
 const BoxWrappPhoto = styled(Box)`
-  //border: yellow 2px solid;
   position: absolute;
   width: 120px;
   top: 12%;

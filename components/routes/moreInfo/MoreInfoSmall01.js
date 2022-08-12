@@ -1,27 +1,21 @@
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 
 import MoreInfoTextPart01 from './MoreInfoTextPart01'
 
 import Box from '../../../styles/Box'
-import Btn from '../../../styles/Btn'
-import Link from '../../../styles/Link'
 import TitleAndText from '../../../styles/TitleAndText'
 
 const MoreInfoSmall01 = ({getWidth}) => {
   return (
     <Box
-      // border={'green 2px solid'}
       display={'flex'}
       flexDirection={'column'}
       justifyContent={'space-between'}
       alignItems={'stretch'}
-      // width={typeof window !== 'undefined' ? `${window.innerWidth}px` : '100%'}
       width={getWidth }
-      // width={'100%'}
     >
       <BgxBg>
         <Box
-          // border={'yellow 2px solid'}
           display={'flex'}
           justifyContent={'center'}
           alignItems={'center'}
@@ -76,7 +70,6 @@ const MoreInfoSmall01 = ({getWidth}) => {
           </TitleAndText>
         </BoxWrappTxt>
       </BgxBg>
-
       <MoreInfoTextPart01 />
     </Box>
   )
@@ -85,7 +78,6 @@ const MoreInfoSmall01 = ({getWidth}) => {
 export default MoreInfoSmall01
 
 const BgxBg = styled(Box)`
-  //border: 2px burlywood solid;
   background-image: url('bg3-sliderSmall.png');
   background-repeat: no-repeat;
   background-size: cover;
@@ -99,12 +91,10 @@ const BgxBg = styled(Box)`
 `
 
 const HeaderImg = styled.img`
-  //border: 2px solid blueviolet;
   width: 100%;
 `
 
 const BoxWrappArrow = styled(Box)`
-  //border: yellow 2px solid;
   position: absolute;
   width: 18%;
   top: 40%;
@@ -122,7 +112,6 @@ const ArrowImg = styled.img`
 `
 
 const BoxWrappGift = styled(Box)`
-  // border: yellow 2px solid;
   position: absolute;
   width: 20%;
   top: 15%;
@@ -140,12 +129,10 @@ const GiftImg = styled.img`
 `
 
 const BoxWrappOrnament = styled(Box)`
-  // border: yellow 2px solid;
   position: absolute;
   width: 40%;
   bottom: -0%;
   left: 40%;
-  //transform: translate(-50%, 0);
   z-index: 2;
   @media (min-width: 568px) {
     width: 34%;
@@ -156,7 +143,6 @@ const BoxWrappOrnament = styled(Box)`
 
 const BoxWrappTextInsideOrnament = styled(Box)`
   width: 70%;
-  //border: yellow 2px solid;
   position: absolute;
   top: 20%;
   left: 50%;
@@ -171,12 +157,10 @@ const OrnamentImg = styled.img`
 `
 
 const BoxWrappTxt = styled(Box)`
-  //border: yellow 2px solid;
   position: absolute;
   width: 20%;
   top: 32%;
   right: 4%;
-  //transform: translate(-50%, 0);
   z-index: 2;
   @media (min-width: 568px) {
     width: 20%;

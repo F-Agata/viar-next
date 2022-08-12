@@ -1,21 +1,19 @@
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 
 import MoreInfoTextPart03 from './MoreInfoTextPart03'
 
 import Box from '../../../styles/Box'
-import Btn from '../../../styles/Btn'
-import Link from '../../../styles/Link'
+
 import TitleAndText from '../../../styles/TitleAndText'
 
 const MoreInfoBig03 = ({getWidth}) => {
   return (
     <Box
-      // border={'green 2px solid'}
-        width={getWidth }
+             width={getWidth }
       display={'flex'}
       flexDirection={'column'}
       justifyContent={'space-between'}
-      alignItems={'strench'}
+      alignItems={'stretch'}
       pb={20}
     >
       <BgxBg>
@@ -27,12 +25,10 @@ const MoreInfoBig03 = ({getWidth}) => {
           display={'flex'}
           justifyContent={'space-between'}
           alignItems={'stretch'}
-          // border={'pink 2px solid'}
           pt={{ _: '0', tablet: '20px' }}
         >
           <Box
             width={{ _: '50%', tabletL: '45%', laptopS: '45%' }}
-            // border={'red 2px solid'}
             display={'flex'}
             flexDirection={'column'}
             justifyContent={'center'}
@@ -49,7 +45,6 @@ const MoreInfoBig03 = ({getWidth}) => {
           <Box
             width={{ _: '50%', tabletL: '60%', laptopS: '60%' }}
             position={'relative'}
-            // border={'olive 2px solid'}
             alignSelf={'flex-end'}
             display={'flex'}
             justifyContent={'center'}
@@ -109,21 +104,18 @@ export default MoreInfoBig03
 
 const BgxBg = styled(Box)`
   width: 100%;
-  //border: 2px burlywood solid;
   background-image: url('bg3-sliderBig.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   padding-bottom: 70px;
   position: relative;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
 `
 
 const HeaderImg = styled.img`
-  //border: 2px solid blueviolet;
   width: 460px;
   margin-left: -30px;
   margin-bottom: -48px;
@@ -137,14 +129,9 @@ const HeaderImg = styled.img`
     margin-left: 50px;
     margin-bottom: -72px;
   }
-  @media (min-width: 1366px) {
-    margin-left: 50px;
-    margin-bottom: -72px;
-  }
 `
 
 const BoxWrappArrow = styled(Box)`
-  //border: yellow 2px solid;
   position: absolute;
   width: 14%;
   top: 22%;
@@ -156,13 +143,11 @@ const BoxWrappArrow = styled(Box)`
     left: 30%;
   }
   @media (min-width: 1140px) {
-    width: 16%;
     top: 74%;
     left: 32%;
   }
   @media (min-width: 1366px) {
     width: 12%;
-    top: 74%;
     left: 33%;
   }
 `
@@ -172,12 +157,10 @@ const ArrowImg = styled.img`
 `
 
 const BoxWrappGift = styled(Box)`
-  // border: yellow 2px solid;
   position: absolute;
   width: 14%;
   top: 12%;
   left: 44%;
-  //transform: translate(-50%, 0);
   z-index: 2;
   @media (min-width: 1024px) {
     width: 10%;
@@ -185,14 +168,10 @@ const BoxWrappGift = styled(Box)`
     left: 40%;
   }
   @media (min-width: 1140px) {
-    width: 10%;
     top: 50%;
-    left: 40%;
   }
   @media (min-width: 1366px) {
     width: 8%;
-    top: 50%;
-    top: 50%;
     left: 42%;
   }
 `
@@ -202,7 +181,6 @@ const GiftImg = styled.img`
 `
 
 const BoxWrappOrnament = styled(Box)`
-  //border: yellow 2px solid;
   position: absolute;
   width: 160px;
   top: 10px;
@@ -210,13 +188,11 @@ const BoxWrappOrnament = styled(Box)`
   z-index: 2;
   @media (min-width: 1024px) {
     top: 60px;
-    right: 0%;
   }
 `
 
 const BoxWrappTextInsideOrnament = styled(Box)`
   width: 80%;
-  //border: yellow 2px solid;
   position: absolute;
   top: 23%;
   left: 50%;
@@ -232,7 +208,6 @@ const OrnamentImg = styled.img`
 `
 
 const BoxWrappTxt = styled(Box)`
-  //border: yellow 2px solid;
   position: absolute;
   width: 30%;
   top: 16%;

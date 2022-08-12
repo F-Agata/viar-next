@@ -49,7 +49,6 @@ const Dots = ({ whichSlide, setWhichSlide, slide01Ref, slide02Ref, slide03Ref}) 
 export default Dots
 
 const BoxWrappIconsDots = styled(Box)`
-  //border: 2px solid red;
   position: absolute;
   z-index: 10;
   bottom: 0;
@@ -63,25 +62,21 @@ const BoxWrappIconsDots = styled(Box)`
 const StyledBoxIconDot = styled(Box)`
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 50%;
-  
   display: flex;
   align-items: center;
   justify-content: center;
   transition: 0.3s;
   cursor: pointer;
   overflow: hidden;
-  
-  width: 20px;
+   width: 20px;
   height: 20px;
   margin: 0px 20px;
-  
-  ${({ theme, isActive }) => css`
+   ${({ theme, isActive }) => css`
     border: ${theme.colors.colorSecondary} 1px solid;
     background-color: ${ isActive ? theme.colors.colorWhite : theme.colors.colorSecondary};
     color: ${ isActive ? theme.colors.colorSecondary : theme.colors.colorWhite };
   `};
-    
-  :hover {
+      :hover {
     ${({ theme }) => css`
       background-color: ${theme.colors.colorWhite};
     `};
@@ -109,8 +104,7 @@ const StyledBsDot = styled(BsDot)`
     background-color: ${ isActive ? theme.colors.colorWhite : theme.colors.colorSecondary};
     color: ${ isActive ? theme.colors.colorSecondary : theme.colors.colorWhite };
   `};
-  
-  :hover {
+    :hover {
     ${({ theme }) => css`
       background-color: ${theme.colors.colorWhite};
       color: ${theme.colors.colorSecondary};

@@ -19,7 +19,6 @@ const MoreInfo = () => {
   const modificationPage = useBetterMediaQuery('(min-width: 768px)')
 
   const [getWidth, setGetWidth] = useState(0);
-
   const [whichSlide, setWhichSlide] = useState(1)
 
   const slide01Ref = useRef(null)
@@ -42,17 +41,9 @@ const MoreInfo = () => {
   }, [whichSlide])
 
   return (
-      <Box
-          // border={'blue 2px solid'}
-          position={'relative'}
-      >
-        <Box
-          // border={'red 2px solid'}
-          overflow={'hidden'}
-
-      >
+      <Box position={'relative'} >
+        <Box overflow={'hidden'}>
         {getWidth !== 0 &&   <Box
-            // border={'red 2px solid'}
             overflow={'hidden'}
             display="flex"
             width={getWidth * 3}
@@ -71,9 +62,6 @@ const MoreInfo = () => {
           </Box>
         </Box>
         }
-        {/*<Arrow direction={"left"}  whichSlide={whichSlide} setWhichSlide={setWhichSlide} slide01Ref={slide01Ref} slide02Ref={slide02Ref} slide03Ref={slide03Ref}/>*/}
-        {/*<Arrow direction={"right"}  whichSlide={whichSlide} setWhichSlide={setWhichSlide} slide01Ref={slide01Ref} slide02Ref={slide02Ref} slide03Ref={slide03Ref}/>*/}
-        {/*<Dots  whichSlide={whichSlide} setWhichSlide={setWhichSlide} slide01Ref={slide01Ref} slide02Ref={slide02Ref} slide03Ref={slide03Ref}/>*/}
         </Box>
          <Arrow direction={"left"}  whichSlide={whichSlide} setWhichSlide={setWhichSlide} slide01Ref={slide01Ref} slide02Ref={slide02Ref} slide03Ref={slide03Ref}/>
          <Arrow direction={"right"}  whichSlide={whichSlide} setWhichSlide={setWhichSlide} slide01Ref={slide01Ref} slide02Ref={slide02Ref} slide03Ref={slide03Ref}/>
