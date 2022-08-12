@@ -7,8 +7,6 @@ import Link from '../../../styles/Link'
 import TitleAndText from '../../../styles/TitleAndText'
 
 const HomeBig = () => {
-
-
   return (
     <Box
       // border={'green 2px solid'}

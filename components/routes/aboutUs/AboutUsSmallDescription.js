@@ -74,7 +74,7 @@ const AboutUsSmallDescription = () => {
 export default AboutUsSmallDescription
 
 const BgxBg = styled(Box)`
-  border-radius: 8px; 
+  border-radius: 8px;
   ${({ theme }) => css`
     background-color: ${theme.colors.colorLightBg};
     outline: ${theme.colors.colorLightBg} solid 8px;
@@ -120,5 +120,3 @@ const BoxWrappTextInsideOrnament = styled(Box)`
 const OrnamentImg = styled.img`
   width: 100%;
 `
-
-

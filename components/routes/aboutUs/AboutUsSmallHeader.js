@@ -26,15 +26,12 @@ const AboutUsSmallHeader = () => {
         <BoxWrappOrnament>
           <OrnamentImg src={' ornament.png'} alt={'photo'} />
           <BoxWrappTextInsideOrnament>
-            <TitleAndText
-              variant={'textSmall'}
-              textAlign={'center'}
-            >
+            <TitleAndText variant={'textSmall'} textAlign={'center'}>
               Nam efficitur{' '}
             </TitleAndText>
             <TitleAndText
               variant={'textSmall'}
-                           textAlign={'center'}
+              textAlign={'center'}
               color={'colorSecondary'}
             >
               {' '}
@@ -59,10 +56,7 @@ const AboutUsSmallHeader = () => {
           >
             Etiam ac{' '}
           </TitleAndText>
-          <TitleAndText
-            variant={'textSmall'}
-            textAlign={'center'}
-          >
+          <TitleAndText variant={'textSmall'} textAlign={'center'}>
             {' '}
             convallis massa
           </TitleAndText>

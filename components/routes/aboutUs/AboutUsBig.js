@@ -6,9 +6,7 @@ import AboutUsBigSteps from './AboutUsBigSteps'
 
 const AboutUsBig = () => {
   return (
-    <Box
-      position={'relative'}
-    >
+    <Box position={'relative'}>
       <AboutUsBigHeader />
       <AboutUsBigDescription />
       <AboutUsBigSteps />

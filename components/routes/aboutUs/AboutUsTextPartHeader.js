@@ -122,10 +122,7 @@ const AboutUsTextPartHeader = () => {
         </TitleAndText>
       </Box>
 
-      <Box
-        width={{ _: '100%', tablet: '70%' }}
-        p={'0 20px'}
-      >
+      <Box width={{ _: '100%', tablet: '70%' }} p={'0 20px'}>
         <Link href={`/portfolio`}>
           <Btn variant="orangeDark" m={'40px 0'} width={'100%'}>
             {' '}

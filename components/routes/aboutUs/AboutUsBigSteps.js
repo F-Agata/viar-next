@@ -330,10 +330,7 @@ const AboutUsBigSteps = () => {
         <BoxWrappOrnament>
           <OrnamentImg src={' ornament.png'} alt={'photo'} />
           <BoxWrappTextInsideOrnament>
-            <TitleAndText
-              variant={'textSmall'}
-              textAlign={'center'}
-            >
+            <TitleAndText variant={'textSmall'} textAlign={'center'}>
               Lorem ipsum
             </TitleAndText>
             <TitleAndText
