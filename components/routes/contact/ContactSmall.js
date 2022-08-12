@@ -1,5 +1,3 @@
-import styled, { css } from 'styled-components'
-
 import Box from '../../../styles/Box'
 
 import ContactSmallHeader from './ContactSmallHeader'
@@ -8,10 +6,7 @@ import Faq from './faq/Faq'
 
 const ContactSmall = () => {
   return (
-    <Box
-      position={'relative'}
-      // border={'green 2px solid'}
-    >
+    <Box position={'relative'}>
       <ContactSmallHeader />
       <ContactSmallDescription />
       <Faq />

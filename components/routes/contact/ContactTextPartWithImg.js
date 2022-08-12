@@ -16,10 +16,7 @@ const ContactTextPartWithImg = () => {
         <BoxWrappIcon isEven={isEven}>
           <StyledBsFillCheckCircleFill />
         </BoxWrappIcon>
-        <Box
-          // border={'green 2px solid'}
-          p={'5px 0'}
-        >
+        <Box p={'5px 0'}>
           <TitleAndText variant={'textMiddle'} color={'colorSecondary'}>
             {item.secondaryText}
             <TitleAndText
@@ -37,12 +34,11 @@ const ContactTextPartWithImg = () => {
 
   return (
     <Box
-      // border={'green 2px solid'}
       maxWidth={1140}
       display={'flex'}
       flexDirection={'column'}
       justifyContent={'space-between'}
-      alignItems={'strench'}
+      alignItems={'stretch'}
       p={{ _: '0px 20px', mobileL: '0px 40px' }}
     >
       <TitleAndText
@@ -62,7 +58,6 @@ const ContactTextPartWithImg = () => {
         eleifend justo at, consectetur libero
       </TitleAndText>
       <Box
-        // border={'orange 2px solid'}
         m={'0 auto'}
         width={'100%'}
         textAlign={'center'}
@@ -81,13 +76,11 @@ const ContactTextPartWithImg = () => {
 export default ContactTextPartWithImg
 
 const StyledBoxOneIdea = styled(Box)`
-  //border: 2px solid pink;
   width: 100%;
   margin: 10px 0;
   padding: 10px 0px;
   display: flex;
   justify-content: flex-start;
-  //align-items: ;
   text-align: left;
 
   @media (min-width: 768px) {
@@ -112,7 +105,6 @@ const StyledBoxOneIdea = styled(Box)`
 `
 
 const BoxWrappIcon = styled(Box)`
-  //border: blueviolet 2px solid;
   width: 24px;
   display: flex;
   justify-content: center;

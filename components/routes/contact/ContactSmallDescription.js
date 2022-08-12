@@ -9,7 +9,6 @@ import TitleAndText from '../../../styles/TitleAndText'
 const ContactSmallDescription = () => {
   return (
     <Box
-      // border={'green 2px solid'}
       display={'flex'}
       flexDirection={'column'}
       justifyContent={'space-between'}
@@ -18,7 +17,6 @@ const ContactSmallDescription = () => {
     >
       <ContactTextPartWithImg />
       <Box
-        // border={'yellow 2px solid'}
         display={'flex'}
         flexDirection={'column'}
         justifyContent={'center'}
@@ -71,7 +69,6 @@ const BgxBgBorder = styled(Box)`
 `
 
 const DescriptionPartImg = styled.img`
-  //border: 2px solid blueviolet;
   width: 200%;
   margin-left: -50%;
   margin-right: -50%;

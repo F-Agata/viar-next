@@ -1,7 +1,4 @@
-import styled, { css } from 'styled-components'
-
 import Box from '../../../../styles/Box'
-import TitleAndText from '../../../../styles/TitleAndText'
 
 import BoxSingleQuestion from './BoxSingleQuestion'
 import DoYouWantToChat from './DoYouWantToChat'
@@ -20,7 +17,6 @@ const Faq = () => {
 
   return (
     <Box
-      // border={'green 2px solid'}
       m={'0 auto'}
       width={'100%'}
       maxWidth={1140}
@@ -34,7 +30,6 @@ const Faq = () => {
       <DoYouWantToChat />
 
       <Box
-        // border={'yellow 2px solid'}
         width={{ _: '100%', tabletL: '60%' }}
         textAlign={'center'}
         display={'flex'}

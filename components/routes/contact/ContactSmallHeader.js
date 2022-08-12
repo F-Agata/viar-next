@@ -1,8 +1,6 @@
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 
 import Box from '../../../styles/Box'
-import Btn from '../../../styles/Btn'
-import Link from '../../../styles/Link'
 import TitleAndText from '../../../styles/TitleAndText'
 
 import ContactTextPartHeader from './ContactTextPartHeader'
@@ -10,15 +8,13 @@ import ContactTextPartHeader from './ContactTextPartHeader'
 const ContactSmallHeader = () => {
   return (
     <Box
-      // border={'green 2px solid'}
       display={'flex'}
       flexDirection={'column'}
       justifyContent={'space-between'}
-      alignItems={'strench'}
+      alignItems={'stretch'}
     >
       <BgxBg>
         <Box
-          // border={'lightblue 2px solid'}
           display={'flex'}
           justifyContent={'center'}
           alignItems={'center'}
@@ -52,24 +48,18 @@ const ContactSmallHeader = () => {
         <BoxWrappTxt>
           <TitleAndText
             variant={'textSmall'}
-            // variant={{_: 'textSmallVery', mobileL: 'textSmall', }}
             textAlign={'center'}
             color={'colorSecondary'}
           >
             Etiam ac{' '}
           </TitleAndText>
-          <TitleAndText
-            variant={'textSmall'}
-            // variant={{_: 'textSmallVery', mobileL: 'textSmall', }}
-            textAlign={'center'}
-          >
+          <TitleAndText variant={'textSmall'} textAlign={'center'}>
             {' '}
             convallis massa
           </TitleAndText>
         </BoxWrappTxt>
       </BgxBg>
       <Box
-        // border={'pink 2px solid'}
         display={'flex'}
         flexDirection={'column'}
         justifyContent={'center'}
@@ -85,7 +75,6 @@ const ContactSmallHeader = () => {
 export default ContactSmallHeader
 
 const BgxBg = styled(Box)`
-  //border: 2px burlywood solid;
   background-image: url('bg3-sliderSmall.png');
   background-repeat: no-repeat;
   background-size: cover;
@@ -99,7 +88,6 @@ const BgxBg = styled(Box)`
 `
 
 const HeaderImg = styled.img`
-  //border: 2px solid blueviolet;
   width: 80%;
   margin-right: -80px;
   @media (min-width: 568px) {
@@ -108,7 +96,6 @@ const HeaderImg = styled.img`
 `
 
 const BoxWrappArrow = styled(Box)`
-  //border: yellow 2px solid;
   position: absolute;
   width: 18%;
   top: 26%;
@@ -126,7 +113,6 @@ const ArrowImg = styled.img`
 `
 
 const BoxWrappGift = styled(Box)`
-  // border: yellow 2px solid;
   position: absolute;
   width: 20%;
   top: 13%;
@@ -142,7 +128,6 @@ const GiftImg = styled.img`
 `
 
 const BoxWrappOrnament = styled(Box)`
-  // border: yellow 2px solid;
   position: absolute;
   width: 36%;
   bottom: 5%;
@@ -155,7 +140,6 @@ const BoxWrappOrnament = styled(Box)`
 
 const BoxWrappTextInsideOrnament = styled(Box)`
   width: 82%;
-  //border: yellow 2px solid;
   position: absolute;
   top: 22%;
   left: 50%;
@@ -167,7 +151,6 @@ const OrnamentImg = styled.img`
 `
 
 const BoxWrappTxt = styled(Box)`
-  //border: yellow 2px solid;
   position: absolute;
   width: 40%;
   top: 18%;

@@ -1,20 +1,17 @@
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 
 import ContactTextPartHeader from './ContactTextPartHeader'
 
 import Box from '../../../styles/Box'
-import Btn from '../../../styles/Btn'
-import Link from '../../../styles/Link'
 import TitleAndText from '../../../styles/TitleAndText'
 
 const ContactBigHeader = () => {
   return (
     <Box
-      // border={'green 2px solid'}
       display={'flex'}
       flexDirection={'column'}
       justifyContent={'space-between'}
-      alignItems={'strench'}
+      alignItems={'stretch'}
       pb={20}
     >
       <BgxBg>
@@ -26,7 +23,6 @@ const ContactBigHeader = () => {
           display={'flex'}
           justifyContent={'space-between'}
           alignItems={'stretch'}
-          // border={'pink 2px solid'}
           pt={{ _: '0', tablet: '20px' }}
         >
           <Box
@@ -48,7 +44,6 @@ const ContactBigHeader = () => {
           <Box
             width={{ _: '50%', tabletL: '60%', laptopS: '60%' }}
             position={'relative'}
-            // border={'olive 2px solid'}
             alignSelf={'flex-end'}
             display={'flex'}
             justifyContent={'center'}
@@ -101,7 +96,6 @@ export default ContactBigHeader
 
 const BgxBg = styled(Box)`
   width: 100%;
-  //border: 2px burlywood solid;
   background-image: url('bg3-sliderBig.png');
   background-repeat: no-repeat;
   background-size: cover;
@@ -114,7 +108,6 @@ const BgxBg = styled(Box)`
 `
 
 const HeaderImg = styled.img`
-  //border: 2px solid blueviolet;
   width: 460px;
   margin-bottom: 30px;
   margin-left: -40px;
@@ -130,7 +123,6 @@ const HeaderImg = styled.img`
 `
 
 const BoxWrappArrow = styled(Box)`
-  //border: yellow 2px solid;
   position: absolute;
   width: 14%;
   top: 24%;
@@ -138,7 +130,6 @@ const BoxWrappArrow = styled(Box)`
   z-index: 2;
   @media (min-width: 1024px) {
     width: 16%;
-    top: 24%;
     left: 50%;
   }
   @media (min-width: 1140px) {
@@ -157,12 +148,10 @@ const ArrowImg = styled.img`
 `
 
 const BoxWrappGift = styled(Box)`
-  // border: yellow 2px solid;
   position: absolute;
   width: 14%;
   top: 12%;
   left: 42%;
-  //transform: translate(-50%, 0);
   z-index: 2;
   @media (min-width: 1024px) {
     width: 12%;
@@ -180,7 +169,6 @@ const GiftImg = styled.img`
 `
 
 const BoxWrappOrnament = styled(Box)`
-  //border: yellow 2px solid;
   position: absolute;
   width: 160px;
   top: 84%;
@@ -194,7 +182,6 @@ const BoxWrappOrnament = styled(Box)`
 
 const BoxWrappTextInsideOrnament = styled(Box)`
   width: 80%;
-  //border: yellow 2px solid;
   position: absolute;
   top: 23%;
   left: 50%;
@@ -210,7 +197,6 @@ const OrnamentImg = styled.img`
 `
 
 const BoxWrappTxt = styled(Box)`
-  //border: yellow 2px solid;
   position: absolute;
   width: 30%;
   top: 16%;
@@ -218,8 +204,6 @@ const BoxWrappTxt = styled(Box)`
   z-index: 2;
   @media (min-width: 1024px) {
     width: 22%;
-    top: 16%;
-    left: 52%;
   }
   @media (min-width: 1140px) {
     top: 16%;

@@ -1,4 +1,3 @@
-import React, { useEffect } from 'react'
 import styled, { css } from 'styled-components'
 
 import useForm from './useForm'
@@ -124,7 +123,6 @@ function FormPanel({ submittedForm }) {
         </WrappInputCheckbox>
       </WrappOnePartOfForm>
       <Box
-        // border={'orange 2px solid'}
         width={'100%'}
         display={'flex'}
         justifyContent={'center'}
@@ -147,7 +145,6 @@ export default FormPanel
 
 const WrappPanel = styled.form`
   width: 100%;
-  //border: chartreuse 2px solid;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -161,7 +158,6 @@ const WrappPanel = styled.form`
 `
 
 const WrappOnePartOfForm = styled(Box)`
-  //border: #0070f3 solid 2px;
   width: 295px;
   margin-top: 20px;
   display: flex;
@@ -182,7 +178,6 @@ const WrappOnePartOfForm = styled(Box)`
 `
 
 const LableF = styled.label`
-  //border: #0023f3 solid 2px;
   ${({ theme }) => css`
     font-size: ${theme.fontSizes.fs7};
     font-weight: ${theme.fontWeights.fontRegular};
@@ -193,7 +188,6 @@ const LableF = styled.label`
 `
 
 const BoxWrapInputAndIcone = styled(Box)`
-  // border: greenyellow 2px solid;
   width: 100%;
   border-radius: 8px;
   display: flex;
@@ -258,7 +252,6 @@ const TextAreaF = styled.textarea`
 `
 
 const WrappInputCheckbox = styled(Box)`
-  //border: blueviolet 2px solid;
   width: 294px;
   height: 64px;
   display: flex;
@@ -272,7 +265,6 @@ const WrappInputCheckbox = styled(Box)`
 `
 
 const BoxWrappText = styled(Box)`
-  //border: blueviolet 2px solid;
   width: 294px;
   height: 64px;
   border-radius: 8px;
@@ -293,7 +285,6 @@ const BoxWrappText = styled(Box)`
 `
 
 const InputFCh = styled.input`
-  //border: orange 2px solid;
   position: absolute;
   cursor: pointer;
   width: 0px;

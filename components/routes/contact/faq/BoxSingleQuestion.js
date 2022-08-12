@@ -14,7 +14,6 @@ const BoxSingleQuestion = ({ question, smallDescription, opened = false }) => {
     <StyledBoxSingleQuestion>
       <Box
         width={'100%'}
-        // border={'green 2px solid'}
         display={'flex'}
         justifyContent={'flex-start'}
         alignItems={'center'}
@@ -39,8 +38,6 @@ const BoxSingleQuestion = ({ question, smallDescription, opened = false }) => {
               width={36}
               height={36}
               bg={'colorSecondary'}
-              width={36}
-              height={36}
               display={'flex'}
               justifyContent={'center'}
               alignItems={'center'}
@@ -66,7 +63,6 @@ export default BoxSingleQuestion
 
 const StyledBoxSingleQuestion = styled(Box)`
   border-top: 1px solid;
-  border-bottom: ;
   border-color: ${(props) => props.theme.colors.colorLight};
   padding: 20px 20px;
   display: flex;

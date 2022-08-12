@@ -1,5 +1,3 @@
-import styled, { css } from 'styled-components'
-
 import Box from '../../../styles/Box'
 
 import ContactBigHeader from './ContactBigHeader'
@@ -8,10 +6,7 @@ import Faq from './faq/Faq'
 
 const ContactBig = () => {
   return (
-    <Box
-      position={'relative'}
-      // border={'green 2px solid'}
-    >
+    <Box position={'relative'}>
       <ContactBigHeader />
       <ContactBigDescription />
       <Faq />

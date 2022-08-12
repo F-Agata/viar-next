@@ -11,7 +11,6 @@ const DoYouWantToChat = () => {
   return (
     <Box
       width={'340px'}
-      // border={'green 2px solid'}
       display={'flex'}
       flexDirection={'column'}
       justifyContent={{ _: 'center', tablet: 'flex-start' }}
@@ -61,7 +60,6 @@ const DoYouWantToChat = () => {
             tincidunt.
           </TitleAndText>
           <Box
-            // border={'orange 2px solid'}
             width={'100%'}
             display={'flex'}
             justifyContent={'center'}
@@ -98,7 +96,6 @@ const BoxWrapImg = styled(Box)`
   left: 0;
   @media (min-width: 768px) {
     top: 220px;
-    left: 00%;
   }
 `
 
@@ -107,7 +104,6 @@ const QuestionMarksImg = styled.img`
 `
 
 const StyledAiOutlineWhatsApp = styled(AiOutlineWhatsApp)`
-  //border: navajowhite 2px solid;
   margin-right: 10px;
   width: 24px;
   height: 24px;

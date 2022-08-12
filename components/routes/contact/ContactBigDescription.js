@@ -45,7 +45,6 @@ export default ContactBigDescription
 const BoxBg = styled(Box)`
   padding-bottom: 30px;
   width: 100%;
-  // border: 2px burlywood solid;
   background-image: url('contact/menWithTablet.png');
   background-repeat: no-repeat;
   background-size: contain;
