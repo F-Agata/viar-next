@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 
 import Box from '../../../styles/Box'
 import Btn from '../../../styles/Btn'
@@ -8,7 +8,7 @@ import TitleAndText from '../../../styles/TitleAndText'
 const HomeSmall = () => {
   return (
     <Box
-      // border={'green 2px solid'}
+
       display={'flex'}
       flexDirection={'column'}
       justifyContent={'space-between'}
@@ -16,7 +16,6 @@ const HomeSmall = () => {
     >
       <BgxBg>
         <Box
-          // border={'yellow 2px solid'}
           display={'flex'}
           justifyContent={'center'}
           alignItems={'center'}
@@ -104,7 +103,6 @@ const HomeSmall = () => {
           libero, non rhoncus erat. Sed
         </TitleAndText>
         <Box
-          // border={'yellow 2px solid'}
           width={'100%'}
           p={'0 20px'}
         >
@@ -123,7 +121,6 @@ const HomeSmall = () => {
 export default HomeSmall
 
 const BgxBg = styled(Box)`
-  //border: 2px burlywood solid;
   background-image: url('bg2.png');
   background-repeat: no-repeat;
   background-size: cover;
@@ -134,7 +131,6 @@ const BgxBg = styled(Box)`
 `
 
 const HeaderImg = styled.img`
-  // border: 2px solid blueviolet;
   width: 80%;
 `
 
@@ -146,7 +142,6 @@ const BoxWrappArrow = styled(Box)`
   left: 28%;
   z-index: 2;
   @media (min-width: 568px) {
-    width: 20%;
     top: 24%;
     left: 30%;
   }
@@ -157,17 +152,14 @@ const ArrowImg = styled.img`
 `
 
 const BoxWrappGift = styled(Box)`
-  // border: yellow 2px solid;
   position: absolute;
   width: 20%;
   top: 18%;
   left: 5%;
   z-index: 2;
   @media (min-width: 568px) {
-    width: 20%;
-    top: 10%;
-    left: 5%;
-  }
+        top: 10%;
+      }
 `
 
 const GiftImg = styled.img`
@@ -175,7 +167,7 @@ const GiftImg = styled.img`
 `
 
 const BoxWrappOrnament = styled(Box)`
-  // border: yellow 2px solid;
+ 
   position: absolute;
   width: 40%;
   bottom: -15%;
@@ -189,7 +181,6 @@ const BoxWrappOrnament = styled(Box)`
 
 const BoxWrappTextInsideOrnament = styled(Box)`
   width: 70%;
-  //border: yellow 2px solid;
   position: absolute;
   top: 20%;
   left: 50%;
@@ -204,8 +195,7 @@ const OrnamentImg = styled.img`
 `
 
 const BoxWrappTxt = styled(Box)`
-  // border: yellow 2px solid;
-  position: absolute;
+    position: absolute;
   width: 40%;
   top: 35%;
   left: 24%;

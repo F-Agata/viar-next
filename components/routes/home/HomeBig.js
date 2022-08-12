@@ -1,5 +1,4 @@
-import { useRef, useEffect, useState } from 'react'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 
 import Box from '../../../styles/Box'
 import Btn from '../../../styles/Btn'
@@ -9,8 +8,6 @@ import TitleAndText from '../../../styles/TitleAndText'
 const HomeBig = () => {
   return (
     <Box
-      // border={'green 2px solid'}
-      // height={'100vh'}
       display={'flex'}
       flexDirection={'column'}
       justifyContent={'space-between'}
@@ -25,12 +22,10 @@ const HomeBig = () => {
           display={'flex'}
           justifyContent={'space-between'}
           alignItems={'stretch'}
-          // border={'pink 2px solid'}
           pt={{ _: '0', tablet: '20px' }}
         >
           <Box
             width={{ _: '40%', tabletL: '40%', laptopS: '40%' }}
-            // border={'pink 2px solid'}
             display={'flex'}
             flexDirection={'column'}
             justifyContent={'center'}
@@ -71,7 +66,6 @@ const HomeBig = () => {
               libero, non rhoncus erat. Sed
             </TitleAndText>
             <Box
-              // border={'yellow 2px solid'}
               width={'60%'}
               p={'0 0px'}
             >
@@ -86,7 +80,6 @@ const HomeBig = () => {
 
           <Box
             width={{ _: '60%', tabletL: '50%', laptopS: '50%' }}
-            // border={'yellow 2px solid'}
             display={'flex'}
             justifyContent={'center'}
             alignItems={'flex-end'}
@@ -104,15 +97,12 @@ const HomeBig = () => {
             <BoxWrappTextInsideOrnament>
               <TitleAndText
                 variant={'textSmall'}
-                // variant={{_: 'textSmallVery', tabletL: 'textSmall', }}
                 textAlign={'center'}
-                // pb={{_: '0', mobileL: '10px', }}
               >
                 Lorem ipsum
               </TitleAndText>
               <TitleAndText
                 variant={'textSmall'}
-                // variant={{_: 'textSmallVery', tabletL: 'textSmall', }}
                 textAlign={'center'}
                 color={'colorSecondary'}
               >
@@ -153,27 +143,22 @@ export default HomeBig
 
 const BgxBg = styled(Box)`
   width: 100%;
-  //border: 2px burlywood solid;
   background-image: url('bg1.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  //padding-top: 140px;
   padding-bottom: 0px;
   position: relative;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
 `
 
 const HeaderImg = styled.img`
-  //border: 2px solid blueviolet;
   width: 100%;
 `
 
 const BoxWrappArrow = styled(Box)`
-   //border: yellow 2px solid;
   position: absolute;
   width: 20%;
   top: 25%;
@@ -185,7 +170,6 @@ const BoxWrappArrow = styled(Box)`
     left: 25%;
   }
   @media (min-width: 1140px) {
-    width: 14%;
     top: 82%;
     left: 28%;
 `
@@ -195,21 +179,17 @@ const ArrowImg = styled.img`
 `
 
 const BoxWrappGift = styled(Box)`
-  // border: yellow 2px solid;
   position: absolute;
   width: 10%;
   top: 13%;
   left: 30%;
   z-index: 2;
   @media (min-width: 1024px) {
-    width: 10%;
     top: 50%;
     left: 40%;
   }
 @media (min-width: 1140px) {
    width: 8%;
-  top: 50%;
-  left: 40%;
   `
 
 const GiftImg = styled.img`
@@ -217,7 +197,6 @@ const GiftImg = styled.img`
 `
 
 const BoxWrappOrnament = styled(Box)`
-  //border: yellow 2px solid;
   position: absolute;
   width: 20%;
   top: 13%;
@@ -226,7 +205,6 @@ const BoxWrappOrnament = styled(Box)`
   z-index: 2;
   @media (min-width: 1024px) {
     width: 16%;
-    top: 13%;
     right: 38%;
   }
   @media (min-width: 1140px) {
@@ -235,7 +213,6 @@ const BoxWrappOrnament = styled(Box)`
     right: -7%;
   }
   @media (min-width: 1366px) {
-    width: 15%;
     top: 14%;
     right: -2%;
   }
@@ -243,7 +220,6 @@ const BoxWrappOrnament = styled(Box)`
 
 const BoxWrappTextInsideOrnament = styled(Box)`
   width: 80%;
-  //border: yellow 2px solid;
   position: absolute;
   top: 18%;
   left: 50%;
@@ -263,7 +239,6 @@ const OrnamentImg = styled.img`
 `
 
 const BoxWrappTxt = styled(Box)`
-  //border: yellow 2px solid;
   position: absolute;
   width: 20%;
   top: 15%;
@@ -271,12 +246,6 @@ const BoxWrappTxt = styled(Box)`
   transform: translate(-50%, 0);
   z-index: 2;
   @media (min-width: 1024px) {
-    width: 20%;
-    top: 70%;
-    left: 40%;
-  }
-  @media (min-width: 1140px) {
-    wwidth: 20%;
     top: 70%;
     left: 40%;
   }
