@@ -8,11 +8,17 @@ import Box from '../../../styles/Box'
 import {
   handleScrollToSlide01,
   handleScrollToSlide02,
-  handleScrollToSlide03
-} from "../../../helpers/helpersMoveSlideInMoreInfo";
+  handleScrollToSlide03,
+} from '../../../helpers/helpersMoveSlideInMoreInfo'
 
-const Arrow = ({ direction, whichSlide, setWhichSlide, slide01Ref, slide02Ref, slide03Ref}) => {
-
+const Arrow = ({
+  direction,
+  whichSlide,
+  setWhichSlide,
+  slide01Ref,
+  slide02Ref,
+  slide03Ref,
+}) => {
   const moveLeft = () => {
     if (whichSlide === 1) {
       setWhichSlide(3)
@@ -42,11 +48,18 @@ const Arrow = ({ direction, whichSlide, setWhichSlide, slide01Ref, slide02Ref, s
     }
   }
 
-    return (
-            <StyledBoxIconArrowLeftOrRight onClick={direction === 'right' ? moveRight :  moveLeft} direction={direction}>
-                {direction === 'right' ? <StyledAiOutlineArrowRight /> :  <StyledAiOutlineArrowLeft />}
-            </StyledBoxIconArrowLeftOrRight>
-    )
+  return (
+    <StyledBoxIconArrowLeftOrRight
+      onClick={direction === 'right' ? moveRight : moveLeft}
+      direction={direction}
+    >
+      {direction === 'right' ? (
+        <StyledAiOutlineArrowRight />
+      ) : (
+        <StyledAiOutlineArrowLeft />
+      )}
+    </StyledBoxIconArrowLeftOrRight>
+  )
 }
 
 export default Arrow
@@ -65,10 +78,10 @@ const StyledBoxIconArrowLeftOrRight = styled(Box)`
   position: absolute;
   z-index: 10;
   top: 40%;
-   cursor: pointer;
-    ${({ theme, direction }) => css`
-    right: ${direction === "right" ? `1%` : 'none'};
-    left: ${direction === "left" ? `1%` : 'none'};
+  cursor: pointer;
+  ${({ theme, direction }) => css`
+    right: ${direction === 'right' ? `1%` : 'none'};
+    left: ${direction === 'left' ? `1%` : 'none'};
     background-color: ${theme.colors.colorSecondary};
   `};
   :hover {
@@ -86,7 +99,7 @@ const StyledBoxIconArrowLeftOrRight = styled(Box)`
 
 const StyledAiOutlineArrowLeft = styled(AiOutlineArrowLeft)`
   transition: 0.3s;
-    ${({ theme }) => css`
+  ${({ theme }) => css`
     background-color: ${theme.colors.colorSecondary};
     color: ${theme.colors.colorWhite};
     font-size: ${theme.fontSizes.fs7};
@@ -113,4 +126,3 @@ const StyledAiOutlineArrowRight = styled(AiOutlineArrowRight)`
       color: ${theme.colors.colorSecondary};
     `};
 `
-

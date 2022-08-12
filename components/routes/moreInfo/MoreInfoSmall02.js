@@ -5,14 +5,14 @@ import TitleAndText from '../../../styles/TitleAndText'
 
 import MoreInfoTextPart02 from './MoreInfoTextPart02'
 
-const MoreInfoSmall02 = ({getWidth}) => {
+const MoreInfoSmall02 = ({ getWidth }) => {
   return (
     <Box
       display={'flex'}
       flexDirection={'column'}
       justifyContent={'space-between'}
       alignItems={'stretch'}
-      width={getWidth }
+      width={getWidth}
     >
       <BgxBg>
         <Box
@@ -61,10 +61,7 @@ const MoreInfoSmall02 = ({getWidth}) => {
           >
             Mauris non
           </TitleAndText>
-          <TitleAndText
-            variant={'textSmall'}
-            textAlign={'center'}
-          >
+          <TitleAndText variant={'textSmall'} textAlign={'center'}>
             {' '}
             erat vehicula maximus
           </TitleAndText>

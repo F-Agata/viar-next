@@ -5,14 +5,14 @@ import MoreInfoTextPart01 from './MoreInfoTextPart01'
 import Box from '../../../styles/Box'
 import TitleAndText from '../../../styles/TitleAndText'
 
-const MoreInfoSmall01 = ({getWidth}) => {
+const MoreInfoSmall01 = ({ getWidth }) => {
   return (
     <Box
       display={'flex'}
       flexDirection={'column'}
       justifyContent={'space-between'}
       alignItems={'stretch'}
-      width={getWidth }
+      width={getWidth}
     >
       <BgxBg>
         <Box

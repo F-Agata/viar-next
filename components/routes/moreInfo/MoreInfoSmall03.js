@@ -5,14 +5,14 @@ import TitleAndText from '../../../styles/TitleAndText'
 
 import MoreInfoTextPart03 from './MoreInfoTextPart03'
 
-const MoreInfoSmall03 = ({getWidth}) => {
+const MoreInfoSmall03 = ({ getWidth }) => {
   return (
     <Box
       display={'flex'}
       flexDirection={'column'}
       justifyContent={'space-between'}
       alignItems={'stretch'}
-      width={getWidth }
+      width={getWidth}
     >
       <BgxBg>
         <Box
@@ -27,10 +27,7 @@ const MoreInfoSmall03 = ({getWidth}) => {
         <BoxWrappOrnament>
           <OrnamentImg src={' ornament.png'} alt={'photo'} />
           <BoxWrappTextInsideOrnament>
-            <TitleAndText
-              variant={'textSmall'}
-              textAlign={'center'}
-                       >
+            <TitleAndText variant={'textSmall'} textAlign={'center'}>
               Nam efficitur{' '}
             </TitleAndText>
             <TitleAndText
@@ -60,10 +57,7 @@ const MoreInfoSmall03 = ({getWidth}) => {
           >
             Etiam ac{' '}
           </TitleAndText>
-          <TitleAndText
-            variant={'textSmall'}
-            textAlign={'center'}
-          >
+          <TitleAndText variant={'textSmall'} textAlign={'center'}>
             {' '}
             convallis massa
           </TitleAndText>

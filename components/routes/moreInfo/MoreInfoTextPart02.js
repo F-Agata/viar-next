@@ -8,7 +8,7 @@ import TitleAndText from '../../../styles/TitleAndText'
 const MoreInfoTextPart02 = () => {
   return (
     <Box
-           display={'flex'}
+      display={'flex'}
       flexDirection={'column'}
       justifyContent={'center'}
       alignItems={'left'}
@@ -28,13 +28,13 @@ const MoreInfoTextPart02 = () => {
       </TitleAndText>
 
       <Box
-              display={'flex'}
+        display={'flex'}
         justifyContent={'left'}
         alignItems={'center'}
         mb={20}
       >
         <Box
-                   width={{ _: '25px', tablet: '30px' }}
+          width={{ _: '25px', tablet: '30px' }}
           height={{ _: '25px', tablet: '30px' }}
           mr={10}
         >
@@ -50,7 +50,7 @@ const MoreInfoTextPart02 = () => {
       </Box>
 
       <Box
-               display={'flex'}
+        display={'flex'}
         justifyContent={'left'}
         alignItems={'center'}
         mb={20}
@@ -76,13 +76,13 @@ const MoreInfoTextPart02 = () => {
       </Box>
 
       <Box
-                display={'flex'}
+        display={'flex'}
         justifyContent={'left'}
         alignItems={'center'}
         mb={20}
       >
         <Box
-                  width={{ _: '25px', tablet: '30px' }}
+          width={{ _: '25px', tablet: '30px' }}
           height={{ _: '25px', tablet: '30px' }}
           mr={10}
         >
@@ -100,10 +100,7 @@ const MoreInfoTextPart02 = () => {
           libero, non rhoncus erat. Sed
         </TitleAndText>
       </Box>
-      <Box
-               width={{ _: '100%', tablet: '70%' }}
-        p={'0 20px'}
-      >
+      <Box width={{ _: '100%', tablet: '70%' }} p={'0 20px'}>
         <Link href={`/portfolio`}>
           <Btn variant="orangeDark" m={'40px 0'} width={'100%'}>
             {' '}

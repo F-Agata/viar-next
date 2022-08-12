@@ -5,10 +5,10 @@ import MoreInfoTextPart02 from './MoreInfoTextPart02'
 import Box from '../../../styles/Box'
 import TitleAndText from '../../../styles/TitleAndText'
 
-const MoreInfoBig02 = ({getWidth}) => {
+const MoreInfoBig02 = ({ getWidth }) => {
   return (
     <Box
-        width={getWidth }
+      width={getWidth}
       display={'flex'}
       flexDirection={'column'}
       justifyContent={'space-between'}
@@ -44,7 +44,7 @@ const MoreInfoBig02 = ({getWidth}) => {
           <Box
             width={{ _: '50%', tabletL: '43%', laptopS: '43%' }}
             position={'relative'}
-                       alignSelf={'flex-end'}
+            alignSelf={'flex-end'}
             display={'flex'}
             justifyContent={'center'}
             mt={120}
@@ -112,7 +112,7 @@ export default MoreInfoBig02
 
 const BgxBg = styled(Box)`
   width: 100%;
-    background-image: url('bg3-sliderBig.png');
+  background-image: url('bg3-sliderBig.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -124,7 +124,7 @@ const BgxBg = styled(Box)`
 `
 
 const HeaderImg = styled.img`
-   width: 440px;
+  width: 440px;
   margin-left: -30px;
 
   @media (min-width: 1024px) {

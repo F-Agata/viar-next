@@ -5,10 +5,10 @@ import MoreInfoTextPart01 from './MoreInfoTextPart01'
 import Box from '../../../styles/Box'
 import TitleAndText from '../../../styles/TitleAndText'
 
-const MoreInfoBig01 = ({getWidth}) => {
+const MoreInfoBig01 = ({ getWidth }) => {
   return (
     <Box
-        width={getWidth }
+      width={getWidth}
       display={'flex'}
       flexDirection={'column'}
       justifyContent={'space-between'}
@@ -28,7 +28,7 @@ const MoreInfoBig01 = ({getWidth}) => {
         >
           <Box
             width={{ _: '50%', tabletL: '45%', laptopS: '45%' }}
-                      display={'flex'}
+            display={'flex'}
             flexDirection={'column'}
             justifyContent={'center'}
             alignItems={'flex-start'}
@@ -156,7 +156,7 @@ const BoxWrappGift = styled(Box)`
     bottom: 30%;
     left: 42%;
   }
-  `
+`
 
 const GiftImg = styled.img`
   width: 100%;

@@ -6,10 +6,10 @@ import Box from '../../../styles/Box'
 
 import TitleAndText from '../../../styles/TitleAndText'
 
-const MoreInfoBig03 = ({getWidth}) => {
+const MoreInfoBig03 = ({ getWidth }) => {
   return (
     <Box
-             width={getWidth }
+      width={getWidth}
       display={'flex'}
       flexDirection={'column'}
       justifyContent={'space-between'}
