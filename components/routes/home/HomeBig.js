@@ -1,3 +1,4 @@
+import { useRef, useEffect } from 'react'
 import styled, { css } from 'styled-components'
 
 import Box from '../../../styles/Box'
@@ -6,6 +7,13 @@ import Link from '../../../styles/Link'
 import TitleAndText from '../../../styles/TitleAndText'
 
 const HomeBig = () => {
+
+  const containerRef = useRef(null);
+
+  useEffect(()=>{
+    console.log('containerHeight', containerRef?.current?.offsetHeight)
+  }, [containerRef])
+
   return (
     <Box
       // border={'green 2px solid'}
@@ -14,6 +22,7 @@ const HomeBig = () => {
       flexDirection={'column'}
       justifyContent={'space-between'}
       alignItems={'strench'}
+      ref={containerRef}
     >
       <BgxBg>
         <Box
