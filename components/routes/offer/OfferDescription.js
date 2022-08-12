@@ -1,9 +1,35 @@
-import styled, { css } from 'styled-components'
+import { useRef, useEffect, useState } from 'react'
+import styled from 'styled-components'
 
 import Box from '../../../styles/Box'
 import TitleAndText from '../../../styles/TitleAndText'
 
+
 const OfferDescription = () => {
+
+  const [container1Height, setContainer1Height] = useState(0);
+  const [container2Height, setContainer2Height] = useState(0);
+  const [heightOfTheTallerContainer, setHeightOfTheTallerContainer] = useState(0)
+
+  const container1Ref = useRef(null);
+  const container2Ref = useRef(null);
+
+  useEffect(()=>{
+    setContainer1Height(container1Ref?.current?.offsetHeight);
+    setContainer2Height(container2Ref?.current?.offsetHeight);
+
+  }, [container1Ref, container1Height, container2Ref, container2Height])
+
+  useEffect( () => {
+      if (container1Height > container2Height) {
+        setHeightOfTheTallerContainer(container1Height)
+      } else {
+        setHeightOfTheTallerContainer(container2Height)
+      }
+
+  }, [container1Ref, container1Height, container2Ref, container2Height])
+
+
   return (
     <Box
       // border={'green 2px solid'}
@@ -45,12 +71,28 @@ const OfferDescription = () => {
           alignItems={'center'}
           p={'20px 0'}
         >
-          <TitleAndText
-            variant={{ _: 'title3Uppercase', tablet: 'title4Uppercase' }}
-            textAlign={'center'}
+
+
+
+
+          <Box
+              border={' aqua 2px solid'}
+              ref={container1Ref}
+              height={heightOfTheTallerContainer > 0 ? heightOfTheTallerContainer : 'auto'}
           >
-            Quisque egestas lorem sit amet
-          </TitleAndText>
+            <TitleAndText
+                variant={{ _: 'title4Uppercase', tablet: 'title3Uppercase' }}
+                textAlign={'center'}
+            >
+              Quisque egestas lofghfhfhfghrem sfghghfhfghit amefsssssddfdfsdf sfdfgfdgssdsfsdf dsfsdfsdf asfsf
+            </TitleAndText>
+          </Box>
+
+
+
+
+
+
           <Box
             // border={'crimson 2px solid'}
             position={'relative'}
@@ -108,12 +150,29 @@ const OfferDescription = () => {
           alignItems={'center'}
           p={'20px 0'}
         >
-          <TitleAndText
-            variant={{ _: 'title4Uppercase', tablet: 'title3Uppercase' }}
-            textAlign={'center'}
-          >
-            Nunc vestibulum sodales rhoncus
-          </TitleAndText>
+
+
+
+
+          <Box
+              border={' aqua 2px solid'}
+              ref={container2Ref}
+              height={heightOfTheTallerContainer > 0 ? heightOfTheTallerContainer : 'auto'}
+              >
+            <TitleAndText
+                variant={{ _: 'title4Uppercase', tablet: 'title3Uppercase' }}
+                textAlign={'center'}
+            >
+              Nunc vestibulum sodales rhoncus
+            </TitleAndText>
+
+          </Box>
+
+
+
+
+
+
           <Box
             // border={'crimson 2px solid'}
             position={'relative'}

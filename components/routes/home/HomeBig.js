@@ -1,4 +1,4 @@
-import { useRef, useEffect } from 'react'
+import { useRef, useEffect, useState } from 'react'
 import styled, { css } from 'styled-components'
 
 import Box from '../../../styles/Box'
@@ -8,11 +8,14 @@ import TitleAndText from '../../../styles/TitleAndText'
 
 const HomeBig = () => {
 
+  const [containerHeight, setContainerHeight] = useState(0);
+
   const containerRef = useRef(null);
 
   useEffect(()=>{
-    console.log('containerHeight', containerRef?.current?.offsetHeight)
-  }, [containerRef])
+    setContainerHeight(containerRef?.current?.offsetHeight);
+    console.log('containerHeight', containerHeight);
+  }, [containerRef, containerHeight])
 
   return (
     <Box
