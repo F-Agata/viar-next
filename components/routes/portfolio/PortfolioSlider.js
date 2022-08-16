@@ -7,30 +7,16 @@ import portfolioItems from './portfolioItems'
 
 import Box from '../../../styles/Box'
 import TitleAndText from '../../../styles/TitleAndText'
+import Arrow from "../moreInfo/Arrow";
+import Dots from "../moreInfo/Dots";
 
 const PortfolioSlider = () => {
   const [whichSlide, setWhichSlide] = useState(0)
+  const [styleTranslate, setStyleTranslate] = useState(0)
+  const [styleTransition, setStyleTransition] = useState(0.45)
 
-  const itemsRef = useRef(null)
 
-  function scrollToId(index) {
-    const map = getMap()
-    const node = map.get(index)
-    node.scrollIntoView({
-      behavior: 'smooth',
-      block: 'nearest',
-      inline: 'center',
-    })
-    setWhichSlide(index)
-  }
 
-  function getMap() {
-    if (!itemsRef.current) {
-      // Initialize the Map on first usage.
-      itemsRef.current = new Map()
-    }
-    return itemsRef.current
-  }
 
   return (
     <Box
@@ -38,7 +24,7 @@ const PortfolioSlider = () => {
       display={'flex'}
       flexDirection={'column'}
       justifyContent={'space-between'}
-      alignItems={'strench'}
+      alignItems={'stretch'}
       pb={20}
     >
       <BgxBg>
@@ -51,9 +37,7 @@ const PortfolioSlider = () => {
           justifyContent={'center'}
           alignItems={'center'}
           flexWrap={'nowrap'}
-          width={
-            typeof window !== 'undefined' ? `${window.innerWidth}px` : '100%'
-          }
+          width={'100%'}
         >
           <TitleAndText
             variant={{ _: 'title4Uppercase', tablet: 'title3Uppercase' }}
@@ -64,12 +48,44 @@ const PortfolioSlider = () => {
             Nunc vestibulum sodales rhoncus
           </TitleAndText>
 
+          <Box
+              border={'orange 2px solid'}
+              width={'100%'}
+              display={'flex'}
+              justifyContent={'center'}
+              alignItems={'center'}
+              overflow={'hidden'}
+              position={'relative'}
+              p={'40px 0px'}
+          >
+
           <OneSlide
-            scrollToId={scrollToId}
             portfolioItems={portfolioItems}
             whichSlide={whichSlide}
             setWhichSlide={setWhichSlide}
+            styleTranslate={styleTranslate}
+            styleTransition={styleTransition}
           />
+            {/*<Arrow*/}
+            {/*    direction={'left'}*/}
+            {/*    whichSlide={whichSlide}*/}
+            {/*    setWhichSlide={setWhichSlide}*/}
+            {/*    portfolioItems={portfolioItems}*/}
+
+            {/*/>*/}
+            {/*<Arrow*/}
+            {/*    direction={'right'}*/}
+            {/*    whichSlide={whichSlide}*/}
+            {/*    setWhichSlide={setWhichSlide}*/}
+            {/*    portfolioItems={portfolioItems}*/}
+
+            {/*/>*/}
+            {/*<Dots*/}
+            {/*    whichSlide={whichSlide}*/}
+            {/*    setWhichSlide={setWhichSlide}*/}
+            {/*    portfolioItems={portfolioItems}*/}
+            {/*/>*/}
+          </Box>
         </Box>
       </BgxBg>
     </Box>
@@ -84,8 +100,7 @@ const BgxBg = styled(Box)`
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  padding-bottom: 70px;
-  //position: relative;
+    //position: relative;
   display: flex;
   justify-content: center;
   align-items: center;

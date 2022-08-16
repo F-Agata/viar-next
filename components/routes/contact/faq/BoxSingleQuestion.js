@@ -11,16 +11,14 @@ const BoxSingleQuestion = ({ question, smallDescription, opened = false }) => {
   const [isOpen, setIsOpen] = useState(opened)
 
   return (
-    <StyledBoxSingleQuestion  onClick={() => setIsOpen(!isOpen)}>
+    <StyledBoxSingleQuestion onClick={() => setIsOpen(!isOpen)}>
       <Box
         width={'100%'}
         display={'flex'}
         justifyContent={'flex-start'}
         alignItems={'center'}
       >
-        <Box pr={10}
-
-        >
+        <Box pr={10}>
           {!isOpen && (
             <Box
               width={36}
@@ -52,7 +50,7 @@ const BoxSingleQuestion = ({ question, smallDescription, opened = false }) => {
         </TitleAndText>
       </Box>
       {isOpen && (
-        <TitleAndText  variant={'textSmall'} textAlign={'left'} p={'20px 0px'}>
+        <TitleAndText variant={'textSmall'} textAlign={'left'} p={'20px 0px'}>
           {smallDescription}
         </TitleAndText>
       )}

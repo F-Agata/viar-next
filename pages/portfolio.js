@@ -1,5 +1,3 @@
-import React from 'react'
-
 import PortfolioSlider from '../components/routes/portfolio/PortfolioSlider'
 
 import Box from '../styles/Box'

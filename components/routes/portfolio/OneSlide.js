@@ -1,75 +1,19 @@
 import React, { useRef } from 'react'
 import styled, { css } from 'styled-components'
 
-import SlidersArrowsAndDots from './SlidersArrowsAndDots'
-
 import Box from '../../../styles/Box'
 
 const OneSlide = ({
-  scrollToId,
   portfolioItems,
   whichSlide,
   setWhichSlide,
+                    styleTranslate,
+                    styleTransition,
 }) => {
-  const itemsRef = useRef(null)
 
-  function scrollToId(index) {
-    const map = getMap()
-    const node = map.get(index)
-    node.scrollIntoView({
-      behavior: 'smooth',
-      block: 'nearest',
-      inline: 'center',
-    })
-  }
-
-  function getMap() {
-    if (!itemsRef.current) {
-      // Initialize the Map on first usage.
-      itemsRef.current = new Map()
-    }
-    return itemsRef.current
-  }
 
   return (
-    <Box
-      // border={'orange 2px solid'}
-      width={'100%'}
-      display={'flex'}
-      justifyContent={'center'}
-      alignItems={'center'}
-      overflow={'hidden'}
-      position={'relative'}
-      p={'40px 0px'}
-    >
-      <Box
-        // border={'orange 2px solid'}
-        // width={`${window.innerWidth}px`}
-        width={'100%'}
-        height={'100%'}
-        position={'absolute'}
-        zIndex={'10'}
-        top={0}
-        left={0}
-      >
-        <SlidersArrowsAndDots
-          scrollToId={scrollToId}
-          getMap={getMap}
-          itemsRef={itemsRef}
-          portfolioItems={portfolioItems}
-          whichSlide={whichSlide}
-          setWhichSlide={setWhichSlide}
-        />
-      </Box>
-
-      <Box
-        // border={'orange 2px solid'}
-        overflow={'hidden'}
-        width={430}
-        display={'flex'}
-        // justifyContent={'flex-start'}
-        alignItems={'stretch'}
-      >
+            <BoxWrapp  howManySlides={portfolioItems.length} styleTranslate={styleTranslate} styleTransition={styleTransition}>
         {portfolioItems.map((item, index) => (
           <Box
             key={item}
@@ -79,22 +23,28 @@ const OneSlide = ({
             display={'flex'}
             justifyContent={'center'}
             alignItems={'center'}
-
-            // ref={(node) => {
-            //     const map = getMap();
-            //     if (node) {
-            //         map.set(index, node);
-            //     } else {
-            //         map.delete(index);
-            //     }
-            // }}
           >
             <img width={350} src={item} alt={item} />
           </Box>
         ))}
-      </Box>
-    </Box>
+      </BoxWrapp>
+
   )
 }
 
 export default OneSlide
+
+const BoxWrapp = styled(Box)`
+border: lightseagreen solid 2px;
+  overflow: hidden;
+  display: flex;
+  align-items: stretch;
+  width: ${props => props.howManySlides * 430}px;
+  transform: translateX(-${props => props.styleTranslate}px);
+  transition: transform ease-out ${props => props.styleTransition}s;
+  
+  
+  
+
+ 
+`
