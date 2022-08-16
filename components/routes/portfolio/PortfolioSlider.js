@@ -15,6 +15,8 @@ const PortfolioSlider = () => {
   const [styleTranslate, setStyleTranslate] = useState(0)
   const [styleTransition, setStyleTransition] = useState(0.45)
 
+  const widthSingleSlide = 430
+
 
 
 
@@ -49,8 +51,8 @@ const PortfolioSlider = () => {
           </TitleAndText>
 
           <Box
-              border={'orange 2px solid'}
-              width={'100%'}
+              // border={'orange 2px solid'}
+              width={widthSingleSlide}
               display={'flex'}
               justifyContent={'center'}
               alignItems={'center'}
@@ -65,6 +67,7 @@ const PortfolioSlider = () => {
             setWhichSlide={setWhichSlide}
             styleTranslate={styleTranslate}
             styleTransition={styleTransition}
+            widthSingleSlide={widthSingleSlide}
           />
             {/*<Arrow*/}
             {/*    direction={'left'}*/}

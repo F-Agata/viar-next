@@ -9,15 +9,21 @@ const OneSlide = ({
   setWhichSlide,
                     styleTranslate,
                     styleTransition,
+                      widthSingleSlide
 }) => {
 
 
   return (
-            <BoxWrapp  howManySlides={portfolioItems.length} styleTranslate={styleTranslate} styleTransition={styleTransition}>
+            <BoxWrapp
+                howManySlides={portfolioItems.length}
+                styleTranslate={styleTranslate}
+                styleTransition={styleTransition}
+                widthSingleSlide={widthSingleSlide}
+            >
         {portfolioItems.map((item, index) => (
           <Box
-            key={item}
-            // border={'red 2px solid'}
+            key={item+item+index}
+            border={'red 2px solid'}
             width={350}
             m={'0 40px 0 40px'}
             display={'flex'}
@@ -39,7 +45,7 @@ border: lightseagreen solid 2px;
   overflow: hidden;
   display: flex;
   align-items: stretch;
-  width: ${props => props.howManySlides * 430}px;
+  width: ${props => props.howManySlides * props.widthSingleSlide}px;
   transform: translateX(-${props => props.styleTranslate}px);
   transition: transform ease-out ${props => props.styleTransition}s;
   
