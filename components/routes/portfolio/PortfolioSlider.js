@@ -1,6 +1,8 @@
 import {  useState, useEffect } from 'react'
 import styled, { css } from 'styled-components'
 
+import useBetterMediaQuery from '../../../hooks/useBetterMediaQuery'
+
 import OneSlide from './OneSlide'
 
 import portfolioItems from './portfolioItems'
@@ -8,13 +10,16 @@ import portfolioItems from './portfolioItems'
 import Box from '../../../styles/Box'
 import TitleAndText from '../../../styles/TitleAndText'
 import Arrow from "./Arrow"
+import Dots from "./Dots"
 
 const PortfolioSlider = () => {
   const [whichSlide, setWhichSlide] = useState(0)
   const [styleTranslate, setStyleTranslate] = useState(0)
   const [styleTransition, setStyleTransition] = useState(0.45)
 
-  const widthSingleSlide = 430;
+  const widthSingleSlide = 510;
+
+  const modificationPage = useBetterMediaQuery('(min-width: 568px)')
 
   return (
     <Box
@@ -47,7 +52,7 @@ const PortfolioSlider = () => {
           </TitleAndText>
 
           <Box
-              border={'orange 2px solid'}
+              // border={'orange 2px solid'}
               width={widthSingleSlide}
               display={'flex'}
               justifyContent={'flex-start'}
@@ -66,7 +71,7 @@ const PortfolioSlider = () => {
             widthSingleSlide={widthSingleSlide}
           />
 
-
+            {modificationPage &&
             <Arrow
                 direction={'left'}
                 whichSlide={whichSlide}
@@ -77,7 +82,9 @@ const PortfolioSlider = () => {
                 // styleTransition={styleTransition}
                 // setStyleTransition={setStyleTransition}
                 widthSingleSlide={widthSingleSlide}
-            />
+            /> }
+
+            {modificationPage &&
             <Arrow
                 direction={'right'}
                 whichSlide={whichSlide}
@@ -88,7 +95,8 @@ const PortfolioSlider = () => {
                 // styleTransition={styleTransition}
                 // setStyleTransition={setStyleTransition}
                 widthSingleSlide={widthSingleSlide}
-            />
+            />}
+
 
             {/*<Dots*/}
             {/*    whichSlide={whichSlide}*/}
@@ -98,7 +106,47 @@ const PortfolioSlider = () => {
             {/*styleTransition={styleTransition}*/}
             {/*widthSingleSlide={widthSingleSlide}*/}
             {/*/>*/}
+
           </Box>
+
+          {/*{!modificationPage &&*/}
+          {/*<Box*/}
+          {/*    // border={'orange 2px solid'}*/}
+          {/*    width={200}*/}
+          {/*    display={'flex'}*/}
+          {/*    justifyContent={'flex-start'}*/}
+          {/*    alignItems={'center'}*/}
+          {/*    overflow={'hidden'}*/}
+          {/*    position={'relative'}*/}
+          {/*    p={'40px 0px'}*/}
+          {/*>*/}
+
+          {/*  <Arrow*/}
+          {/*      direction={'left'}*/}
+          {/*      whichSlide={whichSlide}*/}
+          {/*      setWhichSlide={setWhichSlide}*/}
+          {/*      portfolioItems={portfolioItems}*/}
+          {/*      // styleTranslate={styleTranslate}*/}
+          {/*      setStyleTranslate={setStyleTranslate}*/}
+          {/*      // styleTransition={styleTransition}*/}
+          {/*      // setStyleTransition={setStyleTransition}*/}
+          {/*      widthSingleSlide={widthSingleSlide}*/}
+          {/*  />*/}
+
+          {/*  <Arrow*/}
+          {/*      direction={'right'}*/}
+          {/*      whichSlide={whichSlide}*/}
+          {/*      setWhichSlide={setWhichSlide}*/}
+          {/*      portfolioItems={portfolioItems}*/}
+          {/*      // styleTranslate={styleTranslate}*/}
+          {/*      setStyleTranslate={setStyleTranslate}*/}
+          {/*      // styleTransition={styleTransition}*/}
+          {/*      // setStyleTransition={setStyleTransition}*/}
+          {/*      widthSingleSlide={widthSingleSlide}*/}
+          {/*  />*/}
+
+
+          {/*</Box>}*/}
         </Box>
       </BgxBg>
     </Box>
