@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react'
+import {  useState, useEffect } from 'react'
 import styled, { css } from 'styled-components'
 
 import OneSlide from './OneSlide'
@@ -7,18 +7,14 @@ import portfolioItems from './portfolioItems'
 
 import Box from '../../../styles/Box'
 import TitleAndText from '../../../styles/TitleAndText'
-import Arrow from "../moreInfo/Arrow";
-import Dots from "../moreInfo/Dots";
+import Arrow from "./Arrow"
 
 const PortfolioSlider = () => {
   const [whichSlide, setWhichSlide] = useState(0)
   const [styleTranslate, setStyleTranslate] = useState(0)
   const [styleTransition, setStyleTransition] = useState(0.45)
 
-  const widthSingleSlide = 430
-
-
-
+  const widthSingleSlide = 430;
 
   return (
     <Box
@@ -51,10 +47,10 @@ const PortfolioSlider = () => {
           </TitleAndText>
 
           <Box
-              // border={'orange 2px solid'}
+              border={'orange 2px solid'}
               width={widthSingleSlide}
               display={'flex'}
-              justifyContent={'center'}
+              justifyContent={'flex-start'}
               alignItems={'center'}
               overflow={'hidden'}
               position={'relative'}
@@ -69,24 +65,38 @@ const PortfolioSlider = () => {
             styleTransition={styleTransition}
             widthSingleSlide={widthSingleSlide}
           />
-            {/*<Arrow*/}
-            {/*    direction={'left'}*/}
-            {/*    whichSlide={whichSlide}*/}
-            {/*    setWhichSlide={setWhichSlide}*/}
-            {/*    portfolioItems={portfolioItems}*/}
 
-            {/*/>*/}
-            {/*<Arrow*/}
-            {/*    direction={'right'}*/}
-            {/*    whichSlide={whichSlide}*/}
-            {/*    setWhichSlide={setWhichSlide}*/}
-            {/*    portfolioItems={portfolioItems}*/}
 
-            {/*/>*/}
+            <Arrow
+                direction={'left'}
+                whichSlide={whichSlide}
+                setWhichSlide={setWhichSlide}
+                portfolioItems={portfolioItems}
+                // styleTranslate={styleTranslate}
+                setStyleTranslate={setStyleTranslate}
+                // styleTransition={styleTransition}
+                // setStyleTransition={setStyleTransition}
+                widthSingleSlide={widthSingleSlide}
+            />
+            <Arrow
+                direction={'right'}
+                whichSlide={whichSlide}
+                setWhichSlide={setWhichSlide}
+                portfolioItems={portfolioItems}
+                // styleTranslate={styleTranslate}
+                setStyleTranslate={setStyleTranslate}
+                // styleTransition={styleTransition}
+                // setStyleTransition={setStyleTransition}
+                widthSingleSlide={widthSingleSlide}
+            />
+
             {/*<Dots*/}
             {/*    whichSlide={whichSlide}*/}
             {/*    setWhichSlide={setWhichSlide}*/}
             {/*    portfolioItems={portfolioItems}*/}
+            {/*styleTranslate={styleTranslate}*/}
+            {/*styleTransition={styleTransition}*/}
+            {/*widthSingleSlide={widthSingleSlide}*/}
             {/*/>*/}
           </Box>
         </Box>

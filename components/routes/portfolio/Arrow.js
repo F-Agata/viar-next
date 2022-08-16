@@ -5,52 +5,38 @@ import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai'
 
 import Box from '../../../styles/Box'
 
-import {
-  handleScrollToSlide01,
-  handleScrollToSlide02,
-  handleScrollToSlide03,
-} from '../../../helpers/helpersMoveSlideInMoreInfo'
-
 const Arrow = ({
   direction,
   whichSlide,
   setWhichSlide,
-  slide01Ref,
-  slide02Ref,
-  slide03Ref,
+                 portfolioItems,
+                 setStyleTranslate,
+                 widthSingleSlide,
 }) => {
-  const moveLeft = () => {
-    if (whichSlide === 1) {
-      setWhichSlide(3)
-      handleScrollToSlide01(slide03Ref)
-    } else if (whichSlide === 2) {
-      setWhichSlide(1)
-      handleScrollToSlide02(slide01Ref)
-    } else if (whichSlide === 3) {
-      setWhichSlide(2)
-      handleScrollToSlide03(slide02Ref)
+
+  const nextSlide = () => {
+    if (whichSlide === portfolioItems.length - 1) {
+      setStyleTranslate(0)
+      setWhichSlide (0)
+    } else {
+      setWhichSlide (whichSlide + 1)
+      setStyleTranslate((whichSlide + 1) * widthSingleSlide)
     }
   }
 
-  const moveRight = () => {
-    if (whichSlide === 3) {
-      setWhichSlide(1)
+  const prevSlide = () => {
+    if (whichSlide === 0) {
+      setStyleTranslate((portfolioItems.length - 1) * widthSingleSlide)
+      setWhichSlide (portfolioItems.length - 1)
     } else {
-      setWhichSlide((prevWhichSlide) => prevWhichSlide + 1)
-    }
-
-    if (whichSlide === 1) {
-      handleScrollToSlide01(slide02Ref)
-    } else if (whichSlide === 2) {
-      handleScrollToSlide02(slide03Ref)
-    } else if (whichSlide === 3) {
-      handleScrollToSlide03(slide01Ref)
+      setWhichSlide (whichSlide - 1)
+      setStyleTranslate((whichSlide - 1) * widthSingleSlide)
     }
   }
 
   return (
     <StyledBoxIconArrowLeftOrRight
-      onClick={direction === 'right' ? moveRight : moveLeft}
+      onClick={direction === 'right' ? nextSlide : prevSlide}
       direction={direction}
     >
       {direction === 'right' ? (

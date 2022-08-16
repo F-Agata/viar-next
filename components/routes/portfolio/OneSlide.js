@@ -23,7 +23,7 @@ const OneSlide = ({
         {portfolioItems.map((item, index) => (
           <Box
             key={item+item+index}
-            border={'red 2px solid'}
+            // border={'red 2px solid'}
             width={350}
             m={'0 40px 0 40px'}
             display={'flex'}
@@ -41,8 +41,8 @@ const OneSlide = ({
 export default OneSlide
 
 const BoxWrapp = styled(Box)`
-border: lightseagreen solid 2px;
-  overflow: hidden;
+//border: lightseagreen solid 2px;
+  //overflow: hidden;
   display: flex;
   align-items: stretch;
   width: ${props => props.howManySlides * props.widthSingleSlide}px;
