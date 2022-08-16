@@ -98,14 +98,13 @@ const PortfolioSlider = () => {
             />}
 
 
-            {/*<Dots*/}
-            {/*    whichSlide={whichSlide}*/}
-            {/*    setWhichSlide={setWhichSlide}*/}
-            {/*    portfolioItems={portfolioItems}*/}
-            {/*styleTranslate={styleTranslate}*/}
-            {/*styleTransition={styleTransition}*/}
-            {/*widthSingleSlide={widthSingleSlide}*/}
-            {/*/>*/}
+            <Dots
+                whichSlide={whichSlide}
+                setWhichSlide={setWhichSlide}
+                portfolioItems={portfolioItems}
+                setStyleTranslate={setStyleTranslate}
+                widthSingleSlide={widthSingleSlide}
+            />
 
           </Box>
 

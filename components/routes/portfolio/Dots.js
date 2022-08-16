@@ -5,40 +5,27 @@ import { BsDot } from 'react-icons/bs'
 
 import Box from '../../../styles/Box'
 
-import {
-  handleScrollToSlide01,
-  handleScrollToSlide02,
-  handleScrollToSlide03,
-} from '../../../helpers/helpersMoveSlideInMoreInfo'
-
 const Dots = ({
   whichSlide,
   setWhichSlide,
-  slide01Ref,
-  slide02Ref,
-  slide03Ref,
+                portfolioItems,
+                setStyleTranslate,
+                widthSingleSlide,
 }) => {
-  const howManyDots = [slide01Ref, slide02Ref, slide03Ref]
 
-  const moveToChoiceSlide = (myChoice, item) => {
-    setWhichSlide(myChoice)
 
-    if (whichSlide === 1) {
-      handleScrollToSlide01(item)
-    } else if (whichSlide === 2) {
-      handleScrollToSlide02(item)
-    } else if (whichSlide === 3) {
-      handleScrollToSlide03(item)
-    }
+  const moveToChoiceSlide = (index) => {
+    setWhichSlide(index)
+    setStyleTranslate((index) * widthSingleSlide)
   }
 
-  const singleDot = howManyDots.map((item, index) => (
+  const singleDot = portfolioItems.map((item, index) => (
     <StyledBoxIconDot
       key={`${item} + ${item} * ${item}`}
-      onClick={() => moveToChoiceSlide(index + 1, item)}
-      isActive={whichSlide === index + 1}
+      onClick={() => moveToChoiceSlide(index)}
+      isActive={whichSlide === index}
     >
-      <StyledBsDot isActive={whichSlide === index + 1} />
+      <StyledBsDot isActive={whichSlide === index} />
     </StyledBoxIconDot>
   ))
 
