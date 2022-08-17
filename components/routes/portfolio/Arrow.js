@@ -9,17 +9,16 @@ const Arrow = ({
   direction,
   whichSlide,
   setWhichSlide,
-                 portfolioItems,
-                 setStyleTranslate,
-                 widthSingleSlide,
+  portfolioItems,
+  setStyleTranslate,
+  widthSingleSlide,
 }) => {
-
   const nextSlide = () => {
     if (whichSlide === portfolioItems.length - 1) {
       setStyleTranslate(0)
-      setWhichSlide (0)
+      setWhichSlide(0)
     } else {
-      setWhichSlide (whichSlide + 1)
+      setWhichSlide(whichSlide + 1)
       setStyleTranslate((whichSlide + 1) * widthSingleSlide)
     }
   }
@@ -27,9 +26,9 @@ const Arrow = ({
   const prevSlide = () => {
     if (whichSlide === 0) {
       setStyleTranslate((portfolioItems.length - 1) * widthSingleSlide)
-      setWhichSlide (portfolioItems.length - 1)
+      setWhichSlide(portfolioItems.length - 1)
     } else {
-      setWhichSlide (whichSlide - 1)
+      setWhichSlide(whichSlide - 1)
       setStyleTranslate((whichSlide - 1) * widthSingleSlide)
     }
   }

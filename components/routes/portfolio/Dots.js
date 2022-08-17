@@ -8,15 +8,13 @@ import Box from '../../../styles/Box'
 const Dots = ({
   whichSlide,
   setWhichSlide,
-                portfolioItems,
-                setStyleTranslate,
-                widthSingleSlide,
+  portfolioItems,
+  setStyleTranslate,
+  widthSingleSlide,
 }) => {
-
-
   const moveToChoiceSlide = (index) => {
     setWhichSlide(index)
-    setStyleTranslate((index) * widthSingleSlide)
+    setStyleTranslate(index * widthSingleSlide)
   }
 
   const singleDot = portfolioItems.map((item, index) => (
