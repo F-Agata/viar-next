@@ -3,7 +3,6 @@ import styled, { css } from 'styled-components'
 import Box from '../../styles/Box'
 import Link from '../../styles/Link'
 import TitleAndText from '../../styles/TitleAndText'
-import Btn from '../../styles/Btn'
 
 const LinksPart = ({ menuItems }) => {
   const menuItem = menuItems.map((item) => (
@@ -16,7 +15,6 @@ const LinksPart = ({ menuItems }) => {
 
   return (
     <Box
-      // border={'orange 2px solid'}
       flexGrow={'1'}
       display={'flex'}
       justifyContent={'center'}
@@ -30,7 +28,6 @@ const LinksPart = ({ menuItems }) => {
 export default LinksPart
 
 const StyledNavigationUl = styled.ul`
-  //border: olivedrab 2px solid;
   display: flex;
   justify-content: flex-end;
   @media (min-width: 1024px) {
@@ -39,7 +36,6 @@ const StyledNavigationUl = styled.ul`
 `
 
 const StyledNavigationLi = styled.li`
-  //border: blueviolet 2px solid;
   list-style: none;
   margin-left: 10px;
   padding: 0 10px;

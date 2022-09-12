@@ -1,11 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import styled, { css } from 'styled-components'
-import { FaBars } from 'react-icons/fa'
-import { BiCart } from 'react-icons/bi'
-import { MdOutlineManageAccounts } from 'react-icons/md'
+import styled from 'styled-components'
 import Box from '../../styles/Box'
-import BoxIcon from '../../styles/BoxIcon'
-import Link from '../../styles/Link'
 import Logo from '../Logo'
 import AccountIcons from './AccountIcons'
 import SocialIcons from './SocialIcons'
@@ -50,11 +45,7 @@ const Navigation = () => {
       {modificationMenuSize && <LinksPart menuItems={menuItems} />}
       {modificationMenuSize && <AccountIcons />}
       {!modificationMenuSize && smallNavIsOpen ? (
-        <NavSmall
-          menuItems={menuItems}
-          setSmallNavIsOpen={setSmallNavIsOpen}
-          changeNav={changeNav}
-        />
+        <NavSmall menuItems={menuItems} changeNav={changeNav} />
       ) : null}
     </BoxNavigation>
   )

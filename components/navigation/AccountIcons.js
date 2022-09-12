@@ -11,10 +11,7 @@ import Link from '../../styles/Link'
 
 const AccountIcons = ({ needCloseIcon, needOpenIcon, changeNav }) => {
   return (
-    <Box
-      // border={'green 2px solid'}
-      display={'flex'}
-    >
+    <Box display={'flex'}>
       <Link href={`/home`}>
         {' '}
         <BoxIcon width={40} height={40} bg={'colorWhite'} ml={10}>
